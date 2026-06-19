@@ -1,3 +1,9 @@
+<!--
+  Palette (Color Hunt 2029404b40389a8678caaa98):
+  #202940 navy  ·  #4B4038 brown  ·  #9A8678 taupe  ·  #CAAA98 sand
+  Badge bg = 202940 / logo = CAAA98 / accent = 9A8678 / second tone = 4B4038
+-->
+
 <div align="center">
 
 # Victor Mendonça
@@ -8,10 +14,10 @@ Building ecosystems, data platforms, and AI-native products that matters.
 
 <br/>
 
-![Experience](https://img.shields.io/badge/15%2B%20years-building%20platforms-0D1117?style=flat-square&labelColor=0D1117&color=30363D)
-![Location](https://img.shields.io/badge/São%20Paulo-Brazil-0D1117?style=flat-square&labelColor=0D1117&color=30363D)
-![Focus](https://img.shields.io/badge/AI-Platforms%20·%20Data-0D1117?style=flat-square&labelColor=0D1117&color=30363D)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mend3-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vicmendonca/)
+![Experience](https://img.shields.io/badge/15%2B%20years-building%20platforms-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Location](https://img.shields.io/badge/São%20Paulo-Brazil-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Focus](https://img.shields.io/badge/AI-Platforms%20·%20Data-202940?style=flat-square&labelColor=202940&color=4B4038)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mend3-202940?style=flat-square&logo=linkedin&logoColor=CAAA98&labelColor=202940&color=9A8678)](https://www.linkedin.com/in/vicmendonca/)
 
 </div>
 
@@ -32,6 +38,15 @@ I move comfortably between hands-on engineering and technical strategy: leading 
 A unified, white-label **SaaS ecosystem** that combines infrastructure control planes, multi-tenant runtimes, universal connectors, data acquisition at scale, workflow automation, and AI services — designed so a single platform can power many products and verticals.
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {
+  'primaryColor':'#202940',
+  'primaryTextColor':'#CAAA98',
+  'primaryBorderColor':'#9A8678',
+  'lineColor':'#9A8678',
+  'secondaryColor':'#4B4038',
+  'tertiaryColor':'#4B4038',
+  'fontFamily':'ui-monospace, monospace'
+}}}%%
 graph TD
     ORACLE["Oracle · Infrastructure Control Plane"]
     CB["Connector Bridge · Integrations & Automation"]
@@ -88,14 +103,14 @@ graph TD
 
 ## Industries
 
-![Ecommerce](https://img.shields.io/badge/E-commerce-161B22?style=flat-square)
-![Retail Intelligence](https://img.shields.io/badge/Retail-Intelligence-161B22?style=flat-square)
-![Analytics](https://img.shields.io/badge/Retail-Analytics-161B22?style=flat-square)
-![LegalTech](https://img.shields.io/badge/Legal-Tech-161B22?style=flat-square)
-![FinTech](https://img.shields.io/badge/Fin-Tech-161B22?style=flat-square)
-![AI Systems](https://img.shields.io/badge/AI-Systems-161B22?style=flat-square)
-![Data Platforms](https://img.shields.io/badge/Data-Platforms-161B22?style=flat-square)
-![Web Scraping](https://img.shields.io/badge/Web-Scraping-161B22?style=flat-square)
+![Ecommerce](https://img.shields.io/badge/E-commerce-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Retail Intelligence](https://img.shields.io/badge/Retail-Intelligence-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Analytics](https://img.shields.io/badge/Retail-Analytics-202940?style=flat-square&labelColor=202940&color=4B4038)
+![LegalTech](https://img.shields.io/badge/Legal-Tech-202940?style=flat-square&labelColor=202940&color=4B4038)
+![FinTech](https://img.shields.io/badge/Fin-Tech-202940?style=flat-square&labelColor=202940&color=4B4038)
+![AI Systems](https://img.shields.io/badge/AI-Systems-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Data Platforms](https://img.shields.io/badge/Data-Platforms-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Web Scraping](https://img.shields.io/badge/Web-Scraping-202940?style=flat-square&labelColor=202940&color=4B4038)
 
 ---
 
@@ -103,61 +118,79 @@ graph TD
 
 **Languages**
 
-![TypeScript](https://img.shields.io/badge/TypeScript-161B22?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-161B22?style=flat-square&logo=javascript&logoColor=white)
-![Java](https://img.shields.io/badge/Java-161B22?style=flat-square&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-161B22?style=flat-square&logo=postgresql&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-202940?style=flat-square&logo=typescript&logoColor=CAAA98)
+![JavaScript](https://img.shields.io/badge/JavaScript-202940?style=flat-square&logo=javascript&logoColor=CAAA98)
+![Java](https://img.shields.io/badge/Java-202940?style=flat-square&logo=openjdk&logoColor=CAAA98)
+![Python](https://img.shields.io/badge/Python-202940?style=flat-square&logo=python&logoColor=CAAA98)
+![SQL](https://img.shields.io/badge/SQL-202940?style=flat-square&logo=postgresql&logoColor=CAAA98)
 
 **Frontend**
 
-![React](https://img.shields.io/badge/React-161B22?style=flat-square&logo=react&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-161B22?style=flat-square&logo=nextdotjs&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-161B22?style=flat-square&logo=angular&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-161B22?style=flat-square&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-161B22?style=flat-square&logo=tailwindcss&logoColor=white)
+![React](https://img.shields.io/badge/React-202940?style=flat-square&logo=react&logoColor=CAAA98)
+![Next.js](https://img.shields.io/badge/Next.js-202940?style=flat-square&logo=nextdotjs&logoColor=CAAA98)
+![Angular](https://img.shields.io/badge/Angular-202940?style=flat-square&logo=angular&logoColor=CAAA98)
+![Vite](https://img.shields.io/badge/Vite-202940?style=flat-square&logo=vite&logoColor=CAAA98)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-202940?style=flat-square&logo=tailwindcss&logoColor=CAAA98)
 
 **Backend**
 
-![Node.js](https://img.shields.io/badge/Node.js-161B22?style=flat-square&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-161B22?style=flat-square&logo=express&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-161B22?style=flat-square&logo=nestjs&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring-161B22?style=flat-square&logo=spring&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-161B22?style=flat-square&logo=fastapi&logoColor=white)
-![BullMQ](https://img.shields.io/badge/BullMQ-161B22?style=flat-square&logo=redis&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-202940?style=flat-square&logo=nodedotjs&logoColor=CAAA98)
+![Express](https://img.shields.io/badge/Express-202940?style=flat-square&logo=express&logoColor=CAAA98)
+![NestJS](https://img.shields.io/badge/NestJS-202940?style=flat-square&logo=nestjs&logoColor=CAAA98)
+![Spring](https://img.shields.io/badge/Spring-202940?style=flat-square&logo=spring&logoColor=CAAA98)
+![FastAPI](https://img.shields.io/badge/FastAPI-202940?style=flat-square&logo=fastapi&logoColor=CAAA98)
+![BullMQ](https://img.shields.io/badge/BullMQ-202940?style=flat-square&logo=redis&logoColor=CAAA98)
 
 **Data**
 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-161B22?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-161B22?style=flat-square&logo=redis&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-161B22?style=flat-square&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-161B22?style=flat-square&logo=mysql&logoColor=white)
-![ClickHouse](https://img.shields.io/badge/ClickHouse-161B22?style=flat-square&logo=clickhouse&logoColor=white)
-![BigQuery](https://img.shields.io/badge/BigQuery-161B22?style=flat-square&logo=googlebigquery&logoColor=white)
-![Qdrant](https://img.shields.io/badge/Qdrant-161B22?style=flat-square&logo=qdrant&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-202940?style=flat-square&logo=postgresql&logoColor=CAAA98)
+![Redis](https://img.shields.io/badge/Redis-202940?style=flat-square&logo=redis&logoColor=CAAA98)
+![MongoDB](https://img.shields.io/badge/MongoDB-202940?style=flat-square&logo=mongodb&logoColor=CAAA98)
+![MySQL](https://img.shields.io/badge/MySQL-202940?style=flat-square&logo=mysql&logoColor=CAAA98)
+![ClickHouse](https://img.shields.io/badge/ClickHouse-202940?style=flat-square&logo=clickhouse&logoColor=CAAA98)
+![BigQuery](https://img.shields.io/badge/BigQuery-202940?style=flat-square&logo=googlebigquery&logoColor=CAAA98)
+![Qdrant](https://img.shields.io/badge/Qdrant-202940?style=flat-square&logo=qdrant&logoColor=CAAA98)
 
 **Infrastructure**
 
-![Docker](https://img.shields.io/badge/Docker-161B22?style=flat-square&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-161B22?style=flat-square&logo=kubernetes&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-161B22?style=flat-square&logo=amazonwebservices&logoColor=white)
-![GCP](https://img.shields.io/badge/GCP-161B22?style=flat-square&logo=googlecloud&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-161B22?style=flat-square&logo=githubactions&logoColor=white)
-![Traefik](https://img.shields.io/badge/Traefik-161B22?style=flat-square&logo=traefikproxy&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-202940?style=flat-square&logo=docker&logoColor=CAAA98)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-202940?style=flat-square&logo=kubernetes&logoColor=CAAA98)
+![AWS](https://img.shields.io/badge/AWS-202940?style=flat-square&logo=amazonwebservices&logoColor=CAAA98)
+![GCP](https://img.shields.io/badge/GCP-202940?style=flat-square&logo=googlecloud&logoColor=CAAA98)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-202940?style=flat-square&logo=githubactions&logoColor=CAAA98)
+![Traefik](https://img.shields.io/badge/Traefik-202940?style=flat-square&logo=traefikproxy&logoColor=CAAA98)
 
 **AI & Automation**
 
-![Ollama](https://img.shields.io/badge/Ollama-161B22?style=flat-square&logo=ollama&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP-161B22?style=flat-square&logo=anthropic&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG-161B22?style=flat-square&logo=databricks&logoColor=white)
-![Vector Search](https://img.shields.io/badge/Vector%20Search-161B22?style=flat-square&logo=qdrant&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-161B22?style=flat-square&logo=n8n&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-202940?style=flat-square&logo=ollama&logoColor=CAAA98)
+![MCP](https://img.shields.io/badge/MCP-202940?style=flat-square&logo=anthropic&logoColor=CAAA98)
+![RAG](https://img.shields.io/badge/RAG-202940?style=flat-square&logo=databricks&logoColor=CAAA98)
+![Vector Search](https://img.shields.io/badge/Vector%20Search-202940?style=flat-square&logo=qdrant&logoColor=CAAA98)
+![n8n](https://img.shields.io/badge/n8n-202940?style=flat-square&logo=n8n&logoColor=CAAA98)
 
 ---
 
 ## Experience
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {
+  'cScale0':'#202940','cScaleLabel0':'#CAAA98',
+  'cScale1':'#4B4038','cScaleLabel1':'#CAAA98',
+  'cScale2':'#202940','cScaleLabel2':'#CAAA98',
+  'cScale3':'#4B4038','cScaleLabel3':'#CAAA98',
+  'cScale4':'#202940','cScaleLabel4':'#CAAA98',
+  'cScale5':'#4B4038','cScaleLabel5':'#CAAA98',
+  'cScale6':'#202940','cScaleLabel6':'#CAAA98',
+  'cScale7':'#4B4038','cScaleLabel7':'#CAAA98',
+  'cScale8':'#202940','cScaleLabel8':'#CAAA98',
+  'cScale9':'#4B4038','cScaleLabel9':'#CAAA98',
+  'cScale10':'#202940','cScaleLabel10':'#CAAA98',
+  'cScale11':'#4B4038','cScaleLabel11':'#CAAA98',
+  'titleColor':'#9A8678',
+  'textColor':'#9A8678',
+  'lineColor':'#9A8678',
+  'fontFamily':'ui-monospace, monospace'
+}}}%%
 timeline
     title Professional Journey
     2011 : CS-Consoft — Software Developer
@@ -289,8 +322,8 @@ Drove the design and scalability of data-driven platforms for retail intelligenc
 
 Open to conversations with recruiters, partners, and prospective co-founders.
 
-[![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vicmendonca/)
-[![Email](https://img.shields.io/badge/Get%20in%20touch-EA4335?style=for-the-badge&logo=outlook&logoColor=white)](mailto:victor.mendonca@live.com)
+[![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-9A8678?style=for-the-badge&logo=linkedin&logoColor=202940)](https://www.linkedin.com/in/vicmendonca/)
+[![Email](https://img.shields.io/badge/Get%20in%20touch-9A8678?style=for-the-badge&logo=maildotru&logoColor=202940)](mailto:victor.mendonca@live.com)
 
 </div>
 
