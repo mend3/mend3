@@ -10,7 +10,7 @@ Building ecosystems, data platforms, and AI-native products that matters.
 
 ![Experience](https://img.shields.io/badge/15%2B%20years-building%20platforms-0D1117?style=flat-square&labelColor=0D1117&color=30363D)
 ![Location](https://img.shields.io/badge/São%20Paulo-Brazil-0D1117?style=flat-square&labelColor=0D1117&color=30363D)
-![Focus](https://img.shields.io/badge/Platforms%20·%20AI%20·%20Data-0D1117?style=flat-square&labelColor=0D1117&color=30363D)
+![Focus](https://img.shields.io/badge/AI-Platforms%20·%20Data-0D1117?style=flat-square&labelColor=0D1117&color=30363D)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mend3-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vicmendonca/)
 
 </div>
