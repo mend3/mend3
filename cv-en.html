@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Victor Mendonça — CV</title>
+<style>
+  @page { size: A4; margin: 14mm 15mm; }
+  :root { --navy:#202940; --brown:#4B4038; --taupe:#6f6357; --rule:#c9bfb4; --ink:#23252b; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family:"Helvetica Neue",Arial,"Liberation Sans",sans-serif; font-size:10.2pt; line-height:1.42; color:var(--ink); margin:0; }
+  h1 { font-size:22pt; color:var(--navy); margin:0 0 2pt; letter-spacing:0.2pt; }
+  .title { font-size:10.6pt; color:var(--brown); font-weight:700; margin:0 0 3pt; }
+  .contact { font-size:9.2pt; color:var(--taupe); margin:0 0 4pt; }
+  .contact a { color:var(--taupe); text-decoration:none; }
+  h2 { font-size:11pt; color:var(--navy); text-transform:uppercase; letter-spacing:0.6pt; border-bottom:1.4pt solid var(--navy); padding-bottom:2pt; margin:15pt 0 7pt; page-break-after:avoid; }
+  .lead { margin:0 0 6pt; text-align:justify; }
+  .entry { margin:0 0 9pt; page-break-inside:avoid; }
+  .entry-head { display:flex; justify-content:space-between; align-items:baseline; gap:10pt; margin-bottom:2pt; }
+  .role { font-weight:700; color:var(--navy); }
+  .role .company { font-weight:700; font-style:italic; color:var(--brown); }
+  .dates { font-size:9pt; color:var(--taupe); white-space:nowrap; }
+  .entry p { margin:0 0 3pt; }
+  .bpi b { color:var(--navy); }
+  ul { margin:3pt 0; padding-left:15pt; }
+  li { margin:0 0 2.5pt; }
+  li b { color:var(--navy); }
+  .stack { font-style:italic; color:var(--taupe); font-size:8.8pt; margin-top:3pt; }
+  table { width:100%; border-collapse:collapse; margin:2pt 0 4pt; }
+  td { vertical-align:top; padding:2.5pt 6pt 2.5pt 0; border-bottom:0.5pt solid var(--rule); }
+  td.k { font-weight:700; color:var(--navy); white-space:nowrap; width:32%; }
+  tr:last-child td { border-bottom:none; }
+  .meta { padding-left:0; } .meta li { list-style:none; } .meta b { color:var(--navy); }
+  section { page-break-inside:auto; }
+  section.topology { page-break-before:always; page-break-inside:avoid; text-align:center; }
+  .topology .mermaid { margin:6pt auto 0; line-height:normal; }
+  .topology svg { max-width:100%; max-height:235mm; height:auto; }
+  .topo-note { font-size:8.6pt; color:var(--taupe); font-style:italic; margin-top:4pt; }
+</style>
+</head>
+<body>
+<header><h1>Victor Mendonça</h1><p class="title">Principal Software Engineer · Platform Architect · AI Systems, Data Platforms & Multi-Tenant SaaS</p><p class="contact">São Paulo, Brazil&nbsp;·&nbsp;<a href="https://github.com/mend3">github.com/mend3</a>&nbsp;·&nbsp;<a href="https://www.linkedin.com/in/vicmendonca/">linkedin.com/in/vicmendonca</a>&nbsp;·&nbsp;victor.mendonca@live.com</p></header>
+
+<section><h2>Executive Summary</h2><p class="lead">Software engineer, platform architect, and technical leader with <b>15+ years</b> designing, building, and operating the platforms that companies run on — multi-tenant SaaS, distributed systems, large-scale data acquisition, and AI-native products.</p><p class="lead">One thread connects the work across <b>fintech, legaltech, retail &amp; commerce intelligence, and data-intensive platforms</b>: taking fragmented data, integrations, and processes and turning them into <b>operational intelligence</b> — systems a business operates on, not dashboards it looks at. I did it consolidating millions of pricing signals for global brands; I'm doing it now in DevShell One, where many products share one foundation.</p><p class="lead">I operate across the full arc — <b>set the architecture and strategy, then write the code that de-risks the hardest parts</b> — and I treat structural decisions as business decisions: every one tied to cost, reliability, or speed-to-market.</p></section>
+
+<section><h2>Core Platform Domains</h2><table><tr><td class="k">Multi-tenant SaaS</td><td>One platform serving many customers and verticals — new products ship as modules, not rewrites.</td></tr><tr><td class="k">Data acquisition at scale</td><td>Reliable supply of external data when the web fights back — the raw material for any intelligence.</td></tr><tr><td class="k">Integration ecosystems</td><td>Many systems made to behave as one, on a single canonical data model — no more silos that disagree.</td></tr><tr><td class="k">AI &amp; agentic systems</td><td>AI that understands the whole operation and can act on it — decisions made with context, work done by conversation.</td></tr><tr><td class="k">Operational intelligence</td><td>Fragmented signals turned into what to do next — pricing, shelf, performance, growth.</td></tr><tr><td class="k">Reliability &amp; cost</td><td>Systems easier to operate than to explain — observable, resilient, and cheaper to run over time.</td></tr></table></section>
+
+<section><h2>Professional Experience</h2><div class="entry"><div class="entry-head"><span class="role">Founder & Platform Architect &mdash; <span class="company">DevShell One</span></span><span class="dates">2023 – Present</span></div><p class="bpi"><b>Built:</b> a single platform where one shared foundation powers many products and verticals — instead of rebuilding infrastructure, data, and AI for each.</p><p class="bpi"><b>Problem:</b> every new product or vertical normally means re-creating infrastructure, integrations, and AI from scratch.</p><p class="bpi"><b>Impact:</b> verticals now ship as modules on a shared base, so the marginal cost of the next product, tenant, or market keeps falling — and the AI understands the whole operation because everything lives on one data model.</p><ul><li><b>Shared control plane</b> — one foundation every product runs on: orchestration, shared databases, AI infrastructure, vector search, and observability.</li><li><b>Multi-tenant application runtime</b> — the layer where a whole vertical becomes a module: universal connectors, content/CMS and page building, workflow automation, scheduling, recruitment, real estate, and dashboards. Many products, one codebase.</li><li><b>Data acquisition layer</b> — resilient, large-scale collection (distributed crawling, browser automation, proxy management, anti-bot) that supplies the rest of the platform.</li><li><b>Native AI layer</b> — an assistant that understands the whole system: persistent memory, knowledge retrieval, agentic workflows, and tool execution, with data and inference able to stay on the company's own infrastructure.</li></ul><p>Ownership across product strategy, software architecture, infrastructure, AI systems, data platforms, and engineering standards.</p><p class="stack">TypeScript · Node.js · Next.js · React · PostgreSQL · Redis · Kubernetes · local LLMs (Ollama) · vector search · event-driven architecture</p></div><div class="entry"><div class="entry-head"><span class="role">Senior Software Engineer &mdash; <span class="company">Visualitics</span></span><span class="dates">2025 – Present</span></div><p class="bpi"><b>Built:</b> the integration and processing core of a commerce-intelligence platform that consolidates marketplace, advertising, and analytics data into a single decision layer — surfaced in-workflow through web apps and a browser extension.</p><p class="bpi"><b>Problem:</b> a seller's performance data is scattered across a dozen marketplaces and ad networks that never agree.</p><p class="bpi"><b>Impact:</b> one place to see and act on the whole operation, with insight delivered where the work already happens.</p><p>Owned multi-source ingestion, distributed processing, ETL, and KPI computation across Mercado Livre, Shopee, Amazon SP-API, VTEX, NuvemShop, GA4, Meta Ads, and Google Ads.</p><p class="stack">Node.js · TypeScript · Express · Prisma · Python · FastAPI · BigQuery · Redis · GCP · browser-extension architecture</p></div><div class="entry"><div class="entry-head"><span class="role">Senior Software Engineer &mdash; <span class="company">Jusbrasil</span></span><span class="dates">2024 – 2025</span></div><p class="bpi"><b>Built:</b> the large-scale web-access and data-acquisition infrastructure behind the company's intelligence operations — proxy and routing architecture for fast, dependable retrieval at scale.</p><p class="bpi"><b>Problem:</b> reliable data acquisition gets expensive and brittle as volume and anti-bot pressure grow.</p><p class="bpi"><b>Impact:</b> materially lower operational spend with stronger reliability — and internal tooling that lifted the whole team's throughput.</p><p>Reliability, resiliency, observability, and developer-experience work as first-class concerns.</p><p class="stack">Node.js · TypeScript · Docker · Kubernetes · Redis · PostgreSQL · observability platforms</p></div><div class="entry"><div class="entry-head"><span class="role">Senior Software Engineer &mdash; <span class="company">Stone</span></span><span class="dates">2023 – 2024</span></div><p class="bpi"><b>Built:</b> backend services and integrations for high-volume payment processing and merchant acquiring at one of Latin America's largest acquirers.</p><p class="bpi"><b>Problem:</b> money movement tolerates no downtime, no data loss, and no compliance gaps — at scale.</p><p class="bpi"><b>Impact:</b> dependable, low-latency financial flows that hold under strict reliability and regulatory constraints.</p><p>Distributed systems, payment and banking integrations, and performance optimization under fintech-grade requirements.</p><p class="stack">Node.js · TypeScript · distributed systems · cloud infrastructure</p></div><div class="entry"><div class="entry-head"><span class="role">Technology Manager &mdash; <span class="company">Ascential</span></span><span class="dates">2023</span></div><p class="bpi"><b>Led:</b> engineering for the digital commerce-intelligence platforms used by global consumer brands — architecture, data pipelines, analytics, and cloud infrastructure for large-scale retail data.</p><p class="bpi"><b>Problem:</b> global brands can't see how they're really performing across thousands of digital shelves.</p><p class="bpi"><b>Impact:</b> enabled those brands to optimize pricing, availability, search visibility, content quality, and digital-shelf performance — and set the roadmap and the quality and operational standards behind it.</p><p>Engineering leadership across retail analytics, content &amp; compliance, and store-locator tooling.</p><p class="stack">Distributed data platforms · analytics pipelines · cloud infrastructure</p></div><div class="entry"><div class="entry-head"><span class="role">Technical Lead &mdash; <span class="company">Intellibrand</span></span><span class="dates">2021 – 2023</span></div><p class="bpi"><b>Built &amp; led:</b> large-scale retail-intelligence platforms processing <b>millions of pricing, inventory, and merchandising signals</b> across global retailers and marketplaces — as Tech Lead, owned scalability, data ingestion, pricing intelligence, and digital-shelf analytics.</p><p class="bpi"><b>Problem:</b> pricing and shelf decisions were made blind, across too many channels to track by hand.</p><p class="bpi"><b>Impact:</b> turned a flood of fragmented signals into real-time intelligence brands could act on — and grew the engineering team and the standards that sustained it.</p><p>Where the through-line started: fragmented data → operational intelligence, at scale.</p><p class="stack">Node.js · TypeScript · data pipelines · cloud · AI/ML · CI/CD</p></div><div class="entry"><div class="entry-head"><span class="role">Full Stack Developer &mdash; <span class="company">Intellibrand</span></span><span class="dates">2019 – 2021</span></div><p class="bpi"><b>Built &amp; led:</b> large-scale retail-intelligence platforms processing <b>millions of pricing, inventory, and merchandising signals</b> across global retailers and marketplaces — as Tech Lead, owned scalability, data ingestion, pricing intelligence, and digital-shelf analytics.</p><p class="bpi"><b>Problem:</b> pricing and shelf decisions were made blind, across too many channels to track by hand.</p><p class="bpi"><b>Impact:</b> turned a flood of fragmented signals into real-time intelligence brands could act on — and grew the engineering team and the standards that sustained it.</p><p>Where the through-line started: fragmented data → operational intelligence, at scale.</p><p class="stack">Node.js · TypeScript · data pipelines · cloud · AI/ML · CI/CD</p></div><div class="entry"><div class="entry-head"><span class="role">Full Stack Developer &mdash; <span class="company">Zoroastro C. Teixeira Advogados</span></span><span class="dates">2018 – 2019</span></div><p>Legal operations software — case management, financial controls, workflow automation, and operational reporting (Node.js, Angular, MongoDB, AWS).</p></div><div class="entry"><div class="entry-head"><span class="role">Java Full Stack Developer &mdash; <span class="company">Contalex</span></span><span class="dates">2014 – 2017</span></div><p>SaaS ERP for accounting firms — financial management, billing and recurring payments, and customer onboarding (Java, Spring, SQL Server, AngularJS, Azure).</p></div></section>
+
+<section><h2>Selected Platform Achievements</h2><ul><li><b>Designed and operate DevShell One end-to-end</b> — control plane, data acquisition, integration framework, workflow automation, AI layer, and vertical apps — proving one foundation can power many products at a falling marginal cost.</li><li><b>Built retail &amp; commerce-intelligence platforms processing millions of pricing, inventory, and merchandising signals</b> across global marketplaces, used by global consumer brands to steer pricing, availability, and digital-shelf strategy.</li><li><b>Architected large-scale, cost-efficient web-access and data-acquisition infrastructure</b> with reliability and observability as first-class concerns — cutting operational spend without sacrificing quality.</li><li><b>Delivered high-volume payments and financial systems</b> under strict reliability and compliance constraints, at one of Latin America's largest acquirers.</li><li><b>The consistent thread across fintech, legaltech, retail intelligence, and data platforms:</b> turning fragmented data, integrations, and processes into operational intelligence.</li></ul></section>
+
+<section><h2>Technical Leadership</h2><ul><li><b>Full-arc ownership</b> — set architecture and technical strategy, then write the code that de-risks the hardest parts. I don't hand off the unknown.</li><li><b>Force-multiplier engineering</b> — establish the standards, review culture, and platform conventions that let a small team ship like a much larger one.</li><li><b>Grew people and direction</b> — mentored engineers and owned roadmaps and technical decisions as Tech Lead and Technology Manager.</li><li><b>Architecture as a business lever</b> — every structural decision tied to a concrete outcome: lower cost, higher reliability, or faster time-to-market.</li></ul></section>
+
+<section><h2>Architecture Expertise</h2><ul><li><b>Platforms</b> &mdash; multi-tenant SaaS · distributed &amp; event-driven systems · domain-driven design · system design</li><li><b>Data &amp; integration</b> &mdash; connector frameworks · canonical data modeling · ETL &amp; analytical pipelines · large-scale acquisition</li><li><b>AI-native</b> &mdash; agentic systems · retrieval-augmented generation · knowledge systems · vector search · local-first inference</li><li><b>Operations</b> &mdash; reliability &amp; observability · cost engineering · infrastructure as a shared control plane</li></ul></section>
+
+<section><h2>Technologies & Tools</h2><p class="stack" style="margin-bottom:4pt">Tools in service of the systems above — not the other way around.</p><ul><li><b>Architecture & Leadership</b> &mdash; Platform Architecture · Software Architecture · Distributed Systems · Multi-Tenant SaaS · Systems Design · Solution Architecture · Engineering Strategy · Technical Leadership</li><li><b>AI & Data</b> &mdash; LLMs · Agentic Systems · RAG · Knowledge Systems · Data Engineering · Data Platforms · ETL · Vector Databases</li><li><b>Backend</b> &mdash; TypeScript · Node.js · Express · NestJS · Java · Spring · REST APIs · Microservices</li><li><b>Frontend</b> &mdash; React · Next.js · Angular</li><li><b>Databases</b> &mdash; PostgreSQL · Redis · MongoDB · MySQL · ClickHouse · Qdrant · pgvector · BigQuery</li><li><b>Infrastructure</b> &mdash; Docker · Kubernetes · AWS · GCP · CI/CD · GitHub Actions · Linux · Observability</li></ul></section>
+
+<section><h2>Additional Information</h2><ul class="meta"><li><b>Target roles:</b> Principal / Staff Software Engineer · Platform / Software / Solutions Architect · AI Systems Architect · Data Platform Architect · Engineering Manager · Head / Director of Engineering · Fractional CTO</li><li><b>Languages:</b> Portuguese (native) · English (professional)</li><li><b>Location:</b> São Paulo, Brazil</li></ul></section>
+
+<section class="topology"><h2>Platform Architecture — Live System Topology</h2><!-- KT:PROFILE:START -->
+<pre class="mermaid">
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#202940','primaryTextColor':'#CAAA98','primaryBorderColor':'#9A8678','lineColor':'#9A8678','fontFamily':'ui-monospace, monospace'}}}%%
+flowchart LR
+  classDef plat fill:#202940,stroke:#CAAA98,color:#CAAA98,stroke-width:3px;
+  classDef vis fill:#4B4038,stroke:#9A8678,color:#CAAA98,stroke-width:2px;
+  classDef cap fill:#9A8678,stroke:#4B4038,color:#202940;
+  classDef prod fill:#CAAA98,stroke:#9A8678,color:#202940;
+  classDef dom fill:#202940,stroke:#9A8678,color:#CAAA98,stroke-dasharray:4 3;
+  classDef proj fill:#4B4038,stroke:#CAAA98,color:#CAAA98,stroke-width:2px;
+  c_local_llm["Local LLM"]:::cap
+  c_multi_tenant["Multi-tenant"]:::cap
+  c_page_builder_cms["Page Builder / CMS"]:::cap
+  c_rag_cognition["RAG / Cognition"]:::cap
+  c_universal_connectors["Universal Connectors"]:::cap
+  d_ads["Ads"]:::dom
+  d_ecommerce["Ecommerce"]:::dom
+  d_personal_ai["Personal AI"]:::dom
+  d_real_estate["Real Estate"]:::dom
+  d_talent_intelligence["Talent Intelligence"]:::dom
+  p_commerce_intelligence["Commerce Intelligence"]:::prod
+  p_datahouse["datahouse"]:::proj
+  p_devshell_one["DevShell One"]:::plat
+  p_ella["ella"]:::proj
+  p_ella_local_ai["Ella — Local AI"]:::prod
+  p_hub["hub"]:::proj
+  p_oracle["oracle"]:::proj
+  p_saas_hub["SaaS Hub"]:::prod
+  p_scraping_platform["Scraping Platform"]:::prod
+  v_automation_layer["Automation Layer"]:::vis
+  v_cognition_layer["Cognition Layer"]:::vis
+  v_control_plane["Control Plane"]:::vis
+  v_data_plane["Data Plane"]:::vis
+  v_intelligence_layer["Intelligence Layer"]:::vis
+  c_local_llm -->|provided-by| p_ella
+  c_multi_tenant -->|provided-by| p_hub
+  c_page_builder_cms -->|provided-by| p_hub
+  c_rag_cognition -->|provided-by| p_ella
+  c_rag_cognition -->|provided-by| p_hub
+  c_universal_connectors -->|provided-by| p_hub
+  d_ads -->|served-by| p_hub
+  d_ecommerce -->|served-by| p_hub
+  d_personal_ai -->|served-by| p_ella
+  d_real_estate -->|served-by| p_hub
+  d_talent_intelligence -->|served-by| p_hub
+  p_commerce_intelligence -->|built-on| p_hub
+  p_commerce_intelligence -->|serves| d_ads
+  p_commerce_intelligence -->|serves| d_ecommerce
+  p_devshell_one -->|built-on| v_control_plane
+  p_devshell_one -->|contains| p_commerce_intelligence
+  p_devshell_one -->|contains| p_ella_local_ai
+  p_devshell_one -->|contains| p_saas_hub
+  p_devshell_one -->|contains| p_scraping_platform
+  p_ella_local_ai -->|built-on| p_ella
+  p_ella_local_ai -->|serves| d_personal_ai
+  p_saas_hub -->|built-on| p_hub
+  p_scraping_platform -->|built-on| p_datahouse
+  v_automation_layer -->|includes| p_hub
+  v_cognition_layer -->|includes| p_ella
+  v_cognition_layer -->|includes| p_hub
+  v_control_plane -->|includes| p_oracle
+  v_data_plane -->|includes| p_datahouse
+  v_data_plane -->|includes| p_ella
+  v_data_plane -->|includes| p_hub
+  v_intelligence_layer -->|includes| p_hub
+</pre>
+<!-- KT:PROFILE:END --><p class="topo-note">Auto-generated from the live system topology — vision &rarr; products &rarr; domains &rarr; capabilities &rarr; projects.</p></section>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+</body>
+</html>

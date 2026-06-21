@@ -10,7 +10,7 @@
 
 **Principal Software Engineer · Platform Architect · AI Systems**
 
-Building ecosystems, data platforms, and AI-native products that matters.
+I build platforms that turn fragmented data, integrations, and processes into operational intelligence — and lead the teams and architecture behind them.
 
 <br/>
 
@@ -23,19 +23,19 @@ Building ecosystems, data platforms, and AI-native products that matters.
 
 ---
 
-## About
+## Executive Summary
 
-Software engineer, platform architect, and technical leader with **15+ years** designing and operating scalable SaaS platforms, distributed systems, and AI-native products across **fintech, legaltech, retail intelligence, and data-intensive applications**.
+Software engineer, platform architect, and technical leader with **15+ years** designing, building, and operating the platforms that companies run on — multi-tenant SaaS, distributed systems, large-scale data acquisition, and AI-native products.
 
-My work is about turning fragmented systems, workflows, and data into cohesive platforms that support multiple products, domains, and business models. Lately my focus sits at the intersection of **AI systems** — agentic workflows, RAG, MCP — and the **data and integration infrastructure** that makes them dependable in production.
+One thread connects the work across **fintech, legaltech, retail & commerce intelligence, and data-intensive platforms**: taking fragmented data, integrations, and processes and turning them into **operational intelligence** — systems a business operates on, not dashboards it looks at. I did it consolidating millions of pricing signals for global brands; I'm doing it now in **DevShell One**, where many products share one foundation.
 
-I move comfortably between hands-on engineering and technical strategy: leading teams and setting architecture, while still writing the code that proves the hard parts work.
+I operate across the full arc — **set the architecture and strategy, then write the code that de-risks the hardest parts** — and I treat structural decisions as business decisions: every one tied to cost, reliability, or speed-to-market.
 
 ---
 
-## What I'm building now
+## Selected platform — what I'm building now
 
-A unified, white-label **SaaS ecosystem** that combines infrastructure control planes, multi-tenant runtimes, universal connectors, data acquisition at scale, workflow automation, and AI services — designed so a single platform can power many products and verticals.
+**DevShell One** — a platform where one shared foundation powers many products and verticals, instead of rebuilding infrastructure, data, and AI for each. It spans an infrastructure control plane, a multi-tenant runtime, universal connectors, data acquisition at scale, workflow automation, and a native AI layer. The point isn't the parts — it's that **the cost of the next product, vertical, or tenant keeps falling**.
 
 <!-- KT:PROFILE:START -->
 ```mermaid
@@ -112,19 +112,19 @@ flowchart LR
 <td valign="top" width="50%">
 
 **Oracle** — `shared control plane`
-<br/>Orchestration, shared databases, AI infra, vector search, observability.
+<br/>One foundation every product runs on — orchestration, shared data, AI infra, observability — so a new product ships without rebuilding infrastructure.
 
 **Hub** — `application runtime`
-<br/>Multi-tenant SaaS runtime, universal connectors, page builder/CMS, workflow automation, vertical modules.
+<br/>The multi-tenant runtime where a whole vertical becomes a module: connectors, CMS/page builder, workflow automation, scheduling. Many products, one codebase.
 
 </td>
 <td valign="top" width="50%">
 
 **Datahouse** — `acquisition layer`
-<br/>Large-scale scraping, anti-bot, proxy orchestration, data ingestion.
+<br/>Reliable supply of external data at scale — resilient crawling, anti-bot, proxy orchestration — the raw material the rest of the platform reasons over.
 
-**Ella** — `AI companion`
-<br/>Local-first AI companion — RAG, local LLM, cognition.
+**Ella** — `AI layer`
+<br/>The AI that understands the *whole* system — memory, knowledge retrieval, agentic actions — so any function is operable by conversation, with data staying on the company's own infrastructure.
 
 </td>
 </tr>
@@ -132,14 +132,208 @@ flowchart LR
 
 ---
 
-## Core Expertise
+## Platform Domains
 
-| Area | Focus |
+The kinds of systems I design and own end-to-end — each framed by the problem it solves, not the stack it runs on.
+
+| Domain | What it does for the business |
 |---|---|
-| **Platform Architecture** | SaaS · Distributed systems · DDD · Event-driven · System design |
-| **AI & Intelligence** | LLMs · Agentic systems · RAG · MCP · Vector search · Knowledge systems |
-| **Data Platforms** | Data engineering · ETL · Analytics · Warehousing · Observability |
-| **Leadership** | Engineering strategy · Platform strategy · Product engineering · Mentorship |
+| **Multi-tenant SaaS** | One platform serving many customers and verticals — new products ship as modules, not rewrites. |
+| **Data acquisition at scale** | Reliable supply of external data when the web fights back — the raw material for any intelligence. |
+| **Integration ecosystems** | Many systems made to behave as one, on a single canonical data model — no more silos that disagree. |
+| **AI & agentic systems** | AI that understands the whole operation and can act on it — function by conversation, decisions with context. |
+| **Operational intelligence** | Fragmented signals turned into what to do next — pricing, shelf, performance, growth. |
+| **Reliability & cost** | Systems easier to operate than to explain — observable, resilient, and cheaper to run over time. |
+
+---
+
+## Selected Platform Achievements
+
+- **Designed and operate DevShell One end-to-end** — control plane, data acquisition, integration framework, workflow automation, AI layer, and vertical apps — proving one foundation can power many products at a falling marginal cost.
+- **Built retail & commerce-intelligence platforms processing millions of pricing, inventory, and merchandising signals** across global marketplaces, used by global consumer brands to steer pricing, availability, and digital-shelf strategy.
+- **Architected large-scale, cost-efficient web-access and data-acquisition infrastructure** with reliability and observability as first-class concerns — cutting operational spend without sacrificing quality.
+- **Delivered high-volume payments and financial systems** under strict reliability and compliance constraints, at one of Latin America's largest acquirers.
+- **The consistent thread across fintech, legaltech, retail intelligence, and data platforms:** turning fragmented data, integrations, and processes into operational intelligence.
+
+---
+
+## Industries
+
+![Ecommerce](https://img.shields.io/badge/E-commerce-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Retail Intelligence](https://img.shields.io/badge/Retail-Intelligence-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Analytics](https://img.shields.io/badge/Retail-Analytics-202940?style=flat-square&labelColor=202940&color=4B4038)
+![LegalTech](https://img.shields.io/badge/Legal-Tech-202940?style=flat-square&labelColor=202940&color=4B4038)
+![FinTech](https://img.shields.io/badge/Fin-Tech-202940?style=flat-square&labelColor=202940&color=4B4038)
+![AI Systems](https://img.shields.io/badge/AI-Systems-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Data Platforms](https://img.shields.io/badge/Data-Platforms-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Web Scraping](https://img.shields.io/badge/Web-Scraping-202940?style=flat-square&labelColor=202940&color=4B4038)
+
+---
+
+## Experience
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {
+  'cScale0':'#202940','cScaleLabel0':'#CAAA98',
+  'cScale1':'#4B4038','cScaleLabel1':'#CAAA98',
+  'cScale2':'#202940','cScaleLabel2':'#CAAA98',
+  'cScale3':'#4B4038','cScaleLabel3':'#CAAA98',
+  'cScale4':'#202940','cScaleLabel4':'#CAAA98',
+  'cScale5':'#4B4038','cScaleLabel5':'#CAAA98',
+  'cScale6':'#202940','cScaleLabel6':'#CAAA98',
+  'cScale7':'#4B4038','cScaleLabel7':'#CAAA98',
+  'cScale8':'#202940','cScaleLabel8':'#CAAA98',
+  'cScale9':'#4B4038','cScaleLabel9':'#CAAA98',
+  'cScale10':'#202940','cScaleLabel10':'#CAAA98',
+  'cScale11':'#4B4038','cScaleLabel11':'#CAAA98',
+  'titleColor':'#9A8678',
+  'textColor':'#9A8678',
+  'lineColor':'#9A8678',
+  'fontFamily':'ui-monospace, monospace'
+}}}%%
+timeline
+    title Professional Journey
+    2011 : CS-Consoft — Software Developer
+    2012 : BLM — Ecommerce Manager : RS Websites — PHP Developer
+    2014 : Orgamec — PHP Developer : Contalex — Java Fullstack
+    2018 : Zoroastro — Fullstack Developer
+    2019 : Intellibrand — Fullstack Developer
+    2021 : Intellibrand — Technical Lead
+    2023 : Ascential — Technology Manager : Stone — Senior SWE
+    2024 : Jusbrasil — Senior SWE
+    2025 : Visualitics — Senior SWE
+    Now : Founder — Platform Architect
+```
+
+Different industries, one trajectory: from building data and commerce-intelligence platforms for global brands, to owning the architecture of DevShell One. The constant is **platforms, data, integrations, and operational intelligence** — each role a deeper cut at the same problem.
+
+<br/>
+
+<details>
+<summary><b>Founder & Platform Architect</b> — DevShell One · 2023–Present</summary>
+
+<br/>
+
+**Built:** **DevShell One** — a single platform where one shared foundation powers many products: control plane, data acquisition, integration framework, workflow automation, native AI layer, and vertical apps.
+**Problem:** every new product or vertical normally means rebuilding infrastructure, data, and AI from scratch.
+**Impact:** verticals now ship as modules on a shared base, so the marginal cost of the next product, tenant, or market keeps falling — and the AI understands the whole operation because everything lives on one data model.
+
+Ownership across architecture, product strategy, infrastructure, AI systems, data platforms, and engineering standards.
+
+<sub>TypeScript · Node.js · Next.js · PostgreSQL · Redis · Kubernetes · local LLMs · event-driven architecture</sub>
+
+</details>
+
+<details>
+<summary><b>Senior Software Engineer</b> — Visualitics · 2025–Present</summary>
+
+<br/>
+
+**Built:** the integration and processing core of a commerce-intelligence platform that consolidates marketplace, advertising, and analytics data into a single decision layer — surfaced in-workflow through web apps and a browser extension.
+**Problem:** sellers' performance data is scattered across a dozen marketplaces and ad networks that never agree.
+**Impact:** one place to see and act on the whole operation, with insight delivered where the work already happens.
+
+Owned multi-source ingestion, distributed processing, ETL, and KPI computation across Mercado Livre, Shopee, Amazon, VTEX, NuvemShop, GA4, Meta and Google Ads.
+
+<sub>Node.js · TypeScript · FastAPI · BigQuery · Redis · GCP · browser-extension architecture</sub>
+
+</details>
+
+<details>
+<summary><b>Senior Software Engineer</b> — Jusbrasil · 2024–2025</summary>
+
+<br/>
+
+**Built:** the large-scale web-access and data-acquisition infrastructure behind the company's intelligence operations — proxy and routing architecture for fast, dependable retrieval at scale.
+**Problem:** reliable data acquisition gets expensive and brittle as volume and anti-bot pressure grow.
+**Impact:** materially lower operational spend with stronger reliability — and internal tooling that lifted the whole team's throughput.
+
+Reliability, resiliency, observability, and developer-experience work as first-class concerns.
+
+<sub>Node.js · TypeScript · Kubernetes · Redis · PostgreSQL · observability platforms</sub>
+
+</details>
+
+<details>
+<summary><b>Senior Software Engineer</b> — Stone · 2023–2024</summary>
+
+<br/>
+
+**Built:** backend services and integrations for high-volume payment processing and merchant acquiring at one of Latin America's largest acquirers.
+**Problem:** money movement tolerates no downtime, no data loss, and no compliance gaps — at scale.
+**Impact:** dependable, low-latency financial flows that hold under strict reliability and regulatory constraints.
+
+Distributed systems, payment and banking integrations, and performance optimization under fintech-grade requirements.
+
+<sub>Node.js · TypeScript · distributed systems · cloud infrastructure</sub>
+
+</details>
+
+<details>
+<summary><b>Technology Manager</b> — Ascential · 2023</summary>
+
+<br/>
+
+**Led:** engineering for the digital commerce-intelligence platforms used by global consumer brands — architecture, data pipelines, analytics, and cloud infrastructure for large-scale retail data.
+**Problem:** global brands can't see how they're really performing across thousands of digital shelves.
+**Impact:** enabled those brands to optimize pricing, availability, search visibility, and digital-shelf performance — set the roadmap and the quality and operational standards behind it.
+
+Engineering leadership across retail analytics, content & compliance, and store-locator tooling.
+
+<sub>Distributed data platforms · analytics pipelines · cloud infrastructure</sub>
+
+</details>
+
+<details>
+<summary><b>Technical Lead → Fullstack Developer</b> — Intellibrand · 2019–2023</summary>
+
+<br/>
+
+**Built & led:** large-scale retail-intelligence platforms processing **millions of pricing, inventory, and merchandising signals** across global retailers and marketplaces — as Tech Lead, owned scalability, data ingestion, pricing intelligence, and digital-shelf analytics.
+**Problem:** pricing and shelf decisions were made blind, across too many channels to track by hand.
+**Impact:** turned a flood of fragmented signals into real-time intelligence brands could act on — and grew the engineering team and standards that sustained it.
+
+Where the through-line started: fragmented data → operational intelligence, at scale.
+
+<sub>Node.js · TypeScript · data pipelines · cloud · AI/ML</sub>
+
+</details>
+
+<details>
+<summary><b>Earlier career</b> — 2011–2019</summary>
+
+<br/>
+
+| Company | Role | Focus |
+|---|---|---|
+| Zoroastro Advogados | Fullstack Developer | Legal ops, workflow automation, financial systems (Node, Angular, Mongo) |
+| Contalex | Java Web Fullstack | ERP SaaS for accounting firms (Java, Spring, Hibernate) |
+| Orgamec | PHP Developer | Internal business-process automation |
+| RS Websites | PHP Developer | Web apps, systems, and ERP (PHP, Laravel, MySQL) |
+| BLM | Ecommerce Manager | Digital commerce + a geolocation/Bluetooth Android app |
+| CS-Consoft | Developer | Desktop / RIA software |
+
+</details>
+
+---
+
+## Technical Leadership
+
+- **Full-arc ownership** — set architecture and technical strategy, then write the code that de-risks the hardest parts. I don't hand off the unknown.
+- **Force-multiplier engineering** — establish the standards, review culture, and platform conventions that let a small team ship like a much larger one.
+- **Grew people and direction** — mentored engineers and owned roadmaps and technical decisions as Tech Lead and Technology Manager.
+- **Architecture as a business lever** — every structural decision tied to a concrete outcome: lower cost, higher reliability, or faster time-to-market.
+
+---
+
+## Architecture Expertise
+
+| | |
+|---|---|
+| **Platforms** | Multi-tenant SaaS · distributed & event-driven systems · domain-driven design · system design |
+| **Data & integration** | Connector frameworks · canonical data modeling · ETL & analytical pipelines · large-scale acquisition |
+| **AI-native** | Agentic systems · retrieval-augmented generation · knowledge systems · vector search · local-first inference |
+| **Operations** | Reliability & observability · cost engineering · infrastructure as a shared control plane |
 
 ---
 
@@ -209,136 +403,6 @@ flowchart LR
 ![RAG](https://img.shields.io/badge/RAG-202940?style=flat-square&logo=databricks&logoColor=CAAA98)
 ![Vector Search](https://img.shields.io/badge/Vector%20Search-202940?style=flat-square&logo=qdrant&logoColor=CAAA98)
 ![n8n](https://img.shields.io/badge/n8n-202940?style=flat-square&logo=n8n&logoColor=CAAA98)
-
----
-
-## Experience
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {
-  'cScale0':'#202940','cScaleLabel0':'#CAAA98',
-  'cScale1':'#4B4038','cScaleLabel1':'#CAAA98',
-  'cScale2':'#202940','cScaleLabel2':'#CAAA98',
-  'cScale3':'#4B4038','cScaleLabel3':'#CAAA98',
-  'cScale4':'#202940','cScaleLabel4':'#CAAA98',
-  'cScale5':'#4B4038','cScaleLabel5':'#CAAA98',
-  'cScale6':'#202940','cScaleLabel6':'#CAAA98',
-  'cScale7':'#4B4038','cScaleLabel7':'#CAAA98',
-  'cScale8':'#202940','cScaleLabel8':'#CAAA98',
-  'cScale9':'#4B4038','cScaleLabel9':'#CAAA98',
-  'cScale10':'#202940','cScaleLabel10':'#CAAA98',
-  'cScale11':'#4B4038','cScaleLabel11':'#CAAA98',
-  'titleColor':'#9A8678',
-  'textColor':'#9A8678',
-  'lineColor':'#9A8678',
-  'fontFamily':'ui-monospace, monospace'
-}}}%%
-timeline
-    title Professional Journey
-    2011 : CS-Consoft — Software Developer
-    2012 : BLM — Ecommerce Manager : RS Websites — PHP Developer
-    2014 : Orgamec — PHP Developer : Contalex — Java Fullstack
-    2018 : Zoroastro — Fullstack Developer
-    2019 : Intellibrand — Fullstack Developer
-    2021 : Intellibrand — Technical Lead
-    2023 : Ascential — Technology Manager : Stone — Senior SWE
-    2024 : Jusbrasil — Senior SWE
-    2025 : Visualitics — Senior SWE
-    Now : Founder — Platform Architect
-```
-
-<br/>
-
-<details>
-<summary><b>Founder & Platform Architect</b> — White-Label SaaS Ecosystem · 2023–Present</summary>
-
-<br/>
-
-Designing and operating a unified SaaS ecosystem spanning AI, integrations, automation, data acquisition, and vertical applications. Ownership across platform architecture, product strategy, infrastructure, AI systems, data platforms, and engineering standards.
-
-</details>
-
-<details>
-<summary><b>Senior Software Engineer</b> — Visualitics · 2025</summary>
-
-<br/>
-
-Unified commerce-intelligence platform consolidating operational data from marketplaces, ad networks, and analytics providers.
-
-- Connector architecture and ETL pipelines across **ADS**, **Selling** and **Marketplace** apps
-- Analytics engines with **BigQuery** warehousing and distributed processing
-- Chrome Extension architecture for in-context data capture
-
-</details>
-
-<details>
-<summary><b>Senior Software Engineer</b> — Jusbrasil · 2024–2025</summary>
-
-<br/>
-
-Large-scale infrastructure for reliable web access and data acquisition.
-
-- Designed and optimized **proxy infrastructure and routing** for fast, dependable retrieval
-- Strengthened **observability and reliability** across services
-- Implemented cost-efficient strategies that reduced operational spend without sacrificing quality
-- Built internal tooling that improved developer experience and throughput
-
-</details>
-
-<details>
-<summary><b>Senior Software Engineer</b> — Stone · 2023–2024</summary>
-
-<br/>
-
-Fintech systems for payment processing, merchant acquiring, and financial services for SMEs.
-
-- Backend services, APIs, and microservices for **high-volume transaction processing**
-- Integrations with payment gateways, banking APIs, and fraud-detection systems
-- Performance, latency, and scalability optimization under strict reliability and compliance standards
-
-</details>
-
-<details>
-<summary><b>Technology Manager</b> — Ascential · 2023</summary>
-
-<br/>
-
-Led engineering for digital trade-marketing and e-commerce intelligence platforms serving global brands.
-
-- Directed architecture, data pipelines, analytics platforms, and cloud infrastructure for large-scale retail data
-- Defined roadmaps and established quality and operational standards
-- Delivered across three solution areas: **retail analytics**, **content & compliance**, and **store locator** tooling
-
-</details>
-
-<details>
-<summary><b>Technical Lead → Fullstack Developer</b> — Intellibrand · 2019–2023</summary>
-
-<br/>
-
-Drove the design and scalability of data-driven platforms for retail intelligence and digital trade marketing.
-
-- Architected **real-time retail intelligence** for large-scale collection, processing, and analytics across thousands of digital touchpoints
-- Integrated cloud, AI/ML, and data-pipeline tech to improve pricing intelligence and shelf visibility
-- Mentored engineers and established engineering best practices
-
-</details>
-
-<details>
-<summary><b>Earlier career</b> — 2011–2019</summary>
-
-<br/>
-
-| Company | Role | Focus |
-|---|---|---|
-| Zoroastro Advogados | Fullstack Developer | Legal ops, workflow automation, financial systems (Node, Angular, Mongo) |
-| Contalex | Java Web Fullstack | ERP SaaS for accounting firms (Java, Spring, Hibernate) |
-| Orgamec | PHP Developer | Internal business-process automation |
-| RS Websites | PHP Developer | Web apps, systems, and ERP (PHP, Laravel, MySQL) |
-| BLM | Ecommerce Manager | Digital commerce + a geolocation/Bluetooth Android app |
-| CS-Consoft | Developer | Desktop / RIA software |
-
-</details>
 
 ---
 
