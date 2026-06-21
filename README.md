@@ -18,6 +18,8 @@ I build platforms that turn fragmented data, integrations, and processes into op
 ![Location](https://img.shields.io/badge/São%20Paulo-Brazil-202940?style=flat-square&labelColor=202940&color=4B4038)
 ![Focus](https://img.shields.io/badge/AI-Platforms%20·%20Data-202940?style=flat-square&labelColor=202940&color=4B4038)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mend3-202940?style=flat-square&logo=linkedin&logoColor=CAAA98&labelColor=202940&color=9A8678)](https://www.linkedin.com/in/vicmendonca/)
+[![CV English](https://img.shields.io/badge/CV-English-202940?style=flat-square&logo=adobeacrobatreader&logoColor=CAAA98&labelColor=202940&color=9A8678)](cv-en-us.pdf)
+[![Currículo PT-BR](https://img.shields.io/badge/Currículo-PT--BR-202940?style=flat-square&logo=adobeacrobatreader&logoColor=CAAA98&labelColor=202940&color=9A8678)](cv-pt-br.pdf)
 
 </div>
 
@@ -430,6 +432,9 @@ Open to conversations with recruiters, partners, and prospective co-founders.
 
 [![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-9A8678?style=for-the-badge&logo=linkedin&logoColor=202940)](https://www.linkedin.com/in/vicmendonca/)
 [![Email](https://img.shields.io/badge/Get%20in%20touch-9A8678?style=for-the-badge&logo=maildotru&logoColor=202940)](mailto:victor.mendonca@live.com)
+
+[![Download CV — English](https://img.shields.io/badge/Download%20CV-English-202940?style=for-the-badge&logo=adobeacrobatreader&logoColor=CAAA98)](cv-en-us.pdf)
+[![Baixar Currículo — PT-BR](https://img.shields.io/badge/Baixar%20Currículo-PT--BR-202940?style=for-the-badge&logo=adobeacrobatreader&logoColor=CAAA98)](cv-pt-br.pdf)
 
 </div>
 
