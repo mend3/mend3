@@ -37,33 +37,75 @@ I move comfortably between hands-on engineering and technical strategy: leading 
 
 A unified, white-label **SaaS ecosystem** that combines infrastructure control planes, multi-tenant runtimes, universal connectors, data acquisition at scale, workflow automation, and AI services — designed so a single platform can power many products and verticals.
 
+<!-- KT:PROFILE:START -->
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {
-  'primaryColor':'#202940',
-  'primaryTextColor':'#CAAA98',
-  'primaryBorderColor':'#9A8678',
-  'lineColor':'#9A8678',
-  'secondaryColor':'#4B4038',
-  'tertiaryColor':'#4B4038',
-  'fontFamily':'ui-monospace, monospace'
-}}}%%
-graph TD
-    ORACLE["Oracle · Infrastructure Control Plane"]
-    CB["Connector Bridge · Integrations & Automation"]
-    DH["Datahouse · Business Platform"]
-    SWS["SWS · Acquisition Layer"]
-    HUB["Hub · Application Runtime"]
-    LUMI["Lumi · Beauty Vertical"]
-    ELLA["Ella · AI Companion"]
-
-    ORACLE --> CB
-    ORACLE --> DH
-    DH --> SWS
-    DH --> HUB
-    CB --> HUB
-    HUB --> LUMI
-    HUB --> ELLA
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#202940','primaryTextColor':'#CAAA98','primaryBorderColor':'#9A8678','lineColor':'#9A8678','fontFamily':'ui-monospace, monospace'}}}%%
+flowchart LR
+  classDef plat fill:#202940,stroke:#CAAA98,color:#CAAA98,stroke-width:3px;
+  classDef vis fill:#4B4038,stroke:#9A8678,color:#CAAA98,stroke-width:2px;
+  classDef cap fill:#9A8678,stroke:#4B4038,color:#202940;
+  classDef prod fill:#CAAA98,stroke:#9A8678,color:#202940;
+  classDef dom fill:#202940,stroke:#9A8678,color:#CAAA98,stroke-dasharray:4 3;
+  classDef proj fill:#4B4038,stroke:#CAAA98,color:#CAAA98,stroke-width:2px;
+  c_local_llm["Local LLM"]:::cap
+  c_multi_tenant["Multi-tenant"]:::cap
+  c_page_builder_cms["Page Builder / CMS"]:::cap
+  c_rag_cognition["RAG / Cognition"]:::cap
+  c_universal_connectors["Universal Connectors"]:::cap
+  d_ads["Ads"]:::dom
+  d_ecommerce["Ecommerce"]:::dom
+  d_personal_ai["Personal AI"]:::dom
+  d_real_estate["Real Estate"]:::dom
+  d_talent_intelligence["Talent Intelligence"]:::dom
+  p_commerce_intelligence["Commerce Intelligence"]:::prod
+  p_datahouse["datahouse"]:::proj
+  p_devshell_one["DevShell One"]:::plat
+  p_ella["ella"]:::proj
+  p_ella_local_ai["Ella — Local AI"]:::prod
+  p_hub["hub"]:::proj
+  p_oracle["oracle"]:::proj
+  p_saas_hub["SaaS Hub"]:::prod
+  p_scraping_platform["Scraping Platform"]:::prod
+  v_automation_layer["Automation Layer"]:::vis
+  v_cognition_layer["Cognition Layer"]:::vis
+  v_control_plane["Control Plane"]:::vis
+  v_data_plane["Data Plane"]:::vis
+  v_intelligence_layer["Intelligence Layer"]:::vis
+  c_local_llm -->|provided-by| p_ella
+  c_multi_tenant -->|provided-by| p_hub
+  c_page_builder_cms -->|provided-by| p_hub
+  c_rag_cognition -->|provided-by| p_ella
+  c_rag_cognition -->|provided-by| p_hub
+  c_universal_connectors -->|provided-by| p_hub
+  d_ads -->|served-by| p_hub
+  d_ecommerce -->|served-by| p_hub
+  d_personal_ai -->|served-by| p_ella
+  d_real_estate -->|served-by| p_hub
+  d_talent_intelligence -->|served-by| p_hub
+  p_commerce_intelligence -->|built-on| p_hub
+  p_commerce_intelligence -->|serves| d_ads
+  p_commerce_intelligence -->|serves| d_ecommerce
+  p_devshell_one -->|built-on| v_control_plane
+  p_devshell_one -->|contains| p_commerce_intelligence
+  p_devshell_one -->|contains| p_ella_local_ai
+  p_devshell_one -->|contains| p_saas_hub
+  p_devshell_one -->|contains| p_scraping_platform
+  p_ella_local_ai -->|built-on| p_ella
+  p_ella_local_ai -->|serves| d_personal_ai
+  p_saas_hub -->|built-on| p_hub
+  p_scraping_platform -->|built-on| p_datahouse
+  v_automation_layer -->|includes| p_hub
+  v_cognition_layer -->|includes| p_ella
+  v_cognition_layer -->|includes| p_hub
+  v_control_plane -->|includes| p_oracle
+  v_data_plane -->|includes| p_datahouse
+  v_data_plane -->|includes| p_ella
+  v_data_plane -->|includes| p_hub
+  v_intelligence_layer -->|includes| p_hub
 ```
+<!-- KT:PROFILE:END -->
+
+<sub>↑ Auto-generated from the live system topology (vision → products → domains → capabilities → projects).</sub>
 
 <table>
 <tr>
@@ -72,17 +114,17 @@ graph TD
 **Oracle** — `shared control plane`
 <br/>Orchestration, shared databases, AI infra, vector search, observability.
 
-**Connector Bridge** — `integration & cognition`
-<br/>Universal connectors, canonical schemas, ETL, RAG, automation.
+**Hub** — `application runtime`
+<br/>Multi-tenant SaaS runtime, universal connectors, page builder/CMS, workflow automation, vertical modules.
 
 </td>
 <td valign="top" width="50%">
 
-**Datahouse** — `acquisition + application`
-<br/>Large-scale scraping, anti-bot, proxy orchestration, multi-tenant runtime.
+**Datahouse** — `acquisition layer`
+<br/>Large-scale scraping, anti-bot, proxy orchestration, data ingestion.
 
-**Lumi / Ella** — `vertical & AI products`
-<br/>AI-native CRM for beauty pros; a local-first AI companion.
+**Ella** — `AI companion`
+<br/>Local-first AI companion — RAG, local LLM, cognition.
 
 </td>
 </tr>
