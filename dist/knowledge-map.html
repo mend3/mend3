@@ -52,6 +52,15 @@
   .subgroup { margin-top:12px; }
   .subgroup:first-child { margin-top:0; }
   .subgroup-label { color:var(--muted); font-size:10.5px; font-weight:600; letter-spacing:.7px; text-transform:uppercase; margin-bottom:8px; }
+  .ella-cta { margin:16px 0; }
+  .ella-link { display:flex; align-items:center; gap:16px; padding:15px 18px; border:1px solid var(--line); border-radius:12px; background:var(--band); text-decoration:none; color:var(--text); transition:border-color .12s, background .12s; }
+  .ella-link:hover { border-color:var(--accent); background:color-mix(in srgb, var(--accent) 6%, var(--band)); }
+  .ella-img { width:62px; height:62px; border-radius:50%; object-fit:cover; flex:none; border:1px solid var(--line); }
+  .ella-text { min-width:0; }
+  .ella-h { font-weight:700; font-size:15px; }
+  .ella-p { color:var(--muted); font-size:13px; margin-top:3px; overflow-wrap:anywhere; }
+  .ella-go { margin-left:auto; flex:none; color:var(--muted); font-size:20px; }
+  .ella-link:hover .ella-go { color:var(--accent); }
   .pill { position:relative; z-index:4; padding:6px 13px; border-radius:7px; border:1px solid var(--pillborder); color:var(--pill); background:var(--pillbg); cursor:pointer; white-space:nowrap; transition:color .12s, border-color .12s, background .12s, opacity .12s; font-size:13px; }
   .pill:hover { color:var(--text); border-color:color-mix(in srgb,var(--text) 30%,transparent); }
   .pill.hot { z-index:8; color:var(--text); border-color:var(--c); background:color-mix(in srgb, var(--c) 14%, var(--band)); }
@@ -103,6 +112,24 @@
   .chip.accent.link:hover { color:var(--accent); border-color:var(--accent); }
   .prof-cols { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:14px 30px; margin-top:20px; }
   @media (max-width:880px) { .prof-cols { grid-template-columns:minmax(0,1fr); } }
+  @media (max-width:720px) {
+    header { flex-wrap:wrap; align-items:center; gap:10px 8px; padding:12px 15px; }
+    header > div:first-child { flex:1 1 auto; min-width:0; }
+    header .spacer { display:none; }
+    header h1 { font-size:17px; }
+    header .sub { font-size:12px; max-width:none; margin-top:3px; }
+    #search { order:9; width:100%; flex:1 0 100%; }
+    #stage { padding:8px 15px 72px; }
+    .band { padding:15px 15px 14px; }
+    .repos { grid-template-columns:1fr; }
+    .prof-name { font-size:19px; }
+    .prof-links { margin-left:0; flex-basis:100%; }
+    .exp-period { margin-left:0; padding-left:0; }
+    .ella-link { gap:13px; padding:14px 15px; }
+    .ella-img { width:54px; height:54px; }
+    #card { right:10px; left:10px; top:auto; bottom:10px; width:auto; max-width:none; max-height:78vh; box-shadow:0 -6px 24px rgba(0,0,0,.4); }
+    #hint { display:none; }
+  }
   .prof-grp { min-width:0; }
   .prof-grp > h4 { font-size:12px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--muted); margin:0 0 13px; }
   .exp { display:flex; flex-direction:column; gap:14px; }
@@ -155,6 +182,16 @@
 <div id="stage">
   <svg id="edges"></svg>
   <div id="profile"></div>
+  <section id="ella-cta" class="ella-cta">
+    <a class="ella-link" href="ella.html" title="Ella">
+      <img class="ella-img" src="ella-profile-image.jpeg" alt="Ella" />
+      <div class="ella-text">
+        <div class="ella-h" id="ella-h"></div>
+        <div class="ella-p" id="ella-p"></div>
+      </div>
+      <span class="ella-go" aria-hidden="true">&rarr;</span>
+    </a>
+  </section>
   <div id="hero"></div>
   <div id="bands"></div>
 </div>
@@ -188,15 +225,15 @@
   };
 
   const I18N = {
-    pt: { t: { a: "Arquitetura de", b: "plataforma" }, sub: "O ecossistema SaaS multi-tenant que projeto e opero — produtos, domínios e capacidades sobre uma fundação de dados e IA. Clique num nó para explorar.", search: "Buscar…", owner: "Dono", libHint: "Clique num app para revelar suas bibliotecas.", langs: "Linguagens", repos: "Repositórios", hint: (n, e) => `${n} nós · ${e} relações`, profile: { experience: "Experiência", skills: "Competências", openTo: "Aberto a" },
+    pt: { t: { a: "Arquitetura de", b: "plataforma" }, sub: "O ecossistema SaaS multi-tenant que projeto e opero — produtos, domínios e capacidades sobre uma fundação de dados e IA. Clique num nó para explorar.", search: "Buscar…", owner: "Dono", libHint: "Clique num app para revelar suas bibliotecas.", langs: "Linguagens", repos: "Repositórios", hint: (n, e) => `${n} nós · ${e} relações`, profile: { experience: "Experiência", skills: "Competências", openTo: "Aberto a" }, ella: { h: "Conheça a Ella", p: "A IA do ecossistema — RAG, automações e persona própria." },
       band: { platform: ["Plataforma", "o produto que engloba tudo"], vision: ["Visão", "camadas de arquitetura"], product: ["Produtos", "o que é entregue"], domain: ["Domínios", "mercados atendidos"], capability: ["Capacidades", "o que a plataforma faz"], project: ["Projetos", "repositórios"], service: ["Serviços", "containers e apps"], library: ["Bibliotecas", "módulos do monorepo"], technology: ["Tecnologias", "stack"], doc: ["Documentação", "decisões e docs"] },
       pgroup: { foundation: "Fundação", core: "Core", satellites: "Satélites", _: "Outros" },
       rel: { contains: "contém", uses: "usa", documents: "documenta", includes: "inclui", "built-on": "construído sobre", serves: "serve", "served-by": "servido por", "provided-by": "provido por", manages: "gerencia", exposes: "expõe", depends: "depende de", connects: "conecta" } },
-    en: { t: { a: "Platform", b: "architecture" }, sub: "The multi-tenant SaaS ecosystem I architect and operate — products, domains and capabilities on a shared data and AI foundation. Click a node to explore.", search: "Search…", owner: "Owner", libHint: "Click an app to reveal its libraries.", langs: "Languages", repos: "Repositories", hint: (n, e) => `${n} nodes · ${e} relations`, profile: { experience: "Experience", skills: "Skills", openTo: "Open to" },
+    en: { t: { a: "Platform", b: "architecture" }, sub: "The multi-tenant SaaS ecosystem I architect and operate — products, domains and capabilities on a shared data and AI foundation. Click a node to explore.", search: "Search…", owner: "Owner", libHint: "Click an app to reveal its libraries.", langs: "Languages", repos: "Repositories", hint: (n, e) => `${n} nodes · ${e} relations`, profile: { experience: "Experience", skills: "Skills", openTo: "Open to" }, ella: { h: "Meet Ella", p: "The ecosystem's AI — RAG, automation and a persona of her own." },
       band: { platform: ["Platform", "the product that wraps it all"], vision: ["Vision", "architecture layers"], product: ["Products", "what's delivered"], domain: ["Domains", "markets served"], capability: ["Capabilities", "what the platform does"], project: ["Projects", "codebases"], service: ["Services", "containers & apps"], library: ["Libraries", "monorepo modules"], technology: ["Technologies", "stack"], doc: ["Docs", "decisions & docs"] },
       pgroup: { foundation: "Foundation", core: "Core", satellites: "Satellites", _: "Other" },
       rel: { contains: "contains", uses: "uses", documents: "documents", includes: "includes", "built-on": "built on", serves: "serves", "served-by": "served by", "provided-by": "provided by", manages: "manages", exposes: "exposes", depends: "depends on", connects: "connects" } },
-    es: { t: { a: "Arquitectura de", b: "plataforma" }, sub: "El ecosistema SaaS multi-tenant que diseño y opero — productos, dominios y capacidades sobre una base de datos e IA. Haz clic en un nodo para explorar.", search: "Buscar…", owner: "Dueño", libHint: "Haz clic en una app para revelar sus bibliotecas.", langs: "Lenguajes", repos: "Repositorios", hint: (n, e) => `${n} nodos · ${e} relaciones`, profile: { experience: "Experiencia", skills: "Competencias", openTo: "Abierto a" },
+    es: { t: { a: "Arquitectura de", b: "plataforma" }, sub: "El ecosistema SaaS multi-tenant que diseño y opero — productos, dominios y capacidades sobre una base de datos e IA. Haz clic en un nodo para explorar.", search: "Buscar…", owner: "Dueño", libHint: "Haz clic en una app para revelar sus bibliotecas.", langs: "Lenguajes", repos: "Repositorios", hint: (n, e) => `${n} nodos · ${e} relaciones`, profile: { experience: "Experiencia", skills: "Competencias", openTo: "Abierto a" }, ella: { h: "Conoce a Ella", p: "La IA del ecosistema — RAG, automatización y persona propia." },
       band: { platform: ["Plataforma", "el producto que lo engloba todo"], vision: ["Visión", "capas de arquitectura"], product: ["Productos", "lo que se entrega"], domain: ["Dominios", "mercados atendidos"], capability: ["Capacidades", "lo que hace la plataforma"], project: ["Proyectos", "bases de código"], service: ["Servicios", "contenedores y apps"], library: ["Bibliotecas", "módulos del monorepo"], technology: ["Tecnologías", "stack"], doc: ["Docs", "decisiones y docs"] },
       pgroup: { foundation: "Fundación", core: "Core", satellites: "Satélites", _: "Otros" },
       rel: { contains: "contiene", uses: "usa", documents: "documenta", includes: "incluye", "built-on": "construido sobre", serves: "sirve", "served-by": "servido por", "provided-by": "provisto por", manages: "gestiona", exposes: "expone", depends: "depende de", connects: "conecta" } },
@@ -442,6 +479,7 @@
     for (const g of groupLabelRefs) g.el.textContent = groupName(g.key);
     if (headRefs.library && headRefs.library.hint) headRefs.library.hint.textContent = L().libHint;
     if (langTitleEl) langTitleEl.textContent = L().langs;
+    { const eh = document.getElementById("ella-h"), ep = document.getElementById("ella-p"); if (eh && L().ella) eh.textContent = L().ella.h; if (ep && L().ella) ep.textContent = L().ella.p; }
     document.getElementById("deps").title = { pt: "Dependências (tracejadas)", en: "Dependencies (dashed)", es: "Dependencias (discontinuas)" }[lang] || "Dependencies";
     const ht = document.getElementById("hero-title"); if (ht) ht.textContent = L().repos;
     renderProfile();
