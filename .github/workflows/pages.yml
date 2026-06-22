@@ -1,0 +1,41 @@
+name: Pages
+
+# Publica o knowledge-map (material curricular gerado pela skill knowledge-topology
+# do workspace) no GitHub Pages, servindo dist/index.html.
+# Pré-requisito: Settings -> Pages -> Source = "GitHub Actions".
+# O conteúdo de dist/ é versionado neste repo (gerado por `make topology` no workspace).
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "dist/**"
+      - ".github/workflows/pages.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload Pages artifact (dist)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
