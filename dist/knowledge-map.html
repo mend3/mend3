@@ -41,6 +41,23 @@
   .iconbtn:hover { border-color:color-mix(in srgb,var(--text) 30%,transparent); }
   .iconbtn.on { border-color:var(--accent); color:var(--accent); }
   #stage { position:relative; padding:8px 30px 90px; }
+  #graphview { position:fixed; inset:0; z-index:20; display:none; background:var(--bg); }
+  body.graphmode #bands, body.graphmode #hero, body.graphmode #profile, body.graphmode #ella-cta, body.graphmode #hint, body.graphmode svg#edges { display:none; }
+  body.graphmode #graphview { display:block; }
+  #gpanel { display:none; position:fixed; top:84px; right:16px; width:228px; max-height:calc(100vh - 100px); overflow-y:auto; z-index:35; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px; font-size:12.5px; box-shadow:0 6px 18px rgba(0,0,0,.3); }
+  body.graphmode #gpanel { display:block; }
+  body.graphmode #search { display:none; }
+  #gpanel input { width:100%; box-sizing:border-box; padding:6px 8px; border-radius:7px; border:1px solid var(--line); background:var(--ctl); color:var(--text); }
+  #gpanel .gp-h { font-weight:600; margin:11px 0 6px; }
+  #gpanel .gp-btns { display:flex; gap:6px; margin-bottom:4px; }
+  #gpanel .gp-btns button { flex:1; padding:4px; font-size:11px; border:1px solid var(--line); border-radius:6px; background:var(--ctl); color:var(--muted); cursor:pointer; }
+  #gpanel .gp-item { display:flex; align-items:center; gap:7px; width:100%; padding:4px 3px; background:none; border:0; color:var(--text); cursor:pointer; text-align:left; opacity:.38; }
+  #gpanel .gp-item.on { opacity:1; }
+  #gpanel .gp-dot { width:10px; height:10px; border-radius:50%; flex:none; }
+  #gpanel .gp-srch { position:relative; }
+  #gpanel .gp-ac { display:none; position:absolute; left:0; right:0; top:calc(100% + 2px); max-height:220px; overflow-y:auto; background:var(--card); border:1px solid var(--line); border-radius:8px; z-index:3; box-shadow:0 6px 16px rgba(0,0,0,.3); }
+  #gpanel .gp-ac-i { padding:6px 9px; cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #gpanel .gp-ac-i:hover { background:color-mix(in srgb, var(--text) 9%, transparent); }
   svg#edges { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:6; overflow:visible; }
   @keyframes kt-flow { from { stroke-dashoffset:0; } to { stroke-dashoffset:-64; } }
   svg#edges .kt-flow { stroke-dasharray:4 12; animation:kt-flow 1.1s linear infinite; filter:drop-shadow(0 0 2.5px currentColor); }
@@ -180,6 +197,7 @@
     <button data-lang="pt">PT</button><button data-lang="en">EN</button><button data-lang="es">ES</button>
   </div>
   <button class="iconbtn" id="deps" title="deps"></button>
+  <button class="iconbtn" id="graph" title="graph"></button>
   <button class="iconbtn" id="theme" title="theme"></button>
 </header>
 
@@ -198,7 +216,12 @@
   </section>
   <div id="hero"></div>
   <div id="bands"></div>
+  <div id="graphview"></div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/graphology@0.25.4/dist/graphology.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/graphology-layout-forceatlas2@0.10.1/build/graphology-layout-forceatlas2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sigma@2.4.0/build/sigma.min.js"></script>
 
 <div id="card">
   <div id="card-head">
@@ -268,6 +291,7 @@
     adj.get(e.source).push({ id: e.target, rel: e.relation, dir: "out" }); adj.get(e.target).push({ id: e.source, rel: e.relation, dir: "in" });
   }
   let depsOn = store.get("kt-deps", "0") === "1";
+  let graphMode = false;
   const color = (t) => (CATS[t] && CATS[t].color) || "#64748b";
   const bandName = (t) => (L().band[t] && L().band[t][0]) || (CATS[t] && CATS[t].label) || t;
   const bandTag = (t) => (L().band[t] && L().band[t][1]) || (CATS[t] && CATS[t].tagline) || "";
@@ -442,6 +466,7 @@
   const relStyle = (rel) => REL_STYLE[REL_ALIAS[rel] || rel] || DEFAULT_REL_STYLE;
   /** Desenha o "web" de relações entre os nós em destaque, com estilo por tipo de relação. */
   function drawFlow(reach) {
+    if (graphMode) return;
     svg.innerHTML = ""; if (!reach) return;
     let n = 0;
     for (const e of edges) {
@@ -470,6 +495,7 @@
     for (const [nid, p] of pillOf) { p.classList.toggle("sel", nid === id); p.classList.toggle("hot", !!reach && nid !== id && reach.has(nid)); }
     drawFlow(reach);
     if (!id) { card.classList.remove("show"); return; }
+    if (!graphMode) return;
     cardTitle.textContent = node.label;
     const grps = {};
     for (const nb of adj.get(id)) { const key = `${nb.dir === "out" ? "" : "← "}${relName(nb.rel)}`; (grps[key] ||= []).push(byId.get(nb.id)); }
@@ -537,6 +563,109 @@
   function applyTheme(mode) { document.documentElement.classList.toggle("light", mode === "light"); document.getElementById("theme").innerHTML = mode === "light" ? ICON.sun : ICON.moon; store.set("kt-theme", mode); if (selected) drawFlow(reachableFrom(selected)); }
   document.getElementById("theme").addEventListener("click", () => applyTheme(document.documentElement.classList.contains("light") ? "dark" : "light"));
   document.getElementById("deps").addEventListener("click", () => { depsOn = !depsOn; store.set("kt-deps", depsOn ? "1" : "0"); document.getElementById("deps").classList.toggle("on", depsOn); if (selected) select(selected); });
+
+  // ---- visão de grafo (sigma.js + layout de força; carrega de CDN, degrada se sem rede) ----
+  const NODE_SIZE = { platform: 16, vision: 11, product: 11, domain: 9, capability: 9, project: 12, technology: 5, service: 4, doc: 4, library: 7 };
+  let sigmaInst = null;
+  /** Assenta o layout de força UMA VEZ, síncrono (sem animação): ForceAtlas2 (CDN) ou simulação local estável. */
+  function settle(gr) {
+    const FA2 = window.graphologyLayoutForceAtlas2 || (window.graphologyLibrary && window.graphologyLibrary.layoutForceAtlas2);
+    if (FA2 && FA2.inferSettings && FA2.assign) {
+      const settings = FA2.inferSettings(gr);
+      settings.barnesHutOptimize = gr.order > 150; settings.adjustSizes = true;
+      settings.gravity = 2.2; settings.scalingRatio = 16;
+      FA2.assign(gr, { iterations: 400, settings });
+      return;
+    }
+    const ids = gr.nodes(), st = {};
+    for (const id of ids) st[id] = { x: gr.getNodeAttribute(id, "x"), y: gr.getNodeAttribute(id, "y"), vx: 0, vy: 0 };
+    const es = gr.edges().map((e) => [gr.source(e), gr.target(e)]);
+    for (let f = 0; f < 320; f++) {
+      for (let i = 0; i < ids.length; i++) { const a = st[ids[i]]; for (let j = i + 1; j < ids.length; j++) { const b = st[ids[j]]; let dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy + 1, d = Math.sqrt(d2), fr = 7000 / d2, fx = fr * dx / d, fy = fr * dy / d; a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy; } }
+      for (const [s, t] of es) { const a = st[s], b = st[t]; let dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy) + 1, fa = 0.018 * (d - 80), fx = fa * dx / d, fy = fa * dy / d; a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy; }
+      const damp = f < 60 ? 0.7 : 0.9;
+      for (const id of ids) { const p = st[id]; p.vx -= p.x * 0.025; p.vy -= p.y * 0.025; p.vx *= damp; p.vy *= damp; p.x += Math.max(-30, Math.min(30, p.vx)); p.y += Math.max(-30, Math.min(30, p.vy)); }
+    }
+    for (const id of ids) { gr.setNodeAttribute(id, "x", st[id].x); gr.setNodeAttribute(id, "y", st[id].y); }
+  }
+  function buildSigma() {
+    const Graph = window.graphology && (window.graphology.Graph || window.graphology);
+    if (sigmaInst || !Graph || !window.Sigma) return;
+    const gr = new Graph({ type: "directed" });
+    const all = DATA.nodes, N = all.length;
+    all.forEach((node, i) => { const a = (i / N) * Math.PI * 2; gr.addNode(node.id, { label: node.label, ntype: node.type, size: NODE_SIZE[node.type] || 4, color: color(node.type), x: 240 * Math.cos(a) + (Math.random() - .5) * 14, y: 240 * Math.sin(a) + (Math.random() - .5) * 14 }); });
+    for (const e of edges) { if (!gr.hasNode(e.source) || !gr.hasNode(e.target) || gr.hasEdge(e.source, e.target)) continue; const st = relStyle(e.relation); try { gr.addEdge(e.source, e.target, { color: st.color, size: Math.max(.5, (st.width || 1) - .7) }); } catch { /* aresta paralela ignorada */ } }
+    settle(gr);
+    // Realce por hover no estilo do demo do sigma: passa o mouse num nó → nó + vizinhos ficam em
+    // destaque, o resto esmaece em cinza; as arestas do nó acendem na cor dele, com seta de direção.
+    let hovered = null, pinned = null, focusHood = null;
+    const hiddenTypes = new Set();
+    const refreshFocus = () => { const f = hovered || pinned; focusHood = f ? new Set(gr.neighbors(f)) : null; if (sigmaInst) sigmaInst.refresh(); };
+    const dimColor = () => document.documentElement.classList.contains("light") ? "#dcdcdc" : "#2b3040";
+    sigmaInst = new Sigma(gr, document.getElementById("graphview"), {
+      defaultEdgeType: "arrow", labelRenderedSizeThreshold: 8, minCameraRatio: 0.05, maxCameraRatio: 4,
+      nodeReducer: (node, data) => {
+        const res = { ...data };
+        if (hiddenTypes.has(data.ntype)) { res.hidden = true; return res; }
+        const focus = hovered || pinned;
+        if (focus && node !== focus && (!focusHood || !focusHood.has(node))) { res.label = ""; res.color = dimColor(); res.zIndex = 0; }
+        else if (focus) { res.zIndex = 1; if (node === focus) res.highlighted = true; }
+        return res;
+      },
+      edgeReducer: (edge, data) => {
+        const res = { ...data };
+        const ext = gr.extremities(edge);
+        if (hiddenTypes.has(gr.getNodeAttribute(ext[0], "ntype")) || hiddenTypes.has(gr.getNodeAttribute(ext[1], "ntype"))) { res.hidden = true; return res; }
+        const focus = hovered || pinned;
+        if (focus && !ext.includes(focus)) res.hidden = true;
+        else if (focus) { res.color = gr.getNodeAttribute(focus, "color"); res.size = (res.size || 1) + 0.8; res.zIndex = 1; }
+        return res;
+      },
+    });
+    sigmaInst.on("enterNode", ({ node }) => { hovered = node; refreshFocus(); });
+    sigmaInst.on("leaveNode", () => { hovered = null; refreshFocus(); });
+    sigmaInst.on("clickNode", ({ node }) => { pinned = node; refreshFocus(); select(node); });
+    sigmaInst.on("clickStage", () => { pinned = null; refreshFocus(); });
+    let dragging = null;
+    sigmaInst.on("downNode", ({ node }) => { dragging = node; });
+    sigmaInst.getMouseCaptor().on("mousemovebody", (ev) => { if (!dragging) return; const p = sigmaInst.viewportToGraph(ev); gr.setNodeAttribute(dragging, "x", p.x); gr.setNodeAttribute(dragging, "y", p.y); ev.preventSigmaDefault(); ev.original.preventDefault(); ev.original.stopPropagation(); });
+    sigmaInst.getMouseCaptor().on("mouseup", () => { dragging = null; });
+    // painel de controle (estilo demo): busca com auto-zoom + seções (nossos tipos de nó) como clusters.
+    const types = ORDER.filter((t) => DATA.nodes.some((n) => n.type === t));
+    const panel = document.createElement("div"); panel.id = "gpanel";
+    panel.innerHTML =
+      `<div class="gp-srch"><input id="gp-q" placeholder="${esc(L().search)}" autocomplete="off"/><div id="gp-ac" class="gp-ac"></div></div>` +
+      `<div class="gp-h">Seções</div>` +
+      `<div class="gp-btns"><button id="gp-all">Todas</button><button id="gp-none">Nenhuma</button></div>` +
+      `<div class="gp-list">${types.map((t) => `<button class="gp-item on" data-t="${t}"><span class="gp-dot" style="background:${color(t)}"></span>${esc(bandName(t))}</button>`).join("")}</div>`;
+    document.body.appendChild(panel);
+    const zoomTo = (id) => { const d = sigmaInst.getNodeDisplayData(id); if (!d) return; pinned = id; refreshFocus(); sigmaInst.getCamera().animate({ x: d.x, y: d.y, ratio: 0.22 }, { duration: 600 }); select(id); };
+    const q = panel.querySelector("#gp-q"), ac = panel.querySelector("#gp-ac");
+    const renderAC = () => {
+      const v = q.value.trim().toLowerCase();
+      const hits = v ? DATA.nodes.filter((n) => gr.hasNode(n.id) && n.label.toLowerCase().includes(v)).slice(0, 8) : [];
+      ac.innerHTML = hits.map((n) => `<div class="gp-ac-i" data-id="${esc(n.id)}">${esc(n.label)}</div>`).join("");
+      ac.style.display = hits.length ? "block" : "none";
+    };
+    q.addEventListener("input", renderAC);
+    q.addEventListener("keydown", (ev) => { if (ev.key === "Enter") { const f = ac.querySelector(".gp-ac-i"); if (f) { q.value = f.textContent; ac.style.display = "none"; zoomTo(f.dataset.id); } } else if (ev.key === "Escape") ac.style.display = "none"; });
+    q.addEventListener("blur", () => setTimeout(() => { ac.style.display = "none"; }, 150));
+    ac.addEventListener("mousedown", (ev) => { const it = ev.target.closest(".gp-ac-i"); if (!it) return; q.value = it.textContent; ac.style.display = "none"; zoomTo(it.dataset.id); });
+    panel.querySelector(".gp-list").addEventListener("click", (ev) => { const b = ev.target.closest(".gp-item"); if (!b) return; const t = b.dataset.t; hiddenTypes.has(t) ? hiddenTypes.delete(t) : hiddenTypes.add(t); b.classList.toggle("on", !hiddenTypes.has(t)); sigmaInst.refresh(); });
+    panel.querySelector("#gp-all").addEventListener("click", () => { hiddenTypes.clear(); panel.querySelectorAll(".gp-item").forEach((b) => b.classList.add("on")); sigmaInst.refresh(); });
+    panel.querySelector("#gp-none").addEventListener("click", () => { types.forEach((t) => hiddenTypes.add(t)); panel.querySelectorAll(".gp-item").forEach((b) => b.classList.remove("on")); sigmaInst.refresh(); });
+  }
+  function setGraphMode(on) {
+    graphMode = on;
+    document.body.classList.toggle("graphmode", on);
+    document.getElementById("graph").classList.toggle("on", on);
+    if (on) buildSigma(); else svg.innerHTML = "";
+  }
+  { const gb = document.getElementById("graph");
+    gb.innerHTML = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="3.2" cy="8" r="1.5"/><circle cx="12.5" cy="4" r="1.5"/><circle cx="12.5" cy="12" r="1.5"/><path d="M4.6 7.3 11 4.5M4.6 8.7 11 11.5"/></svg>';
+    gb.title = "Graph view (sigma.js)";
+    gb.addEventListener("click", () => { if (!window.Sigma) { gb.title = "Graph view indisponível (sigma.js requer rede)"; return; } setGraphMode(!graphMode); });
+  }
 
   addEventListener("resize", () => { if (selected) drawFlow(reachableFrom(selected)); });
   document.getElementById("deps").innerHTML = ICON.deps;
