@@ -89,61 +89,20 @@
   "nodes": [
     {
       "id": "project:oracle",
-      "label": "oracle",
+      "label": "Oracle",
       "type": "project",
       "meta": {
         "dir": "foundation/oracle",
         "group": "foundation",
-        "summary": "The infrastructure orchestrator for the workspace: it owns the shared `workspace` Docker network and provides the global services — Traefik ingress, databases (PostgreSQL, MySQL, Redis, pgvector, Qdra",
+        "summary": "The infrastructure orchestrator for the workspace. It owns the shared `workspace` Docker network and is the **single provider of the global services** every product consumes over it — Traefik ingress ",
         "description": null,
         "remote": "https://github.com/mendshell/oracle",
         "repo": "mendshell/oracle",
-        "pitch": "Plano de controle e infra global do workspace — ingress (Traefik), bancos, LLM (Ollama) e observabilidade compartilhados por todos os produtos."
-      }
-    },
-    {
-      "id": "service:oracle:ollama",
-      "label": "ollama",
-      "type": "service",
-      "meta": {
-        "project": "oracle",
-        "global": true
-      }
-    },
-    {
-      "id": "service:oracle:minio",
-      "label": "minio",
-      "type": "service",
-      "meta": {
-        "project": "oracle",
-        "global": true
-      }
-    },
-    {
-      "id": "service:oracle:clickhouse",
-      "label": "clickhouse",
-      "type": "service",
-      "meta": {
-        "project": "oracle",
-        "global": true
-      }
-    },
-    {
-      "id": "service:oracle:n8n",
-      "label": "n8n",
-      "type": "service",
-      "meta": {
-        "project": "oracle",
-        "global": true
-      }
-    },
-    {
-      "id": "service:oracle:neo4j",
-      "label": "neo4j",
-      "type": "service",
-      "meta": {
-        "project": "oracle",
-        "global": true
+        "pitch": {
+          "pt": "Plano de controle e infra global do workspace — ingress (Traefik), bancos, LLM (Ollama) e observabilidade compartilhados pelos produtos.",
+          "en": "Workspace control plane and global infra — ingress (Traefik), databases, LLM (Ollama) and observability shared across all products.",
+          "es": "Plano de control e infra global del workspace — ingress (Traefik), bases de datos, LLM (Ollama) y observabilidad compartidos por los productos."
+        }
       }
     },
     {
@@ -152,6 +111,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
+        "group": "foundation",
         "global": true
       }
     },
@@ -161,6 +121,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
+        "group": "foundation",
         "global": true
       }
     },
@@ -170,6 +131,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
+        "group": "foundation",
         "global": true
       }
     },
@@ -179,6 +141,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
+        "group": "foundation",
         "global": true
       }
     },
@@ -188,6 +151,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
+        "group": "foundation",
         "global": true
       }
     },
@@ -197,6 +161,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
+        "group": "foundation",
         "global": true
       }
     },
@@ -206,6 +171,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
+        "group": "foundation",
         "global": true
       }
     },
@@ -215,351 +181,58 @@
       "type": "service",
       "meta": {
         "project": "oracle",
+        "group": "foundation",
         "global": true
       }
     },
     {
-      "id": "service:oracle:playwright",
-      "label": "playwright",
+      "id": "service:oracle:minio",
+      "label": "minio",
       "type": "service",
       "meta": {
-        "project": "oracle"
+        "project": "oracle",
+        "group": "foundation",
+        "global": true
       }
     },
     {
-      "id": "service:oracle:selenoid",
-      "label": "selenoid",
+      "id": "service:oracle:clickhouse",
+      "label": "clickhouse",
       "type": "service",
       "meta": {
-        "project": "oracle"
+        "project": "oracle",
+        "group": "foundation",
+        "global": true
       }
     },
     {
-      "id": "service:oracle:selenoid-ui",
-      "label": "selenoid-ui",
+      "id": "service:oracle:n8n",
+      "label": "n8n",
       "type": "service",
       "meta": {
-        "project": "oracle"
+        "project": "oracle",
+        "group": "foundation",
+        "global": true
       }
     },
     {
-      "id": "service:oracle:ai-context",
-      "label": "ai-context",
+      "id": "service:oracle:neo4j",
+      "label": "neo4j",
       "type": "service",
       "meta": {
-        "project": "oracle"
+        "project": "oracle",
+        "group": "foundation",
+        "global": true
       }
     },
     {
-      "id": "service:oracle:waha",
-      "label": "waha",
+      "id": "service:oracle:ollama",
+      "label": "ollama",
       "type": "service",
       "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:kuma",
-      "label": "kuma",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:docmost",
-      "label": "docmost",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:cron",
-      "label": "cron",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:firefly",
-      "label": "firefly",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:wordpress",
-      "label": "wordpress",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-puppeteer",
-      "label": "mcp-puppeteer",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-pgvector",
-      "label": "mcp-pgvector",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-mysql",
-      "label": "mcp-mysql",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-sequentialthinking",
-      "label": "mcp-sequentialthinking",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-memory",
-      "label": "mcp-memory",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-filesystem",
-      "label": "mcp-filesystem",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-bravesearch",
-      "label": "mcp-bravesearch",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:template-mcp",
-      "label": "template-mcp",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:prometheus",
-      "label": "prometheus",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:prometheus-node-exporter",
-      "label": "prometheus-node-exporter",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:elasticsearch",
-      "label": "elasticsearch",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:grafana",
-      "label": "grafana",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:loki",
-      "label": "loki",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:cadvisor",
-      "label": "cadvisor",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:logstash",
-      "label": "logstash",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:homarr",
-      "label": "homarr",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:homeassistant",
-      "label": "homeassistant",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:otel-collector",
-      "label": "otel-collector",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:tempo",
-      "label": "tempo",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:alertmanager",
-      "label": "alertmanager",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:postgres-exporter",
-      "label": "postgres-exporter",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:redis-exporter",
-      "label": "redis-exporter",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:gpu-exporter",
-      "label": "gpu-exporter",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:blackbox",
-      "label": "blackbox",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:promtail",
-      "label": "promtail",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:graphiti",
-      "label": "graphiti",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:n8n-migrations",
-      "label": "n8n-migrations",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-fetch",
-      "label": "mcp-fetch",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-git",
-      "label": "mcp-git",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-time",
-      "label": "mcp-time",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:mcp-graphiti",
-      "label": "mcp-graphiti",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:miniflux-db",
-      "label": "miniflux-db",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
-      }
-    },
-    {
-      "id": "service:oracle:miniflux",
-      "label": "miniflux",
-      "type": "service",
-      "meta": {
-        "project": "oracle"
+        "project": "oracle",
+        "group": "foundation",
+        "global": true
       }
     },
     {
@@ -567,7 +240,8 @@
       "label": "ollama-cpu",
       "type": "service",
       "meta": {
-        "project": "oracle"
+        "project": "oracle",
+        "group": "foundation"
       }
     },
     {
@@ -575,7 +249,8 @@
       "label": "ollama-amd",
       "type": "service",
       "meta": {
-        "project": "oracle"
+        "project": "oracle",
+        "group": "foundation"
       }
     },
     {
@@ -583,7 +258,8 @@
       "label": "ollama-pull-cpu",
       "type": "service",
       "meta": {
-        "project": "oracle"
+        "project": "oracle",
+        "group": "foundation"
       }
     },
     {
@@ -591,7 +267,395 @@
       "label": "ollama-pull-nvidia",
       "type": "service",
       "meta": {
-        "project": "oracle"
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:ollama-pull-amd",
+      "label": "ollama-pull-amd",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:graphiti",
+      "label": "graphiti",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:n8n-migrations",
+      "label": "n8n-migrations",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-fetch",
+      "label": "mcp-fetch",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-git",
+      "label": "mcp-git",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-time",
+      "label": "mcp-time",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-graphiti",
+      "label": "mcp-graphiti",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:miniflux-db",
+      "label": "miniflux-db",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:miniflux",
+      "label": "miniflux",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:playwright",
+      "label": "playwright",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:selenoid",
+      "label": "selenoid",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:selenoid-ui",
+      "label": "selenoid-ui",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:waha",
+      "label": "waha",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:kuma",
+      "label": "kuma",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:docmost",
+      "label": "docmost",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:cron",
+      "label": "cron",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:firefly",
+      "label": "firefly",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:wordpress",
+      "label": "wordpress",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-puppeteer",
+      "label": "mcp-puppeteer",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-pgvector",
+      "label": "mcp-pgvector",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-mysql",
+      "label": "mcp-mysql",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-sequentialthinking",
+      "label": "mcp-sequentialthinking",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-memory",
+      "label": "mcp-memory",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-filesystem",
+      "label": "mcp-filesystem",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:mcp-bravesearch",
+      "label": "mcp-bravesearch",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:prometheus",
+      "label": "prometheus",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:prometheus-node-exporter",
+      "label": "prometheus-node-exporter",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:elasticsearch",
+      "label": "elasticsearch",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:grafana",
+      "label": "grafana",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:loki",
+      "label": "loki",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:cadvisor",
+      "label": "cadvisor",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:logstash",
+      "label": "logstash",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:otel-collector",
+      "label": "otel-collector",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:tempo",
+      "label": "tempo",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:alertmanager",
+      "label": "alertmanager",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:postgres-exporter",
+      "label": "postgres-exporter",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:redis-exporter",
+      "label": "redis-exporter",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:gpu-exporter",
+      "label": "gpu-exporter",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:blackbox",
+      "label": "blackbox",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:promtail",
+      "label": "promtail",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:ai-context",
+      "label": "ai-context",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:template-mcp",
+      "label": "template-mcp",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:homarr",
+      "label": "homarr",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
       }
     },
     {
@@ -661,38 +725,8 @@
       "meta": {}
     },
     {
-      "id": "tech:playwright",
-      "label": "Playwright",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:traefik",
-      "label": "Traefik",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:qdrant",
-      "label": "Qdrant",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:prometheus",
-      "label": "Prometheus",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:elasticsearch",
-      "label": "Elasticsearch",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:grafana",
-      "label": "Grafana",
+      "id": "tech:ollama",
+      "label": "Ollama",
       "type": "technology",
       "meta": {}
     },
@@ -715,26 +749,68 @@
       "meta": {}
     },
     {
-      "id": "tech:miniflux",
-      "label": "Miniflux",
+      "id": "tech:playwright",
+      "label": "Playwright",
       "type": "technology",
       "meta": {}
     },
     {
-      "id": "tech:ollama",
-      "label": "Ollama",
+      "id": "tech:node-js",
+      "label": "Node.js",
       "type": "technology",
       "meta": {}
     },
     {
-      "id": "tech:websocket",
-      "label": "WebSocket",
+      "id": "tech:prometheus",
+      "label": "Prometheus",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:elasticsearch",
+      "label": "Elasticsearch",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:grafana",
+      "label": "Grafana",
       "type": "technology",
       "meta": {}
     },
     {
       "id": "tech:loki",
       "label": "Loki",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:traefik",
+      "label": "Traefik",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:qdrant",
+      "label": "Qdrant",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:mongodb",
+      "label": "MongoDB",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:miniflux",
+      "label": "Miniflux",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:websocket",
+      "label": "WebSocket",
       "type": "technology",
       "meta": {}
     },
@@ -751,14 +827,8 @@
       "meta": {}
     },
     {
-      "id": "tech:mongodb",
-      "label": "MongoDB",
-      "type": "technology",
-      "meta": {}
-    },
-    {
       "id": "project:datahouse",
-      "label": "datahouse",
+      "label": "DataHouse",
       "type": "project",
       "meta": {
         "dir": "core/datahouse",
@@ -767,7 +837,11 @@
         "remote": "https://github.com/mendshell/datahouse",
         "repo": "mendshell/datahouse",
         "monorepo": "nx",
-        "pitch": "Plataforma de scraping em escala — API, scrapers, proxy e pool de browsers para coleta resiliente de dados."
+        "pitch": {
+          "pt": "Plataforma de scraping em escala — API, scrapers, proxy e pool de browsers para coleta de dados resiliente e distribuída.",
+          "en": "Scraping platform at scale — API, scrapers, proxy and a browser pool for resilient, distributed data collection.",
+          "es": "Plataforma de scraping a escala — API, scrapers, proxy y pool de navegadores para recolección de datos resiliente y distribuida."
+        }
       }
     },
     {
@@ -776,6 +850,7 @@
       "type": "service",
       "meta": {
         "project": "datahouse",
+        "group": "core",
         "kind": "app"
       }
     },
@@ -785,6 +860,7 @@
       "type": "service",
       "meta": {
         "project": "datahouse",
+        "group": "core",
         "kind": "app"
       }
     },
@@ -794,6 +870,7 @@
       "type": "service",
       "meta": {
         "project": "datahouse",
+        "group": "core",
         "kind": "app"
       }
     },
@@ -803,6 +880,7 @@
       "type": "service",
       "meta": {
         "project": "datahouse",
+        "group": "core",
         "kind": "app"
       }
     },
@@ -812,23 +890,8 @@
       "type": "service",
       "meta": {
         "project": "datahouse",
+        "group": "core",
         "kind": "app"
-      }
-    },
-    {
-      "id": "service:datahouse:brightdata",
-      "label": "brightdata",
-      "type": "service",
-      "meta": {
-        "project": "datahouse"
-      }
-    },
-    {
-      "id": "service:datahouse:flaresolverr",
-      "label": "flaresolverr",
-      "type": "service",
-      "meta": {
-        "project": "datahouse"
       }
     },
     {
@@ -836,7 +899,26 @@
       "label": "k6",
       "type": "service",
       "meta": {
-        "project": "datahouse"
+        "project": "datahouse",
+        "group": "core"
+      }
+    },
+    {
+      "id": "service:datahouse:brightdata",
+      "label": "brightdata",
+      "type": "service",
+      "meta": {
+        "project": "datahouse",
+        "group": "core"
+      }
+    },
+    {
+      "id": "service:datahouse:flaresolverr",
+      "label": "flaresolverr",
+      "type": "service",
+      "meta": {
+        "project": "datahouse",
+        "group": "core"
       }
     },
     {
@@ -844,7 +926,8 @@
       "label": "postgres-migrations-up",
       "type": "service",
       "meta": {
-        "project": "datahouse"
+        "project": "datahouse",
+        "group": "core"
       }
     },
     {
@@ -852,7 +935,8 @@
       "label": "postgres-migrations-down",
       "type": "service",
       "meta": {
-        "project": "datahouse"
+        "project": "datahouse",
+        "group": "core"
       }
     },
     {
@@ -860,7 +944,8 @@
       "label": "localstack",
       "type": "service",
       "meta": {
-        "project": "datahouse"
+        "project": "datahouse",
+        "group": "core"
       }
     },
     {
@@ -868,7 +953,8 @@
       "label": "nginx",
       "type": "service",
       "meta": {
-        "project": "datahouse"
+        "project": "datahouse",
+        "group": "core"
       }
     },
     {
@@ -876,7 +962,8 @@
       "label": "upstream",
       "type": "service",
       "meta": {
-        "project": "datahouse"
+        "project": "datahouse",
+        "group": "core"
       }
     },
     {
@@ -884,7 +971,8 @@
       "label": "integration",
       "type": "service",
       "meta": {
-        "project": "datahouse"
+        "project": "datahouse",
+        "group": "core"
       }
     },
     {
@@ -1020,12 +1108,6 @@
       "meta": {}
     },
     {
-      "id": "tech:k6",
-      "label": "k6",
-      "type": "technology",
-      "meta": {}
-    },
-    {
       "id": "tech:nginx",
       "label": "Nginx",
       "type": "technology",
@@ -1033,7 +1115,7 @@
     },
     {
       "id": "project:ella",
-      "label": "ella",
+      "label": "Ella",
       "type": "project",
       "meta": {
         "dir": "core/ella",
@@ -1042,7 +1124,11 @@
         "description": null,
         "remote": "https://github.com/mendshell/ella",
         "repo": "mendshell/ella",
-        "pitch": "Assistente de IA local-first (Ollama gpt-oss) — RAG com busca (SearXNG), feeds (Miniflux) e TTS, rodando 100% on-host. Built on Hermes Agent."
+        "pitch": {
+          "pt": "Assistente de IA local-first (Ollama) — RAG com busca (SearXNG), feeds (Miniflux) e TTS, rodando 100% on-host sobre o Hermes Agent.",
+          "en": "Local-first AI assistant (Ollama) — RAG with search (SearXNG), feeds (Miniflux) and TTS, running 100% on-host atop Hermes Agent.",
+          "es": "Asistente de IA local-first (Ollama) — RAG con búsqueda (SearXNG), feeds (Miniflux) y TTS, 100% on-host sobre el Hermes Agent."
+        }
       }
     },
     {
@@ -1050,7 +1136,8 @@
       "label": "searxng",
       "type": "service",
       "meta": {
-        "project": "ella"
+        "project": "ella",
+        "group": "core"
       }
     },
     {
@@ -1058,7 +1145,8 @@
       "label": "tts",
       "type": "service",
       "meta": {
-        "project": "ella"
+        "project": "ella",
+        "group": "core"
       }
     },
     {
@@ -1066,7 +1154,8 @@
       "label": "web",
       "type": "service",
       "meta": {
-        "project": "ella"
+        "project": "ella",
+        "group": "core"
       }
     },
     {
@@ -1074,7 +1163,8 @@
       "label": "chat-shipper",
       "type": "service",
       "meta": {
-        "project": "ella"
+        "project": "ella",
+        "group": "core"
       }
     },
     {
@@ -1082,7 +1172,8 @@
       "label": "status-exporter",
       "type": "service",
       "meta": {
-        "project": "ella"
+        "project": "ella",
+        "group": "core"
       }
     },
     {
@@ -1099,7 +1190,7 @@
     },
     {
       "id": "project:epic-seven",
-      "label": "e7",
+      "label": "Epic Seven",
       "type": "project",
       "meta": {
         "dir": "satellites/epic-seven",
@@ -1107,7 +1198,11 @@
         "summary": "Knowledge + reasoning + combat-simulation layer for Epic Seven: structured collectors,",
         "remote": "https://github.com/mend3/epic-seven",
         "repo": "mend3/epic-seven",
-        "pitch": "Copiloto de IA para Epic Seven — RAG do meta do jogo, motor de combate e arena 3D para planejar times e duelos."
+        "pitch": {
+          "pt": "Copiloto de IA para Epic Seven — RAG do meta do jogo, motor de combate e arena 3D para planejar e simular times e duelos.",
+          "en": "AI copilot for Epic Seven — game-meta RAG, a combat engine and a 3D arena to plan and simulate teams and duels.",
+          "es": "Copiloto de IA para Epic Seven — RAG del meta del juego, motor de combate y arena 3D para planear y simular equipos y duelos."
+        }
       }
     },
     {
@@ -1115,7 +1210,8 @@
       "label": "db",
       "type": "service",
       "meta": {
-        "project": "epic-seven"
+        "project": "epic-seven",
+        "group": "satellites"
       }
     },
     {
@@ -1123,7 +1219,8 @@
       "label": "reasoner",
       "type": "service",
       "meta": {
-        "project": "epic-seven"
+        "project": "epic-seven",
+        "group": "satellites"
       }
     },
     {
@@ -1131,7 +1228,8 @@
       "label": "combat",
       "type": "service",
       "meta": {
-        "project": "epic-seven"
+        "project": "epic-seven",
+        "group": "satellites"
       }
     },
     {
@@ -1139,7 +1237,8 @@
       "label": "collector",
       "type": "service",
       "meta": {
-        "project": "epic-seven"
+        "project": "epic-seven",
+        "group": "satellites"
       }
     },
     {
@@ -1180,7 +1279,7 @@
     },
     {
       "id": "project:extalia",
-      "label": "extalia",
+      "label": "Extalia",
       "type": "project",
       "meta": {
         "dir": "satellites/extalia",
@@ -1190,7 +1289,11 @@
         "remote": "https://github.com/mend3/extalia",
         "repo": "mend3/extalia",
         "monorepo": "nx",
-        "pitch": "Servidor Lineage 2 Interlude (L2J/Java) com painel web, CDN e anticheat — operação completa de um MMO clássico."
+        "pitch": {
+          "pt": "Servidor Lineage 2 Interlude (L2J/Java) com painel web, CDN e anticheat — a operação completa de um MMO clássico self-hosted.",
+          "en": "Lineage 2 Interlude server (L2J/Java) with web panel, CDN and anticheat — the full operation of a classic self-hosted MMO.",
+          "es": "Servidor Lineage 2 Interlude (L2J/Java) con panel web, CDN y anticheat — la operación completa de un MMO clásico self-hosted."
+        }
       }
     },
     {
@@ -1199,31 +1302,8 @@
       "type": "service",
       "meta": {
         "project": "extalia",
+        "group": "satellites",
         "kind": "app"
-      }
-    },
-    {
-      "id": "service:extalia:cdn",
-      "label": "cdn",
-      "type": "service",
-      "meta": {
-        "project": "extalia"
-      }
-    },
-    {
-      "id": "service:extalia:nprotect",
-      "label": "nprotect",
-      "type": "service",
-      "meta": {
-        "project": "extalia"
-      }
-    },
-    {
-      "id": "service:extalia:l2j-server",
-      "label": "l2j-server",
-      "type": "service",
-      "meta": {
-        "project": "extalia"
       }
     },
     {
@@ -1231,7 +1311,35 @@
       "label": "socket",
       "type": "service",
       "meta": {
-        "project": "extalia"
+        "project": "extalia",
+        "group": "satellites"
+      }
+    },
+    {
+      "id": "service:extalia:cdn",
+      "label": "cdn",
+      "type": "service",
+      "meta": {
+        "project": "extalia",
+        "group": "satellites"
+      }
+    },
+    {
+      "id": "service:extalia:nprotect",
+      "label": "nprotect",
+      "type": "service",
+      "meta": {
+        "project": "extalia",
+        "group": "satellites"
+      }
+    },
+    {
+      "id": "service:extalia:l2j-server",
+      "label": "l2j-server",
+      "type": "service",
+      "meta": {
+        "project": "extalia",
+        "group": "satellites"
       }
     },
     {
@@ -1248,7 +1356,7 @@
     },
     {
       "id": "project:hub",
-      "label": "hub",
+      "label": "Hub",
       "type": "project",
       "meta": {
         "dir": "core/hub",
@@ -1257,7 +1365,11 @@
         "description": "SaaS multi-tenant shell + runtime de modulos nativos (features)",
         "remote": "https://github.com/mendshell/devshell-one",
         "repo": "mendshell/devshell-one",
-        "pitch": "SaaS multi-tenant — blog, CRM de vagas, agenda, page-builder, workflows (com nós de IA), financeiro/Open Finance (Pluggy + auto-categorização por IA), projetos (board/sprints/OKR), salon, concierge (B2B2C), analytics e coleta de conectores nativa (módulo connectors + engine + worker packs do async-ops) como módulos nativos, com gating por plano e billing."
+        "pitch": {
+          "pt": "SaaS multi-tenant — blog, CRM, agenda, page-builder, workflows com IA, financeiro/Open Finance e conectores nativos, com gating por plano.",
+          "en": "Multi-tenant SaaS — blog, CRM, calendar, page-builder, AI workflows, finance/Open Finance and native connectors, with plan-based gating.",
+          "es": "SaaS multi-tenant — blog, CRM, agenda, page-builder, workflows con IA, finanzas/Open Finance y conectores nativos, con gating por plan."
+        }
       }
     },
     {
@@ -1265,7 +1377,8 @@
       "label": "hub",
       "type": "service",
       "meta": {
-        "project": "hub"
+        "project": "hub",
+        "group": "core"
       }
     },
     {
@@ -1273,7 +1386,8 @@
       "label": "async-ops",
       "type": "service",
       "meta": {
-        "project": "hub"
+        "project": "hub",
+        "group": "core"
       }
     },
     {
@@ -1281,7 +1395,8 @@
       "label": "async-ops-worker",
       "type": "service",
       "meta": {
-        "project": "hub"
+        "project": "hub",
+        "group": "core"
       }
     },
     {
@@ -1316,7 +1431,7 @@
     },
     {
       "id": "project:knowledge-engine",
-      "label": "knowledge-engine",
+      "label": "Knowledge Engine",
       "type": "project",
       "meta": {
         "dir": "foundation/knowledge-engine",
@@ -1324,7 +1439,12 @@
         "summary": "Motor de **ingestão stateless** do workspace: dado um arquivo, URL ou diretório, devolve",
         "description": null,
         "remote": "https://github.com/mendshell/devshell-one",
-        "repo": "mendshell/devshell-one"
+        "repo": "mendshell/devshell-one",
+        "pitch": {
+          "pt": "Motor de ingestão stateless do workspace — recebe um arquivo, URL ou diretório e devolve conteúdo normalizado para a base de conhecimento.",
+          "en": "Workspace stateless ingestion engine — takes a file, URL or directory and returns normalized content for the knowledge base.",
+          "es": "Motor de ingesta stateless del workspace — recibe un archivo, URL o directorio y devuelve contenido normalizado para la base de conocimiento."
+        }
       }
     },
     {
@@ -1332,7 +1452,8 @@
       "label": "knowledge-engine",
       "type": "service",
       "meta": {
-        "project": "knowledge-engine"
+        "project": "knowledge-engine",
+        "group": "foundation"
       }
     },
     {
@@ -1543,31 +1664,6 @@
   "edges": [
     {
       "source": "project:oracle",
-      "target": "service:oracle:ollama",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:minio",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:clickhouse",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:n8n",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:neo4j",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
       "target": "service:oracle:qdrant",
       "relation": "contains"
     },
@@ -1608,6 +1704,96 @@
     },
     {
       "source": "project:oracle",
+      "target": "service:oracle:minio",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:clickhouse",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:n8n",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:neo4j",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:ollama",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:ollama-cpu",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:ollama-amd",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:ollama-pull-cpu",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:ollama-pull-nvidia",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:ollama-pull-amd",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:graphiti",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:n8n-migrations",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:mcp-fetch",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:mcp-git",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:mcp-time",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:mcp-graphiti",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:miniflux-db",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:miniflux",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
       "target": "service:oracle:playwright",
       "relation": "contains"
     },
@@ -1619,11 +1805,6 @@
     {
       "source": "project:oracle",
       "target": "service:oracle:selenoid-ui",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:ai-context",
       "relation": "contains"
     },
     {
@@ -1693,11 +1874,6 @@
     },
     {
       "source": "project:oracle",
-      "target": "service:oracle:template-mcp",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
       "target": "service:oracle:prometheus",
       "relation": "contains"
     },
@@ -1729,16 +1905,6 @@
     {
       "source": "project:oracle",
       "target": "service:oracle:logstash",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:homarr",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:homeassistant",
       "relation": "contains"
     },
     {
@@ -1783,62 +1949,17 @@
     },
     {
       "source": "project:oracle",
-      "target": "service:oracle:graphiti",
+      "target": "service:oracle:ai-context",
       "relation": "contains"
     },
     {
       "source": "project:oracle",
-      "target": "service:oracle:n8n-migrations",
+      "target": "service:oracle:template-mcp",
       "relation": "contains"
     },
     {
       "source": "project:oracle",
-      "target": "service:oracle:mcp-fetch",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:mcp-git",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:mcp-time",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:mcp-graphiti",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:miniflux-db",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:miniflux",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:ollama-cpu",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:ollama-amd",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:ollama-pull-cpu",
-      "relation": "contains"
-    },
-    {
-      "source": "project:oracle",
-      "target": "service:oracle:ollama-pull-nvidia",
+      "target": "service:oracle:homarr",
       "relation": "contains"
     },
     {
@@ -1898,32 +2019,7 @@
     },
     {
       "source": "project:oracle",
-      "target": "tech:playwright",
-      "relation": "uses"
-    },
-    {
-      "source": "project:oracle",
-      "target": "tech:traefik",
-      "relation": "uses"
-    },
-    {
-      "source": "project:oracle",
-      "target": "tech:qdrant",
-      "relation": "uses"
-    },
-    {
-      "source": "project:oracle",
-      "target": "tech:prometheus",
-      "relation": "uses"
-    },
-    {
-      "source": "project:oracle",
-      "target": "tech:elasticsearch",
-      "relation": "uses"
-    },
-    {
-      "source": "project:oracle",
-      "target": "tech:grafana",
+      "target": "tech:ollama",
       "relation": "uses"
     },
     {
@@ -1943,22 +2039,57 @@
     },
     {
       "source": "project:oracle",
-      "target": "tech:miniflux",
+      "target": "tech:playwright",
       "relation": "uses"
     },
     {
       "source": "project:oracle",
-      "target": "tech:ollama",
+      "target": "tech:node-js",
       "relation": "uses"
     },
     {
       "source": "project:oracle",
-      "target": "tech:websocket",
+      "target": "tech:prometheus",
+      "relation": "uses"
+    },
+    {
+      "source": "project:oracle",
+      "target": "tech:elasticsearch",
+      "relation": "uses"
+    },
+    {
+      "source": "project:oracle",
+      "target": "tech:grafana",
       "relation": "uses"
     },
     {
       "source": "project:oracle",
       "target": "tech:loki",
+      "relation": "uses"
+    },
+    {
+      "source": "project:oracle",
+      "target": "tech:traefik",
+      "relation": "uses"
+    },
+    {
+      "source": "project:oracle",
+      "target": "tech:qdrant",
+      "relation": "uses"
+    },
+    {
+      "source": "project:oracle",
+      "target": "tech:mongodb",
+      "relation": "uses"
+    },
+    {
+      "source": "project:oracle",
+      "target": "tech:miniflux",
+      "relation": "uses"
+    },
+    {
+      "source": "project:oracle",
+      "target": "tech:websocket",
       "relation": "uses"
     },
     {
@@ -1969,11 +2100,6 @@
     {
       "source": "project:oracle",
       "target": "tech:supabase",
-      "relation": "uses"
-    },
-    {
-      "source": "project:oracle",
-      "target": "tech:mongodb",
       "relation": "uses"
     },
     {
@@ -2008,6 +2134,11 @@
     },
     {
       "source": "project:datahouse",
+      "target": "service:datahouse:k6",
+      "relation": "contains"
+    },
+    {
+      "source": "project:datahouse",
       "target": "service:datahouse:brightdata",
       "relation": "contains"
     },
@@ -2029,11 +2160,6 @@
     {
       "source": "project:datahouse",
       "target": "service:oracle:selenoid-ui",
-      "relation": "contains"
-    },
-    {
-      "source": "project:datahouse",
-      "target": "service:datahouse:k6",
       "relation": "contains"
     },
     {
@@ -2228,17 +2354,7 @@
     },
     {
       "source": "project:datahouse",
-      "target": "tech:playwright",
-      "relation": "uses"
-    },
-    {
-      "source": "project:datahouse",
-      "target": "tech:traefik",
-      "relation": "uses"
-    },
-    {
-      "source": "project:datahouse",
-      "target": "tech:k6",
+      "target": "tech:node-js",
       "relation": "uses"
     },
     {
@@ -2249,6 +2365,16 @@
     {
       "source": "project:datahouse",
       "target": "tech:grafana",
+      "relation": "uses"
+    },
+    {
+      "source": "project:datahouse",
+      "target": "tech:playwright",
+      "relation": "uses"
+    },
+    {
+      "source": "project:datahouse",
+      "target": "tech:traefik",
       "relation": "uses"
     },
     {
@@ -2318,12 +2444,17 @@
     },
     {
       "source": "project:ella",
-      "target": "tech:searxng",
+      "target": "tech:node-js",
       "relation": "uses"
     },
     {
       "source": "project:ella",
       "target": "tech:loki",
+      "relation": "uses"
+    },
+    {
+      "source": "project:ella",
+      "target": "tech:searxng",
       "relation": "uses"
     },
     {
@@ -2458,12 +2589,17 @@
     },
     {
       "source": "project:epic-seven",
-      "target": "tech:traefik",
+      "target": "tech:node-js",
       "relation": "uses"
     },
     {
       "source": "project:epic-seven",
       "target": "tech:ollama",
+      "relation": "uses"
+    },
+    {
+      "source": "project:epic-seven",
+      "target": "tech:traefik",
       "relation": "uses"
     },
     {
@@ -2483,6 +2619,16 @@
     },
     {
       "source": "project:extalia",
+      "target": "service:extalia:socket",
+      "relation": "contains"
+    },
+    {
+      "source": "project:extalia",
+      "target": "service:datahouse:nginx",
+      "relation": "contains"
+    },
+    {
+      "source": "project:extalia",
       "target": "service:extalia:cdn",
       "relation": "contains"
     },
@@ -2494,16 +2640,6 @@
     {
       "source": "project:extalia",
       "target": "service:extalia:l2j-server",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:extalia:socket",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:datahouse:nginx",
       "relation": "contains"
     },
     {
@@ -2588,17 +2724,22 @@
     },
     {
       "source": "project:extalia",
+      "target": "tech:node-js",
+      "relation": "uses"
+    },
+    {
+      "source": "project:extalia",
       "target": "tech:nginx",
       "relation": "uses"
     },
     {
       "source": "project:extalia",
-      "target": "tech:traefik",
+      "target": "tech:mysql",
       "relation": "uses"
     },
     {
       "source": "project:extalia",
-      "target": "tech:mysql",
+      "target": "tech:traefik",
       "relation": "uses"
     },
     {
@@ -2733,17 +2874,22 @@
     },
     {
       "source": "project:hub",
-      "target": "tech:traefik",
-      "relation": "uses"
-    },
-    {
-      "source": "project:hub",
       "target": "tech:postgresql",
       "relation": "uses"
     },
     {
       "source": "project:hub",
+      "target": "tech:node-js",
+      "relation": "uses"
+    },
+    {
+      "source": "project:hub",
       "target": "tech:ollama",
+      "relation": "uses"
+    },
+    {
+      "source": "project:hub",
+      "target": "tech:traefik",
       "relation": "uses"
     },
     {
@@ -2759,6 +2905,11 @@
     {
       "source": "project:knowledge-engine",
       "target": "tech:qdrant",
+      "relation": "uses"
+    },
+    {
+      "source": "project:knowledge-engine",
+      "target": "tech:postgresql",
       "relation": "uses"
     },
     {
@@ -2882,6 +3033,36 @@
       "relation": "connects"
     },
     {
+      "source": "project:datahouse",
+      "target": "project:oracle",
+      "relation": "depends"
+    },
+    {
+      "source": "project:ella",
+      "target": "project:oracle",
+      "relation": "depends"
+    },
+    {
+      "source": "project:epic-seven",
+      "target": "project:oracle",
+      "relation": "depends"
+    },
+    {
+      "source": "project:extalia",
+      "target": "project:oracle",
+      "relation": "depends"
+    },
+    {
+      "source": "project:hub",
+      "target": "project:oracle",
+      "relation": "depends"
+    },
+    {
+      "source": "project:knowledge-engine",
+      "target": "project:oracle",
+      "relation": "depends"
+    },
+    {
       "source": "platform:devshell-one",
       "target": "product:saas-hub",
       "relation": "contains"
@@ -2907,6 +3088,26 @@
       "relation": "built-on"
     },
     {
+      "source": "platform:devshell-one",
+      "target": "vision:data-plane",
+      "relation": "built-on"
+    },
+    {
+      "source": "platform:devshell-one",
+      "target": "vision:cognition-layer",
+      "relation": "built-on"
+    },
+    {
+      "source": "platform:devshell-one",
+      "target": "vision:automation-layer",
+      "relation": "built-on"
+    },
+    {
+      "source": "platform:devshell-one",
+      "target": "vision:intelligence-layer",
+      "relation": "built-on"
+    },
+    {
       "source": "vision:control-plane",
       "target": "project:oracle",
       "relation": "includes"
@@ -2922,6 +3123,11 @@
       "relation": "includes"
     },
     {
+      "source": "vision:data-plane",
+      "target": "project:ella",
+      "relation": "includes"
+    },
+    {
       "source": "vision:cognition-layer",
       "target": "project:hub",
       "relation": "includes"
@@ -2929,6 +3135,11 @@
     {
       "source": "vision:cognition-layer",
       "target": "project:epic-seven",
+      "relation": "includes"
+    },
+    {
+      "source": "vision:cognition-layer",
+      "target": "project:ella",
       "relation": "includes"
     },
     {
@@ -2945,6 +3156,16 @@
       "source": "product:commerce-intelligence",
       "target": "project:hub",
       "relation": "built-on"
+    },
+    {
+      "source": "product:commerce-intelligence",
+      "target": "domain:ecommerce",
+      "relation": "serves"
+    },
+    {
+      "source": "product:commerce-intelligence",
+      "target": "domain:ads",
+      "relation": "serves"
     },
     {
       "source": "product:saas-hub",
@@ -2965,16 +3186,6 @@
       "source": "product:scraping-platform",
       "target": "project:datahouse",
       "relation": "built-on"
-    },
-    {
-      "source": "product:commerce-intelligence",
-      "target": "domain:ecommerce",
-      "relation": "serves"
-    },
-    {
-      "source": "product:commerce-intelligence",
-      "target": "domain:ads",
-      "relation": "serves"
     },
     {
       "source": "domain:ecommerce",
@@ -3027,6 +3238,11 @@
       "relation": "provided-by"
     },
     {
+      "source": "capability:rag",
+      "target": "project:ella",
+      "relation": "provided-by"
+    },
+    {
       "source": "capability:multi-tenant",
       "target": "project:hub",
       "relation": "provided-by"
@@ -3047,16 +3263,6 @@
       "relation": "provided-by"
     },
     {
-      "source": "vision:cognition-layer",
-      "target": "project:ella",
-      "relation": "includes"
-    },
-    {
-      "source": "vision:data-plane",
-      "target": "project:ella",
-      "relation": "includes"
-    },
-    {
       "source": "product:ella",
       "target": "project:ella",
       "relation": "built-on"
@@ -3070,11 +3276,6 @@
       "source": "domain:personal-ai",
       "target": "project:ella",
       "relation": "served-by"
-    },
-    {
-      "source": "capability:rag",
-      "target": "project:ella",
-      "relation": "provided-by"
     },
     {
       "source": "capability:local-llm",
