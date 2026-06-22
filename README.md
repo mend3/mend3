@@ -21,6 +21,9 @@ I build platforms that turn fragmented data, integrations, and processes into op
 [![CV English](https://img.shields.io/badge/CV-English-202940?style=flat-square&logo=adobeacrobatreader&logoColor=CAAA98&labelColor=202940&color=9A8678)](cv-en-us.pdf)
 [![Currículo PT-BR](https://img.shields.io/badge/Currículo-PT--BR-202940?style=flat-square&logo=adobeacrobatreader&logoColor=CAAA98&labelColor=202940&color=9A8678)](cv-pt-br.pdf)
 
+[![Live architecture map](https://img.shields.io/badge/Live-Architecture%20Map-202940?style=flat-square&logo=googlechrome&logoColor=CAAA98&labelColor=202940&color=9A8678)](https://mend3.github.io/mend3/)
+[![Ella — Intelligence Layer](https://img.shields.io/badge/Ella-Intelligence%20Layer-202940?style=flat-square&labelColor=202940&color=9A8678)](https://mend3.github.io/mend3/ella.html)
+
 </div>
 
 ---
@@ -124,7 +127,7 @@ flowchart LR
 ```
 <!-- KT:PROFILE:END -->
 
-<sub>↑ Mapped from the real system I architect and operate (vision → products → domains → capabilities → projects).</sub>
+<sub>↑ <a href="https://mend3.github.io/mend3/">Mapped from the real system I architect and operate</a> (vision → products → domains → capabilities → projects) — explore it live.</sub>
 
 <table>
 <tr>
