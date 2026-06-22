@@ -124,7 +124,7 @@ flowchart LR
 ```
 <!-- KT:PROFILE:END -->
 
-<sub>↑ Auto-generated from the live system topology (vision → products → domains → capabilities → projects).</sub>
+<sub>↑ Mapped from the real system I architect and operate (vision → products → domains → capabilities → projects).</sub>
 
 <table>
 <tr>
