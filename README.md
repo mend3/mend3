@@ -49,13 +49,16 @@ flowchart LR
   classDef prod fill:#CAAA98,stroke:#9A8678,color:#202940;
   classDef dom fill:#202940,stroke:#9A8678,color:#CAAA98,stroke-dasharray:4 3;
   classDef proj fill:#4B4038,stroke:#CAAA98,color:#CAAA98,stroke-width:2px;
+  c_automa_o_com_ia["Automação com IA"]:::cap
   c_local_llm["Local LLM"]:::cap
   c_multi_tenant["Multi-tenant"]:::cap
+  c_open_finance_financeiro["Open Finance / Financeiro"]:::cap
   c_page_builder_cms["Page Builder / CMS"]:::cap
   c_rag_cognition["RAG / Cognition"]:::cap
   c_universal_connectors["Universal Connectors"]:::cap
   d_ads["Ads"]:::dom
   d_ecommerce["Ecommerce"]:::dom
+  d_financeiro["Financeiro"]:::dom
   d_personal_ai["Personal AI"]:::dom
   d_real_estate["Real Estate"]:::dom
   d_talent_intelligence["Talent Intelligence"]:::dom
@@ -73,14 +76,17 @@ flowchart LR
   v_control_plane["Control Plane"]:::vis
   v_data_plane["Data Plane"]:::vis
   v_intelligence_layer["Intelligence Layer"]:::vis
+  c_automa_o_com_ia -->|provided-by| p_hub
   c_local_llm -->|provided-by| p_ella
   c_multi_tenant -->|provided-by| p_hub
+  c_open_finance_financeiro -->|provided-by| p_hub
   c_page_builder_cms -->|provided-by| p_hub
   c_rag_cognition -->|provided-by| p_ella
   c_rag_cognition -->|provided-by| p_hub
   c_universal_connectors -->|provided-by| p_hub
   d_ads -->|served-by| p_hub
   d_ecommerce -->|served-by| p_hub
+  d_financeiro -->|served-by| p_hub
   d_personal_ai -->|served-by| p_ella
   d_real_estate -->|served-by| p_hub
   d_talent_intelligence -->|served-by| p_hub
