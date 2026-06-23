@@ -3437,6 +3437,186 @@
         "url": "https://www.linkedin.com/in/vicmendonca/"
       }
     ],
+    "hub": {
+      "hero": {
+        "lead": {
+          "pt": "Construindo plataformas AI-native, ecossistemas de dados e produtos SaaS que escalam.",
+          "en": "Building AI-native platforms, data ecosystems, and SaaS products that scale.",
+          "es": "Construyendo plataformas AI-native, ecosistemas de datos y productos SaaS que escalan."
+        },
+        "roles": [
+          {
+            "pt": "Principal Engineer",
+            "en": "Principal Engineer",
+            "es": "Principal Engineer"
+          },
+          {
+            "pt": "Arquiteto de Plataforma",
+            "en": "Platform Architect",
+            "es": "Arquitecto de Plataforma"
+          },
+          {
+            "pt": "Fundador",
+            "en": "Founder",
+            "es": "Fundador"
+          }
+        ]
+      },
+      "impact": [
+        {
+          "value": "15+",
+          "label": {
+            "pt": "anos construindo plataformas em produção",
+            "en": "years building platforms in production",
+            "es": "años construyendo plataformas en producción"
+          }
+        },
+        {
+          "value": {
+            "pt": "milhões",
+            "en": "millions",
+            "es": "millones"
+          },
+          "label": {
+            "pt": "de sinais de preço e estoque processados",
+            "en": "of pricing & inventory signals processed",
+            "es": "de señales de precio e inventario procesadas"
+          }
+        },
+        {
+          "value": {
+            "pt": "Multi-tenant",
+            "en": "Multi-tenant",
+            "es": "Multi-tenant"
+          },
+          "label": {
+            "pt": "ecossistema SaaS sobre uma só fundação",
+            "en": "SaaS ecosystem on one shared foundation",
+            "es": "ecosistema SaaS sobre una sola base"
+          }
+        },
+        {
+          "value": {
+            "pt": "AI-native",
+            "en": "AI-native",
+            "es": "AI-native"
+          },
+          "label": {
+            "pt": "RAG, agentes e LLMs locais em produção",
+            "en": "RAG, agents & local LLMs in production",
+            "es": "RAG, agentes y LLMs locales en producción"
+          }
+        },
+        {
+          "value": {
+            "pt": "fintech · commerce",
+            "en": "fintech · commerce",
+            "es": "fintech · commerce"
+          },
+          "label": {
+            "pt": "domínios entregues — pagamentos a inteligência de varejo",
+            "en": "domains shipped — payments to retail intelligence",
+            "es": "dominios entregados — pagos a inteligencia de retail"
+          }
+        },
+        {
+          "value": {
+            "pt": "Distribuído",
+            "en": "Distributed",
+            "es": "Distribuido"
+          },
+          "label": {
+            "pt": "sistemas orientados a eventos, observáveis e resilientes",
+            "en": "event-driven systems, observable & resilient",
+            "es": "sistemas orientados a eventos, observables y resilientes"
+          }
+        }
+      ],
+      "aiLab": [
+        {
+          "t": {
+            "pt": "LLMs local-first",
+            "en": "Local-first LLMs",
+            "es": "LLMs local-first"
+          },
+          "d": {
+            "pt": "Ollama self-hosted (qwen2.5) na fundação compartilhada — inferência que pode ficar na infra do próprio cliente.",
+            "en": "Self-hosted Ollama (qwen2.5) on the shared foundation — inference that can stay on a company's own infra.",
+            "es": "Ollama self-hosted (qwen2.5) en la base compartida — inferencia que puede quedarse en la infra del propio cliente."
+          }
+        },
+        {
+          "t": {
+            "pt": "RAG & busca vetorial",
+            "en": "RAG & vector search",
+            "es": "RAG & búsqueda vectorial"
+          },
+          "d": {
+            "pt": "Recuperação sobre Qdrant + pgvector, alimentando conhecimento sobre a operação inteira.",
+            "en": "Retrieval over Qdrant + pgvector, powering knowledge across the whole operation.",
+            "es": "Recuperación sobre Qdrant + pgvector, alimentando conocimiento sobre toda la operación."
+          }
+        },
+        {
+          "t": {
+            "pt": "Workflows agênticos",
+            "en": "Agentic workflows",
+            "es": "Workflows agénticos"
+          },
+          "d": {
+            "pt": "Ella — um agente com persona própria, memória persistente, recuperação de conhecimento e execução de ferramentas.",
+            "en": "Ella — a persona-driven agent with persistent memory, knowledge retrieval and tool execution.",
+            "es": "Ella — un agente con persona propia, memoria persistente, recuperación de conocimiento y ejecución de herramientas."
+          }
+        },
+        {
+          "t": {
+            "pt": "Infraestrutura MCP",
+            "en": "MCP infrastructure",
+            "es": "Infraestructura MCP"
+          },
+          "d": {
+            "pt": "Uma camada Model Context Protocol que conecta ferramentas, dados e navegadores aos agentes.",
+            "en": "A Model Context Protocol layer wiring tools, data and browsers into agents.",
+            "es": "Una capa Model Context Protocol que conecta herramientas, datos y navegadores a los agentes."
+          }
+        },
+        {
+          "t": {
+            "pt": "Sistemas de conhecimento",
+            "en": "Knowledge systems",
+            "es": "Sistemas de conocimiento"
+          },
+          "d": {
+            "pt": "Um motor de conhecimento + este mapa de topologia vivo, gerado a partir de código e docs.",
+            "en": "A knowledge engine + this living topology map, generated from code and docs.",
+            "es": "Un motor de conocimiento + este mapa de topología vivo, generado a partir de código y docs."
+          }
+        }
+      ],
+      "now": [
+        {
+          "pt": "DevShell One — um ecossistema SaaS AI-data-driven onde verticais entram como módulos sobre uma fundação multi-tenant.",
+          "en": "DevShell One — an AI-data-driven SaaS ecosystem where verticals ship as modules on one multi-tenant foundation.",
+          "es": "DevShell One — un ecosistema SaaS AI-data-driven donde las verticales entran como módulos sobre una base multi-tenant."
+        },
+        {
+          "pt": "Inteligência de e-commerce — consolidando dados de marketplace, ads e analytics em uma só camada de decisão.",
+          "en": "E-commerce intelligence — consolidating marketplace, ads and analytics data into one decision layer.",
+          "es": "Inteligencia de e-commerce — consolidando datos de marketplace, ads y analytics en una sola capa de decisión."
+        },
+        {
+          "pt": "Infraestrutura de MCP e agentes — fazendo a IA ser genuinamente útil em produção, local-first.",
+          "en": "MCP & agent infrastructure — making AI genuinely useful in production, local-first.",
+          "es": "Infraestructura de MCP y agentes — haciendo la IA genuinamente útil en producción, local-first."
+        },
+        {
+          "pt": "Este mapa de conhecimento — uma topologia auto-gerada de tudo acima.",
+          "en": "This knowledge map — a self-generating topology of everything above.",
+          "es": "Este mapa de conocimiento — una topología auto-generada de todo lo anterior."
+        }
+      ]
+    },
     "cv": {
       "tagline": {
         "pt": "Engenheiro de Software Principal · Arquiteto de Plataforma · Sistemas de IA, Plataformas de Dados & SaaS Multi-Tenant",
