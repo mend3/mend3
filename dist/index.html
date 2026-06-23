@@ -284,6 +284,15 @@
   .wlist a:hover .wic { color:var(--accent); }
   .lab .term { box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); }
 
+  /* in-place section graph (cards row -> scoped knowledge-map nodes) */
+  .arch-grid.graph-mode, .repos.graph-mode { display:block; }
+  .secgraph { border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--card); box-shadow:var(--shadow-lg); }
+  .secgraph-bar { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 14px; border-bottom:1px solid var(--line); font-size:12.5px; font-weight:700; letter-spacing:.3px; color:var(--ink-muted); }
+  .secgraph-back { border:1px solid var(--line); background:var(--card); color:var(--accent); border-radius:8px; padding:5px 12px; font-weight:600; cursor:pointer; font-size:12px; }
+  .secgraph-back:hover { border-color:var(--accent); }
+  .secgraph-canvas { display:block; }
+  .secgraph-canvas canvas { display:block; cursor:grab; }
+
   /* github activity widget (above the map) */
   .ghw { text-align:left; background:var(--card); border:1px solid var(--line); border-radius:13px; box-shadow:var(--shadow); padding:14px 15px; margin-bottom:18px; }
   .ghw-head { display:flex; align-items:center; gap:8px; font-size:13.5px; }
@@ -813,6 +822,51 @@ window.__PROFILE = {
       const cta = q(".hero-cta"); if (cta && H.ctas) cta.innerHTML = H.ctas.map((b) => `<a class="btn ${b.primary ? "primary" : "ghost"}" href="${esc(b.href)}"${ext(b.href)}>${esc(b.label)} ${ic(b.icon, 2)}</a>`).join("");
       const focus = q(".hero .focus .chips"); if (focus && H.focus) focus.innerHTML = H.focus.map((f) => `<span class="chip">${esc(f)}</span>`).join("");
     }
+  })();
+
+  // ---- in-place section graph: a "see all" link swaps its card grid for a scoped node graph ----
+  (function sectionGraphs() {
+    let GRAPH = null;
+    const SEM = new Set(["platform", "vision", "product", "domain", "capability", "project"]);
+    const sub = (g, seeds) => {
+      const byId = new Map(g.nodes.map((n) => [n.id, n]));
+      const seed = new Set(g.nodes.filter((n) => seeds.includes(n.type)).map((n) => n.id));
+      const inc = new Set(seed);
+      g.edges.forEach((e) => { const s = byId.get(e.source), t = byId.get(e.target); if (!s || !t) return; if (seed.has(e.source) && SEM.has(t.type)) inc.add(e.target); if (seed.has(e.target) && SEM.has(s.type)) inc.add(e.source); });
+      return { nodes: g.nodes.filter((n) => inc.has(n.id)).map((n) => ({ id: n.id, label: n.label, type: n.type })), edges: g.edges.filter((e) => inc.has(e.source) && inc.has(e.target)), cats: g.categories || {} };
+    };
+    const render = (host, d) => {
+      const W = host.clientWidth || 700, H = 440, DPR = Math.min(window.devicePixelRatio || 1, 2);
+      const cvs = document.createElement("canvas"); cvs.width = W * DPR; cvs.height = H * DPR; cvs.style.width = "100%"; cvs.style.height = H + "px";
+      const ctx = cvs.getContext("2d"); ctx.scale(DPR, DPR);
+      const N = d.nodes, E = d.edges, idx = new Map(N.map((n) => [n.id, n]));
+      N.forEach((n) => { n.x = W / 2 + (Math.random() - .5) * W * .5; n.y = H / 2 + (Math.random() - .5) * H * .5; n.vx = 0; n.vy = 0; });
+      for (let it = 0; it < 240; it++) {
+        for (let i = 0; i < N.length; i++) for (let j = i + 1; j < N.length; j++) { const a = N[i], b = N[j]; let dx = a.x - b.x, dy = a.y - b.y, dd = Math.hypot(dx, dy) || 1; const f = 2800 / (dd * dd); dx /= dd; dy /= dd; a.vx += dx * f; a.vy += dy * f; b.vx -= dx * f; b.vy -= dy * f; }
+        E.forEach((e) => { const a = idx.get(e.source), b = idx.get(e.target); if (!a || !b) return; let dx = b.x - a.x, dy = b.y - a.y, dd = Math.hypot(dx, dy) || 1; const f = (dd - 100) * .02; dx /= dd; dy /= dd; a.vx += dx * f; a.vy += dy * f; b.vx -= dx * f; b.vy -= dy * f; });
+        N.forEach((n) => { n.vx += (W / 2 - n.x) * .003; n.vy += (H / 2 - n.y) * .003; n.x += Math.max(-7, Math.min(7, n.vx)); n.y += Math.max(-7, Math.min(7, n.vy)); n.vx *= .84; n.vy *= .84; n.x = Math.max(50, Math.min(W - 50, n.x)); n.y = Math.max(26, Math.min(H - 26, n.y)); });
+      }
+      const ink = (getComputedStyle(document.body).getPropertyValue("--ink").trim()) || "#0f1722";
+      ctx.clearRect(0, 0, W, H);
+      E.forEach((e) => { const a = idx.get(e.source), b = idx.get(e.target); if (!a || !b) return; ctx.strokeStyle = "rgba(125,145,180,.32)"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); });
+      ctx.textAlign = "center"; ctx.font = "600 11px ui-sans-serif,system-ui";
+      N.forEach((n) => { const col = (d.cats[n.type] && d.cats[n.type].color) || "#64748b"; ctx.fillStyle = col; ctx.beginPath(); ctx.arc(n.x, n.y, 5.5, 0, 6.283); ctx.fill(); ctx.fillStyle = ink; ctx.fillText(n.label, n.x, n.y - 9); });
+      host.innerHTML = ""; host.appendChild(cvs);
+    };
+    const open = (grid, seeds, title) => {
+      if (!grid || grid.dataset.graphOn) return;
+      const go = () => {
+        grid.dataset.graphOn = "1"; grid.dataset.orig = grid.innerHTML; grid.classList.add("graph-mode");
+        grid.innerHTML = `<div class="secgraph"><div class="secgraph-bar"><span>${title} — knowledge map</span><button class="secgraph-back" type="button">&larr; Back to cards</button></div><div class="secgraph-canvas"></div></div>`;
+        grid.querySelector(".secgraph-back").addEventListener("click", () => { grid.innerHTML = grid.dataset.orig; grid.classList.remove("graph-mode"); delete grid.dataset.graphOn; });
+        render(grid.querySelector(".secgraph-canvas"), sub(GRAPH, seeds));
+      };
+      if (GRAPH) return go();
+      fetch("knowledge-graph.json").then((r) => r.ok ? r.json() : null).then((g) => { if (g && g.nodes) { GRAPH = g; go(); } }).catch(() => {});
+    };
+    const wire = (linkSel, gridSel, seeds, title) => { const a = document.querySelector(linkSel); if (a) a.addEventListener("click", (e) => { e.preventDefault(); open(document.querySelector(gridSel), seeds, title); }); };
+    wire('.sec-split .sec-link[href="knowledge-map.html"]', ".arch-grid", ["vision", "product", "domain", "capability", "platform"], "Architecture");
+    wire('.os-row .sec-link', ".repos", ["project"], "Projects");
   })();
   const moon = '<path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>';
   const sun = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>';
