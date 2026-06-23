@@ -147,7 +147,7 @@
 
   /* ---------- impact ---------- */
   .impact-wrap { background:var(--paper); }
-  .impact { margin-top:-34px; position:relative; z-index:5; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); display:grid; grid-template-columns:repeat(5,1fr); }
+  .impact { margin-top:-34px; position:relative; z-index:5; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); display:grid; grid-template-columns:repeat(4,1fr); }
   .stat { display:flex; align-items:flex-start; gap:13px; padding:24px 22px; border-right:1px solid var(--line); }
   .stat:last-child { border-right:none; }
   .stat .si { width:30px; height:30px; flex:none; color:var(--accent); stroke:currentColor; fill:none; stroke-width:1.6; }
@@ -188,7 +188,7 @@
   .os-wrap { background:color-mix(in srgb,var(--ink) 2%,var(--paper)); }
   html.dark .os-wrap { background:color-mix(in srgb,#000 25%,var(--paper)); }
   .os-row { display:grid; grid-template-columns:255px minmax(0,1fr); gap:40px; align-items:start; }
-  .repos { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; align-items:stretch; }
+  .repos { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; align-items:start; }
   .repo { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:19px; box-shadow:var(--shadow); display:flex; flex-direction:column; }
   .repo:hover { transform:translateY(-5px); border-color:color-mix(in srgb,var(--accent) 45%,var(--line)); box-shadow:var(--shadow-lg); }
   .repo:hover .rh .ava { background:var(--accent); color:#fff; border-color:var(--accent); }
@@ -220,13 +220,20 @@
   /* writing + now + map */
   .wn-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:34px; align-items:start; }
   .wcol .sec-title { font-size:24px; }
-  .wlist { display:flex; flex-direction:column; gap:10px; }
-  .wlist a { display:flex; gap:13px; padding:13px 15px; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); transition:transform .16s cubic-bezier(.2,.7,.3,1), border-color .16s, box-shadow .16s, color .14s; }
-  .wlist a:hover { transform:translateY(-2px); border-color:color-mix(in srgb,var(--accent) 42%,var(--line)); box-shadow:var(--shadow-lg); }
-  .wlist .wic { width:36px; height:36px; flex:none; box-sizing:border-box; padding:8px; border-radius:10px; color:var(--accent); background:var(--accent-soft); border:1px solid color-mix(in srgb,var(--accent) 18%,transparent); }
-  .wlist .wt { font-size:13.5px; font-weight:600; line-height:1.35; }
-  .wlist a:hover .wt { color:var(--accent); }
-  .wlist .wd { font-size:11.5px; color:var(--ink-muted); margin-top:3px; }
+  .wcol .sec-lead { max-width:none; }
+  .wlist { display:flex; flex-direction:column; gap:12px; }
+  .wpost { display:block; padding:16px 17px; background:var(--card); border:1px solid var(--line); border-radius:13px; box-shadow:var(--shadow); transition:transform .16s cubic-bezier(.2,.7,.3,1), border-color .16s, box-shadow .16s, color .14s; }
+  .wpost:hover { transform:translateY(-3px); border-color:color-mix(in srgb,var(--accent) 42%,var(--line)); box-shadow:var(--shadow-lg); }
+  .wp-top { display:flex; align-items:center; gap:9px; margin-bottom:11px; }
+  .wp-ic { width:30px; height:30px; flex:none; box-sizing:border-box; padding:7px; border-radius:8px; color:var(--accent); background:var(--accent-soft); border:1px solid color-mix(in srgb,var(--accent) 18%,transparent); }
+  .wp-date { font-size:11.5px; color:var(--ink-muted); font-weight:500; }
+  .wp-title { font-size:15px; font-weight:700; line-height:1.32; letter-spacing:-.2px; }
+  .wpost:hover .wp-title { color:var(--accent); }
+  .wp-desc { font-size:12.5px; color:var(--ink-muted); line-height:1.55; margin-top:8px; }
+  .wp-meta { display:flex; align-items:center; gap:15px; margin-top:13px; padding-top:12px; border-top:1px solid var(--line); font-size:12px; color:var(--ink-muted); }
+  .wp-meta span { display:inline-flex; align-items:center; gap:6px; }
+  .wp-meta svg { width:14px; height:14px; }
+  .wp-meta .wp-src { margin-left:auto; }
   .now-title { font-size:24px; font-weight:800; letter-spacing:-.6px; margin:0 0 4px; }
   .now-sub { color:var(--ink-muted); font-size:13.5px; margin:0 0 16px; }
   .nowlist { display:flex; flex-direction:column; gap:9px; }
@@ -269,13 +276,29 @@
   .btn.ghost:hover { transform:translateY(-1px); }
   .chip { transition:border-color .14s, background .14s, color .14s; }
   .chip:hover { color:#fff; border-color:rgba(255,255,255,.34); background:rgba(255,255,255,.07); }
-  .sec-link svg { transition:transform .16s; }
+  .sec-link svg { width:15px; height:15px; flex:none; transition:transform .16s; }
   .sec-link:hover svg { transform:translateX(3px); }
   .nav a.active svg { color:var(--accent); }
   .wlist a .wt { transition:color .14s; }
   .wlist a:hover .wt { color:var(--accent); }
   .wlist a:hover .wic { color:var(--accent); }
   .lab .term { box-shadow:inset 0 0 0 1px rgba(255,255,255,.04); }
+
+  /* github activity widget (above the map) */
+  .ghw { text-align:left; background:var(--card); border:1px solid var(--line); border-radius:13px; box-shadow:var(--shadow); padding:14px 15px; margin-bottom:18px; }
+  .ghw-head { display:flex; align-items:center; gap:8px; font-size:13.5px; }
+  .ghw-grow { flex:1; }
+  .ghw-ic { width:22px; height:22px; flex:none; color:var(--ink); display:grid; place-items:center; }
+  .ghw-ic svg { width:18px; height:18px; }
+  .ghw-head a { color:var(--ink); font-weight:700; }
+  .ghw-head a:hover { color:var(--accent); }
+  .ghw-head .ghw-link { color:var(--accent); font-weight:600; font-size:12px; }
+  .ghw-badges { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0; }
+  .ghw-badges img { height:20px; }
+  .ghw-chartwrap { background:color-mix(in srgb,var(--ink) 3%,transparent); border:1px solid var(--line); border-radius:9px; padding:9px; overflow:hidden; }
+  html.dark .ghw-chartwrap { background:rgba(255,255,255,.04); }
+  /* the chart spans a full year; crop to the most recent ~6 months (its right half) */
+  .ghw-chart { width:200%; height:auto; display:block; margin-left:-100%; }
 
   /* mobile nav: skip link, hamburger, drawer backdrop */
   .skip-link { position:absolute; left:-9999px; top:8px; z-index:300; padding:10px 16px; border-radius:8px; background:var(--accent); color:#fff; font-weight:600; font-size:13px; }
@@ -380,7 +403,7 @@
     <a href="#contact"><svg viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>Contact</a>
   </nav>
   <div class="side-spacer"></div>
-  <div class="socials">
+  <div class="socials" id="socials">
     <a href="https://github.com/mend3" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
     <a href="https://www.linkedin.com/in/vicmendonca/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
     <a href="mailto:victor.mendonca@live.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
@@ -428,7 +451,7 @@
   <!-- IMPACT -->
   <div class="impact-wrap">
     <div class="wrap">
-      <div class="impact">
+      <div class="impact" id="impact-grid">
         <div class="stat"><svg class="si" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><div><div class="sv">15+</div><div class="sl">Years of experience</div></div></div>
         <div class="stat"><svg class="si" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg><div><div class="sv">50M+</div><div class="sl">Events processed/day</div></div></div>
         <div class="stat"><svg class="si" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg><div><div class="sv">Multi-tenant</div><div class="sl">SaaS platforms</div></div></div>
@@ -447,32 +470,32 @@
           <p class="sec-lead">Designing systems that scale, evolve and deliver value.</p>
           <a class="sec-link" href="knowledge-map.html">View all architecture <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         </div>
-        <div class="arch-grid">
+        <div class="arch-grid" id="arch-grid">
           <a class="acard" style="--ac:#2f6bff" href="knowledge-map.html">
             <div class="ac-top"><span class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"/><rect x="14" y="2" width="8" height="8" rx="1"/></svg></span><h3>SaaS Ecosystem</h3></div>
             <div class="viz"><div class="minichips"><span>Auth</span><span>Billing</span><span>Tenant</span><span>API</span><span>Events</span><span>Analytics</span></div></div>
-            <p>Multi-tenant SaaS architecture patterns and best practices.</p>
+            <p>One platform serving many tenants and verticals — new products ship as modules, not rewrites.</p>
             <div class="ac-tags"><span>Multi-tenant</span><span>Billing</span><span>RBAC</span></div>
             <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
           </a>
           <a class="acard" style="--ac:#06b6d4" href="knowledge-map.html">
             <div class="ac-top"><span class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></span><h3>Data Platform</h3></div>
             <div class="viz"><svg viewBox="0 0 220 96" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 34c8-10 16 10 24 0M16 58c8-10 16 10 24 0" opacity=".75"/><path d="M52 46h26M130 46h24" stroke-dasharray="3 5"/><path d="M92 32l16 14-16 14"/><ellipse cx="184" cy="38" rx="18" ry="7"/><path d="M166 38v20c0 4 8 7 18 7s18-3 18-7V38"/></svg></div>
-            <p>Real-time pipelines, lakehouse, analytics and governance.</p>
+            <p>Fragmented sources made to behave as one canonical model — the raw material for any intelligence.</p>
             <div class="ac-tags"><span>Streaming</span><span>Lakehouse</span><span>ETL</span></div>
             <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
           </a>
           <a class="acard" style="--ac:#8b5cf6" href="knowledge-map.html">
             <div class="ac-top"><span class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg></span><h3>AI Systems</h3></div>
             <div class="viz"><svg viewBox="0 0 220 96" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="110" cy="48" r="10" fill="currentColor" fill-opacity=".16"/><circle cx="44" cy="24" r="6"/><circle cx="44" cy="72" r="6"/><circle cx="176" cy="24" r="6"/><circle cx="176" cy="72" r="6"/><path d="M50 27l50 17M50 69l50-19M170 27l-50 17M170 69l-50-19" opacity=".5"/></svg></div>
-            <p>RAG, agents, tools, MCP servers and model orchestration.</p>
+            <p>AI that understands the whole operation and acts on it — context-aware decisions, work done by conversation.</p>
             <div class="ac-tags"><span>RAG</span><span>Agents</span><span>MCP</span></div>
             <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
           </a>
           <a class="acard" style="--ac:#f59e0b" href="knowledge-map.html">
             <div class="ac-top"><span class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span><h3>Platform Engineering</h3></div>
             <div class="viz"><svg viewBox="0 0 220 96" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M80 48l30-17 30 17-30 17z"/><path d="M64 32l16-9 16 9-16 9zM126 64l16-9 16 9-16 9z" opacity=".55"/><path d="M96 40l-12 5M140 56l12-5" opacity=".5"/></svg></div>
-            <p>Kubernetes, CI/CD, observability and operational excellence.</p>
+            <p>Systems easier to operate than to explain — observable, resilient, cheaper to run over time.</p>
             <div class="ac-tags"><span>Kubernetes</span><span>CI/CD</span><span>Observability</span></div>
             <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
           </a>
@@ -490,7 +513,7 @@
           <p class="sec-lead">Building in public.</p>
           <a class="sec-link" href="https://github.com/mend3" target="_blank" rel="noopener">See all projects <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         </div>
-        <div class="repos">
+        <div class="repos" id="repos">
           <a class="repo" href="https://github.com/mend3" target="_blank" rel="noopener">
             <div class="rh"><span class="ava"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span><span class="nm">mend3/<b>mcp-servers</b></span></div>
             <div class="rp">MCP servers collection for AI agents.</div>
@@ -536,26 +559,31 @@
         <div class="wcol">
           <h2 class="sec-title">Latest Writing</h2>
           <p class="sec-lead">Thoughts on architecture, engineering and AI.</p>
-          <a class="sec-link" href="#writing" style="margin-bottom:18px">Read all articles <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-          <div class="wlist">
-            <a href="#"><svg class="wic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><div><div class="wt">MCP servers: The new interface layer for AI</div><div class="wd">Jun 18</div></div></a>
-            <a href="#"><svg class="wic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><div><div class="wt">Building multi-tenant SaaS the hard way</div><div class="wd">Jun 05</div></div></a>
-            <a href="#"><svg class="wic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg><div><div class="wt">Observability that actually helps</div><div class="wd">May 28</div></div></a>
-            <a href="#"><svg class="wic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg><div><div class="wt">AI agents in production: lessons learned</div><div class="wd">May 10</div></div></a>
+          <a class="sec-link" href="https://medium.com/@mend3" target="_blank" rel="noopener" style="margin-bottom:18px">Read on Medium <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <div class="wlist" id="wlist">
           </div>
         </div>
         <div class="ncol" id="now">
           <h3 class="now-title">Now</h3>
           <p class="now-sub">What I'm focused on.</p>
-          <div class="nowlist">
+          <div class="nowlist" id="nowlist">
             <div class="ni"><span class="nd" style="background:#2f6bff"></span>Evolving my AI-native SaaS ecosystem</div>
             <div class="ni"><span class="nd" style="background:#f59e0b"></span>Building MCP infrastructure and agents</div>
             <div class="ni"><span class="nd" style="background:#10b981"></span>Automating everything with Home Assistant</div>
             <div class="ni"><span class="nd" style="background:#a855f7"></span>Exploring local LLMs and edge AI</div>
-            <div class="ni"><span class="nd" style="background:#06b6d4"></span>Helping teams build sustainable platforms</div>
+            <div class="ni"><span class="nd" style="background:#06b6d4"></span>Helping small teams ship like much larger ones</div>
           </div>
         </div>
         <div class="mapcol" id="about">
+          <div class="ghw">
+            <div class="ghw-head"><span class="ghw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></span><a href="https://github.com/mend3" target="_blank" rel="noopener">@mend3</a><span class="ghw-grow"></span><a class="ghw-link" href="https://github.com/mend3" target="_blank" rel="noopener">GitHub &rarr;</a></div>
+            <div class="ghw-badges">
+              <img src="https://img.shields.io/github/followers/mend3?style=flat-square&logo=github&logoColor=white&label=followers&color=2f6bff" alt="GitHub followers" loading="lazy" />
+              <img src="https://img.shields.io/github/last-commit/mend3/typestack?style=flat-square&logo=git&logoColor=white&label=last%20commit&color=8b5cf6" alt="last commit" loading="lazy" />
+            </div>
+            <div style="font-size:10px;color:var(--ink-muted);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;">Contributions &middot; last 6 months</div>
+            <div class="ghw-chartwrap"><img class="ghw-chart" src="https://ghchart.rshah.org/2f6bff/mend3" alt="@mend3 GitHub contributions — last 6 months" loading="lazy" /></div>
+          </div>
           <div class="mapwrap">
             <canvas class="mapc" aria-hidden="true"></canvas>
             <div class="pin"><span class="dot"></span></div>
@@ -569,14 +597,14 @@
   <!-- FOOTER -->
   <footer class="footer" id="contact">
     <div class="foot-grid">
-      <div class="quote"><span class="qm">&ldquo;</span>I believe in systems that empower people and compound over time.</div>
-      <div class="fcol">
+      <div class="quote"><span class="qm">&ldquo;</span>I build systems that outlast their makers and compound over time.</div>
+      <div class="fcol" id="fcol-connect">
         <h4>Connect</h4>
         <a href="https://github.com/mend3" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>GitHub</a>
         <a href="https://www.linkedin.com/in/vicmendonca/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
         <a href="mailto:victor.mendonca@live.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>Email</a>
       </div>
-      <div class="fcol">
+      <div class="fcol" id="fcol-elsewhere">
         <h4>Elsewhere</h4>
         <a href="https://stackoverflow.com/users/1725952/mend3" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 17v3H5v-3M7 14l9 1M8 10l8 3M10 6l7 5"/></svg>Stack Overflow</a>
         <a href="https://calendly.com/mend3" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M3 10h5"/><path d="M8 2v4"/><circle cx="16" cy="16" r="6"/></svg>Book a call</a>
@@ -595,13 +623,69 @@
     </div>
     <div class="footbar">
       <span>&copy; 2026 mend3 — Built with &hearts; and lots of &#9749;</span>
-      <span>Made with HTML &middot; CSS &middot; Vanilla JS</span>
+      <span>Self-assembling page &middot; data-driven HTML &middot; CSS &middot; Vanilla JS, conjured by AI wizards &#129668;</span>
     </div>
   </footer>
   <div class="pageend"></div>
 </main>
 
 <script>window.__MAPDATA={"dots":[[0.011,0.107],[0.333,0.107],[0.344,0.107],[0.356,0.107],[0.378,0.107],[0.389,0.107],[0.4,0.107],[0.411,0.107],[0.422,0.107],[0.433,0.107],[0.444,0.107],[0.456,0.107],[0.522,0.107],[0.533,0.107],[0.678,0.107],[0,0.129],[0.278,0.129],[0.311,0.129],[0.322,0.129],[0.333,0.129],[0.389,0.129],[0.4,0.129],[0.411,0.129],[0.422,0.129],[0.433,0.129],[0.444,0.129],[0.456,0.129],[0.611,0.129],[0.678,0.129],[0.689,0.129],[0.7,0.129],[0.711,0.129],[0.989,0.129],[0,0.15],[0.011,0.15],[0.022,0.15],[0.033,0.15],[0.044,0.15],[0.056,0.15],[0.067,0.15],[0.078,0.15],[0.178,0.15],[0.267,0.15],[0.278,0.15],[0.322,0.15],[0.333,0.15],[0.344,0.15],[0.356,0.15],[0.389,0.15],[0.4,0.15],[0.411,0.15],[0.422,0.15],[0.433,0.15],[0.444,0.15],[0.556,0.15],[0.644,0.15],[0.656,0.15],[0.667,0.15],[0.678,0.15],[0.689,0.15],[0.7,0.15],[0.711,0.15],[0.722,0.15],[0.733,0.15],[0.744,0.15],[0.756,0.15],[0.767,0.15],[0.778,0.15],[0.789,0.15],[0.8,0.15],[0.811,0.15],[0.822,0.15],[0.911,0.15],[0.922,0.15],[0.933,0.15],[0,0.171],[0.011,0.171],[0.022,0.171],[0.033,0.171],[0.044,0.171],[0.056,0.171],[0.067,0.171],[0.078,0.171],[0.089,0.171],[0.1,0.171],[0.111,0.171],[0.122,0.171],[0.133,0.171],[0.156,0.171],[0.167,0.171],[0.178,0.171],[0.189,0.171],[0.2,0.171],[0.211,0.171],[0.222,0.171],[0.233,0.171],[0.244,0.171],[0.256,0.171],[0.267,0.171],[0.278,0.171],[0.289,0.171],[0.3,0.171],[0.311,0.171],[0.344,0.171],[0.356,0.171],[0.367,0.171],[0.389,0.171],[0.4,0.171],[0.411,0.171],[0.422,0.171],[0.467,0.171],[0.533,0.171],[0.544,0.171],[0.556,0.171],[0.567,0.171],[0.578,0.171],[0.6,0.171],[0.611,0.171],[0.622,0.171],[0.633,0.171],[0.644,0.171],[0.656,0.171],[0.667,0.171],[0.678,0.171],[0.689,0.171],[0.7,0.171],[0.711,0.171],[0.722,0.171],[0.733,0.171],[0.744,0.171],[0.756,0.171],[0.767,0.171],[0.778,0.171],[0.789,0.171],[0.8,0.171],[0.811,0.171],[0.822,0.171],[0.833,0.171],[0.844,0.171],[0.856,0.171],[0.867,0.171],[0.878,0.171],[0.889,0.171],[0.9,0.171],[0.933,0.171],[0.944,0.171],[0.956,0.171],[0.967,0.171],[0.978,0.171],[0.989,0.171],[0,0.193],[0.011,0.193],[0.022,0.193],[0.033,0.193],[0.044,0.193],[0.056,0.193],[0.078,0.193],[0.089,0.193],[0.1,0.193],[0.144,0.193],[0.156,0.193],[0.167,0.193],[0.178,0.193],[0.189,0.193],[0.2,0.193],[0.211,0.193],[0.222,0.193],[0.233,0.193],[0.244,0.193],[0.256,0.193],[0.267,0.193],[0.278,0.193],[0.289,0.193],[0.4,0.193],[0.522,0.193],[0.533,0.193],[0.556,0.193],[0.567,0.193],[0.578,0.193],[0.589,0.193],[0.6,0.193],[0.611,0.193],[0.622,0.193],[0.633,0.193],[0.644,0.193],[0.656,0.193],[0.667,0.193],[0.678,0.193],[0.689,0.193],[0.7,0.193],[0.711,0.193],[0.722,0.193],[0.733,0.193],[0.744,0.193],[0.756,0.193],[0.767,0.193],[0.778,0.193],[0.789,0.193],[0.8,0.193],[0.811,0.193],[0.822,0.193],[0.833,0.193],[0.844,0.193],[0.856,0.193],[0.867,0.193],[0.878,0.193],[0.889,0.193],[0.933,0.193],[0.944,0.193],[0.956,0.193],[0.967,0.193],[0.978,0.193],[0.989,0.193],[0,0.214],[0.044,0.214],[0.144,0.214],[0.189,0.214],[0.2,0.214],[0.211,0.214],[0.222,0.214],[0.233,0.214],[0.244,0.214],[0.256,0.214],[0.267,0.214],[0.278,0.214],[0.322,0.214],[0.333,0.214],[0.344,0.214],[0.356,0.214],[0.489,0.214],[0.533,0.214],[0.556,0.214],[0.567,0.214],[0.578,0.214],[0.589,0.214],[0.6,0.214],[0.611,0.214],[0.622,0.214],[0.633,0.214],[0.644,0.214],[0.656,0.214],[0.667,0.214],[0.678,0.214],[0.689,0.214],[0.7,0.214],[0.711,0.214],[0.722,0.214],[0.733,0.214],[0.744,0.214],[0.756,0.214],[0.767,0.214],[0.778,0.214],[0.789,0.214],[0.8,0.214],[0.811,0.214],[0.867,0.214],[0.967,0.214],[0.033,0.236],[0.2,0.236],[0.211,0.236],[0.222,0.236],[0.233,0.236],[0.244,0.236],[0.256,0.236],[0.267,0.236],[0.278,0.236],[0.289,0.236],[0.3,0.236],[0.322,0.236],[0.333,0.236],[0.344,0.236],[0.356,0.236],[0.489,0.236],[0.522,0.236],[0.556,0.236],[0.567,0.236],[0.578,0.236],[0.589,0.236],[0.6,0.236],[0.611,0.236],[0.622,0.236],[0.633,0.236],[0.644,0.236],[0.656,0.236],[0.667,0.236],[0.678,0.236],[0.689,0.236],[0.7,0.236],[0.711,0.236],[0.722,0.236],[0.733,0.236],[0.744,0.236],[0.756,0.236],[0.767,0.236],[0.778,0.236],[0.789,0.236],[0.8,0.236],[0.811,0.236],[0.867,0.236],[0.878,0.236],[0.2,0.257],[0.211,0.257],[0.222,0.257],[0.233,0.257],[0.244,0.257],[0.256,0.257],[0.267,0.257],[0.278,0.257],[0.289,0.257],[0.3,0.257],[0.311,0.257],[0.322,0.257],[0.333,0.257],[0.344,0.257],[0.356,0.257],[0.367,0.257],[0.5,0.257],[0.511,0.257],[0.522,0.257],[0.533,0.257],[0.544,0.257],[0.556,0.257],[0.567,0.257],[0.578,0.257],[0.589,0.257],[0.6,0.257],[0.611,0.257],[0.622,0.257],[0.633,0.257],[0.644,0.257],[0.656,0.257],[0.667,0.257],[0.678,0.257],[0.689,0.257],[0.7,0.257],[0.711,0.257],[0.722,0.257],[0.733,0.257],[0.744,0.257],[0.756,0.257],[0.767,0.257],[0.778,0.257],[0.789,0.257],[0.8,0.257],[0.811,0.257],[0.822,0.257],[0.833,0.257],[0.211,0.279],[0.222,0.279],[0.233,0.279],[0.244,0.279],[0.256,0.279],[0.267,0.279],[0.278,0.279],[0.289,0.279],[0.3,0.279],[0.311,0.279],[0.322,0.279],[0.333,0.279],[0.367,0.279],[0.5,0.279],[0.511,0.279],[0.522,0.279],[0.533,0.279],[0.544,0.279],[0.556,0.279],[0.567,0.279],[0.578,0.279],[0.589,0.279],[0.6,0.279],[0.611,0.279],[0.622,0.279],[0.633,0.279],[0.644,0.279],[0.656,0.279],[0.667,0.279],[0.678,0.279],[0.689,0.279],[0.7,0.279],[0.711,0.279],[0.722,0.279],[0.733,0.279],[0.744,0.279],[0.756,0.279],[0.767,0.279],[0.778,0.279],[0.789,0.279],[0.8,0.279],[0.811,0.279],[0.822,0.279],[0.833,0.279],[0.2,0.3],[0.211,0.3],[0.222,0.3],[0.233,0.3],[0.244,0.3],[0.256,0.3],[0.267,0.3],[0.278,0.3],[0.289,0.3],[0.3,0.3],[0.311,0.3],[0.322,0.3],[0.5,0.3],[0.511,0.3],[0.544,0.3],[0.556,0.3],[0.567,0.3],[0.6,0.3],[0.611,0.3],[0.633,0.3],[0.644,0.3],[0.656,0.3],[0.667,0.3],[0.678,0.3],[0.689,0.3],[0.7,0.3],[0.711,0.3],[0.722,0.3],[0.733,0.3],[0.744,0.3],[0.756,0.3],[0.767,0.3],[0.778,0.3],[0.789,0.3],[0.8,0.3],[0.811,0.3],[0.822,0.3],[0.833,0.3],[0.856,0.3],[0.189,0.321],[0.2,0.321],[0.211,0.321],[0.222,0.321],[0.233,0.321],[0.244,0.321],[0.256,0.321],[0.267,0.321],[0.278,0.321],[0.289,0.321],[0.3,0.321],[0.311,0.321],[0.478,0.321],[0.489,0.321],[0.5,0.321],[0.522,0.321],[0.544,0.321],[0.556,0.321],[0.567,0.321],[0.578,0.321],[0.589,0.321],[0.6,0.321],[0.611,0.321],[0.622,0.321],[0.644,0.321],[0.656,0.321],[0.667,0.321],[0.678,0.321],[0.689,0.321],[0.7,0.321],[0.711,0.321],[0.722,0.321],[0.733,0.321],[0.744,0.321],[0.756,0.321],[0.767,0.321],[0.778,0.321],[0.789,0.321],[0.8,0.321],[0.811,0.321],[0.822,0.321],[0.856,0.321],[0.189,0.343],[0.2,0.343],[0.211,0.343],[0.222,0.343],[0.233,0.343],[0.244,0.343],[0.256,0.343],[0.267,0.343],[0.278,0.343],[0.289,0.343],[0.3,0.343],[0.478,0.343],[0.489,0.343],[0.522,0.343],[0.556,0.343],[0.578,0.343],[0.589,0.343],[0.6,0.343],[0.611,0.343],[0.622,0.343],[0.644,0.343],[0.656,0.343],[0.667,0.343],[0.678,0.343],[0.689,0.343],[0.7,0.343],[0.711,0.343],[0.722,0.343],[0.733,0.343],[0.744,0.343],[0.756,0.343],[0.767,0.343],[0.778,0.343],[0.789,0.343],[0.8,0.343],[0.811,0.343],[0.856,0.343],[0.2,0.364],[0.211,0.364],[0.222,0.364],[0.233,0.364],[0.244,0.364],[0.256,0.364],[0.267,0.364],[0.278,0.364],[0.289,0.364],[0.489,0.364],[0.5,0.364],[0.511,0.364],[0.522,0.364],[0.6,0.364],[0.611,0.364],[0.622,0.364],[0.633,0.364],[0.644,0.364],[0.656,0.364],[0.667,0.364],[0.678,0.364],[0.689,0.364],[0.7,0.364],[0.711,0.364],[0.722,0.364],[0.733,0.364],[0.744,0.364],[0.756,0.364],[0.767,0.364],[0.778,0.364],[0.789,0.364],[0.8,0.364],[0.811,0.364],[0.211,0.386],[0.222,0.386],[0.233,0.386],[0.244,0.386],[0.256,0.386],[0.278,0.386],[0.478,0.386],[0.489,0.386],[0.5,0.386],[0.511,0.386],[0.522,0.386],[0.533,0.386],[0.544,0.386],[0.556,0.386],[0.567,0.386],[0.578,0.386],[0.589,0.386],[0.6,0.386],[0.611,0.386],[0.622,0.386],[0.633,0.386],[0.644,0.386],[0.656,0.386],[0.667,0.386],[0.678,0.386],[0.689,0.386],[0.7,0.386],[0.711,0.386],[0.722,0.386],[0.733,0.386],[0.744,0.386],[0.756,0.386],[0.767,0.386],[0.778,0.386],[0.789,0.386],[0.8,0.386],[0.811,0.386],[0.2,0.407],[0.211,0.407],[0.222,0.407],[0.233,0.407],[0.467,0.407],[0.478,0.407],[0.489,0.407],[0.5,0.407],[0.511,0.407],[0.522,0.407],[0.533,0.407],[0.544,0.407],[0.556,0.407],[0.567,0.407],[0.578,0.407],[0.589,0.407],[0.6,0.407],[0.611,0.407],[0.622,0.407],[0.644,0.407],[0.656,0.407],[0.667,0.407],[0.678,0.407],[0.689,0.407],[0.7,0.407],[0.711,0.407],[0.722,0.407],[0.733,0.407],[0.744,0.407],[0.756,0.407],[0.767,0.407],[0.778,0.407],[0.789,0.407],[0.8,0.407],[0.811,0.407],[0.222,0.429],[0.233,0.429],[0.467,0.429],[0.478,0.429],[0.489,0.429],[0.5,0.429],[0.511,0.429],[0.522,0.429],[0.533,0.429],[0.544,0.429],[0.556,0.429],[0.567,0.429],[0.578,0.429],[0.589,0.429],[0.611,0.429],[0.622,0.429],[0.633,0.429],[0.644,0.429],[0.656,0.429],[0.689,0.429],[0.7,0.429],[0.711,0.429],[0.722,0.429],[0.733,0.429],[0.744,0.429],[0.756,0.429],[0.767,0.429],[0.778,0.429],[0.789,0.429],[0.8,0.429],[0.811,0.429],[0.822,0.429],[0.222,0.45],[0.233,0.45],[0.256,0.45],[0.467,0.45],[0.478,0.45],[0.489,0.45],[0.5,0.45],[0.511,0.45],[0.522,0.45],[0.533,0.45],[0.544,0.45],[0.556,0.45],[0.567,0.45],[0.578,0.45],[0.589,0.45],[0.6,0.45],[0.611,0.45],[0.622,0.45],[0.633,0.45],[0.644,0.45],[0.656,0.45],[0.7,0.45],[0.711,0.45],[0.722,0.45],[0.756,0.45],[0.767,0.45],[0.778,0.45],[0.244,0.471],[0.256,0.471],[0.456,0.471],[0.467,0.471],[0.478,0.471],[0.489,0.471],[0.5,0.471],[0.511,0.471],[0.522,0.471],[0.533,0.471],[0.544,0.471],[0.556,0.471],[0.567,0.471],[0.578,0.471],[0.589,0.471],[0.6,0.471],[0.622,0.471],[0.633,0.471],[0.7,0.471],[0.711,0.471],[0.767,0.471],[0.778,0.471],[0.789,0.471],[0.267,0.493],[0.456,0.493],[0.467,0.493],[0.478,0.493],[0.489,0.493],[0.5,0.493],[0.511,0.493],[0.522,0.493],[0.533,0.493],[0.544,0.493],[0.556,0.493],[0.567,0.493],[0.578,0.493],[0.589,0.493],[0.6,0.493],[0.611,0.493],[0.711,0.493],[0.778,0.493],[0.789,0.493],[0.3,0.514],[0.311,0.514],[0.322,0.514],[0.333,0.514],[0.467,0.514],[0.478,0.514],[0.489,0.514],[0.5,0.514],[0.511,0.514],[0.522,0.514],[0.533,0.514],[0.544,0.514],[0.556,0.514],[0.567,0.514],[0.578,0.514],[0.589,0.514],[0.6,0.514],[0.611,0.514],[0.622,0.514],[0.633,0.514],[0.711,0.514],[0.789,0.514],[0.844,0.514],[0.289,0.536],[0.3,0.536],[0.311,0.536],[0.322,0.536],[0.333,0.536],[0.344,0.536],[0.478,0.536],[0.489,0.536],[0.5,0.536],[0.522,0.536],[0.533,0.536],[0.544,0.536],[0.556,0.536],[0.567,0.536],[0.578,0.536],[0.589,0.536],[0.6,0.536],[0.611,0.536],[0.622,0.536],[0.633,0.536],[0.778,0.536],[0.822,0.536],[0.289,0.557],[0.3,0.557],[0.311,0.557],[0.322,0.557],[0.333,0.557],[0.344,0.557],[0.356,0.557],[0.533,0.557],[0.544,0.557],[0.556,0.557],[0.567,0.557],[0.578,0.557],[0.589,0.557],[0.6,0.557],[0.611,0.557],[0.622,0.557],[0.811,0.557],[0.822,0.557],[0.278,0.579],[0.289,0.579],[0.3,0.579],[0.311,0.579],[0.322,0.579],[0.333,0.579],[0.344,0.579],[0.356,0.579],[0.367,0.579],[0.533,0.579],[0.544,0.579],[0.556,0.579],[0.567,0.579],[0.578,0.579],[0.589,0.579],[0.6,0.579],[0.611,0.579],[0.778,0.579],[0.811,0.579],[0.833,0.579],[0.867,0.579],[0.278,0.6],[0.289,0.6],[0.3,0.6],[0.311,0.6],[0.322,0.6],[0.333,0.6],[0.344,0.6],[0.356,0.6],[0.367,0.6],[0.378,0.6],[0.389,0.6],[0.533,0.6],[0.544,0.6],[0.556,0.6],[0.567,0.6],[0.578,0.6],[0.589,0.6],[0.6,0.6],[0.789,0.6],[0.878,0.6],[0.889,0.6],[0.9,0.6],[0.289,0.621],[0.3,0.621],[0.311,0.621],[0.322,0.621],[0.333,0.621],[0.344,0.621],[0.356,0.621],[0.367,0.621],[0.378,0.621],[0.389,0.621],[0.4,0.621],[0.544,0.621],[0.556,0.621],[0.567,0.621],[0.578,0.621],[0.589,0.621],[0.6,0.621],[0.811,0.621],[0.878,0.621],[0.889,0.621],[0.289,0.643],[0.3,0.643],[0.311,0.643],[0.322,0.643],[0.333,0.643],[0.344,0.643],[0.356,0.643],[0.367,0.643],[0.378,0.643],[0.389,0.643],[0.544,0.643],[0.556,0.643],[0.567,0.643],[0.578,0.643],[0.589,0.643],[0.6,0.643],[0.889,0.643],[0.3,0.664],[0.311,0.664],[0.322,0.664],[0.333,0.664],[0.344,0.664],[0.356,0.664],[0.367,0.664],[0.378,0.664],[0.389,0.664],[0.533,0.664],[0.544,0.664],[0.556,0.664],[0.567,0.664],[0.578,0.664],[0.589,0.664],[0.6,0.664],[0.633,0.664],[0.844,0.664],[0.856,0.664],[0.867,0.664],[0.889,0.664],[0.311,0.686],[0.322,0.686],[0.333,0.686],[0.344,0.686],[0.356,0.686],[0.367,0.686],[0.378,0.686],[0.389,0.686],[0.544,0.686],[0.556,0.686],[0.567,0.686],[0.578,0.686],[0.589,0.686],[0.622,0.686],[0.833,0.686],[0.844,0.686],[0.856,0.686],[0.867,0.686],[0.878,0.686],[0.889,0.686],[0.322,0.707],[0.333,0.707],[0.344,0.707],[0.356,0.707],[0.367,0.707],[0.378,0.707],[0.544,0.707],[0.556,0.707],[0.567,0.707],[0.578,0.707],[0.589,0.707],[0.622,0.707],[0.811,0.707],[0.822,0.707],[0.833,0.707],[0.844,0.707],[0.856,0.707],[0.867,0.707],[0.878,0.707],[0.889,0.707],[0.9,0.707],[0.322,0.729],[0.333,0.729],[0.344,0.729],[0.356,0.729],[0.367,0.729],[0.544,0.729],[0.556,0.729],[0.567,0.729],[0.578,0.729],[0.811,0.729],[0.822,0.729],[0.833,0.729],[0.844,0.729],[0.856,0.729],[0.867,0.729],[0.878,0.729],[0.889,0.729],[0.9,0.729],[0.322,0.75],[0.333,0.75],[0.344,0.75],[0.356,0.75],[0.367,0.75],[0.544,0.75],[0.556,0.75],[0.567,0.75],[0.578,0.75],[0.811,0.75],[0.822,0.75],[0.833,0.75],[0.844,0.75],[0.856,0.75],[0.867,0.75],[0.878,0.75],[0.889,0.75],[0.9,0.75],[0.322,0.771],[0.333,0.771],[0.344,0.771],[0.356,0.771],[0.556,0.771],[0.567,0.771],[0.811,0.771],[0.822,0.771],[0.856,0.771],[0.867,0.771],[0.878,0.771],[0.889,0.771],[0.322,0.793],[0.333,0.793],[0.344,0.793],[0.867,0.793],[0.878,0.793],[0.033,0.814],[0.322,0.814],[0.333,0.814],[0.944,0.814],[0.322,0.836],[0.333,0.836],[0.867,0.836],[0.322,0.857],[0.333,0.857],[0.322,0.879],[0.333,0.879]],"sp":[0.375,0.716],"hubs":[[0.313,0.32],[0.5,0.255],[0.861,0.351]]};</script>
+<script>
+window.__PROFILE = {
+  hero: {
+    badge: 'PRINCIPAL ENGINEER <span class="sp">&middot;</span> PLATFORM ARCHITECT',
+    title: 'Building <span class="sp">AI-native</span> platforms, data ecosystems and scalable SaaS products.',
+    sub: "15+ years architecting distributed systems, data platforms and multi-tenant SaaS — across fintech, legaltech and commerce intelligence.",
+    ctas: [
+      { label: "Explore Architecture", href: "knowledge-map.html", icon: "arrow", primary: true },
+      { label: "View Projects", href: "#opensource", icon: "github" },
+      { label: "Book a call", href: "https://calendly.com/mend3", icon: "calendar" }
+    ],
+    focus: ["Platform Engineering", "Data", "AI Systems", "Observability", "Automation"]
+  },
+  connect: [
+    { label: "GitHub", href: "https://github.com/mend3", icon: "github" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/vicmendonca/", icon: "linkedin" },
+    { label: "Google Developers", href: "https://me.developers.google.com/u/vmendonca", icon: "code" },
+    { label: "Email", href: "mailto:victor.mendonca@live.com", icon: "mail" }
+  ],
+  elsewhere: [
+    { label: "Stack Overflow", href: "https://stackoverflow.com/users/1725952/mend3", icon: "stackoverflow" },
+    { label: "Medium", href: "https://medium.com/@mend3", icon: "medium" },
+    { label: "Book a call", href: "https://calendly.com/mend3", icon: "calendar" },
+    { label: "Last.fm", href: "https://www.last.fm/user/mend3", icon: "audiolines" }
+  ],
+  writing: [
+    { title: "Going TypeStack with NX Monorepo and Docker (Part 1)", href: "https://medium.com/dev-genius/going-typestack-with-nx-monorepo-and-docker-part-1-d5ff257981f2", date: "May 26, 2022", source: "Dev Genius", desc: "A long, hands-on tutorial — wiring a full project (APIs, app, Storybook, databases) on the Nx + Docker monorepo architecture.", claps: 177, comments: 0 },
+    { title: "Going TypeStack with NX Monorepo and Docker (Part 2)", href: "https://blog.devgenius.io/going-typestack-with-nx-monorepo-and-docker-part-2-f66c543c7d8f", date: "May 29, 2022", source: "Dev Genius", desc: "Part 2 — extending the Nx workspace with Storybook, React and Tailwind CSS for more flexibility.", claps: 88, comments: 8 }
+  ],
+  impact: [
+    { icon: "target", value: "15+", label: "Years of experience" },
+    { icon: "layers", value: "5+", label: "Industries shipped across" },
+    { icon: "blocks", value: "Platform", label: "architecture · AI · data" },
+    { icon: "infinity", value: "∞", label: "Curiosity & builders" }
+  ],
+  architecture: [
+    { ac: "#2f6bff", icon: "blocks", title: "SaaS Ecosystem", viz: "chips", chips: ["Auth", "Billing", "Tenant", "API", "Events", "Analytics"], desc: "One platform serving many tenants and verticals — new products ship as modules, not rewrites.", tags: ["Multi-tenant", "Billing", "RBAC"], href: "knowledge-map.html" },
+    { ac: "#06b6d4", icon: "database", title: "Data Platform", viz: "pipeline", desc: "Fragmented sources made to behave as one canonical model — the raw material for any intelligence.", tags: ["Streaming", "Lakehouse", "ETL"], href: "knowledge-map.html" },
+    { ac: "#8b5cf6", icon: "cpu", title: "AI Systems", viz: "nodes", desc: "AI that understands the whole operation and acts on it — context-aware decisions, work done by conversation.", tags: ["RAG", "Agents", "MCP"], href: "knowledge-map.html" },
+    { ac: "#f59e0b", icon: "server", title: "Platform Engineering", viz: "hex", desc: "Systems easier to operate than to explain — observable, resilient, cheaper to run over time.", tags: ["Kubernetes", "CI/CD", "Observability"], href: "knowledge-map.html" }
+  ],
+  repos: [
+    { name: "typestack", href: "https://github.com/mend3/typestack", icon: "blocks", desc: "Companion repo to the Dev Genius series — a full Nx monorepo + Docker stack (APIs, app, Storybook, databases).", tags: ["Nx", "Docker", "Monorepo"], lang: "JavaScript", langColor: "#f1e05a", stars: 5, forks: 0 },
+    { name: "ts-boilerplate", href: "https://github.com/mend3/ts-boilerplate", icon: "terminal", desc: "Strict TypeScript boilerplate with top-level await.", tags: ["TypeScript", "Boilerplate"], lang: "TypeScript", langColor: "#3178c6", stars: 0, forks: 0 },
+    { name: "mend3", href: "https://github.com/mend3/mend3", icon: "code", desc: "This very site — a self-generating, data-driven CV.", tags: ["CV", "GitHub Pages"], lang: "HTML", langColor: "#e34c26", stars: 0, forks: 0 }
+  ],
+  aiLab: { desc: "Experiments, prototypes and research.", href: "#ailab", tree: ["mcp/", "agents/", "rag/", "automation/", "experiments/"] },
+  now: [
+    { c: "#2f6bff", t: "Building DevShell One — an AI-data-driven SaaS ecosystem on one multi-tenant foundation" },
+    { c: "#ec4899", t: "Shipping verticals as modules — finance/Open Finance, connectors, scheduling" },
+    { c: "#a855f7", t: "Deepening Ella, the platform's local-first AI — RAG, agents, persistent memory" },
+    { c: "#10b981", t: "Turning docs and signals into a living knowledge base (facts, derivers)" },
+    { c: "#06b6d4", t: "Tinkering with local LLMs, edge AI and Home Assistant at home" }
+  ]
+};
+</script>
 <script>
 (() => {
   "use strict";
@@ -624,6 +708,106 @@
   if (navBackdrop) navBackdrop.addEventListener("click", () => setNav(false));
   document.querySelectorAll(".nav a").forEach((a) => a.addEventListener("click", () => setNav(false)));
   addEventListener("keydown", (e) => { if (e.key === "Escape") setNav(false); });
+
+  // ---- data-driven content (links + writing) from window.__PROFILE ----
+  (function renderProfile() {
+    const P = window.__PROFILE; if (!P) return;
+    const ICONS = {
+      github: '<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>',
+      linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>',
+      mail: '<path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/>',
+      code: '<path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>',
+      stackoverflow: '<path d="M17 17v3H5v-3M7 14l9 1M8 10l8 3M10 6l7 5"/>',
+      medium: '<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
+      calendar: '<path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M3 10h5"/><path d="M8 2v4"/><circle cx="16" cy="16" r="6"/>',
+      audiolines: '<path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/>',
+      heart: '<path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/>',
+      comment: '<path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/>',
+      arrow: '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
+      target: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+      chart: '<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+      layers: '<path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/>',
+      package: '<path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/>',
+      infinity: '<path d="M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8"/>',
+      blocks: '<path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"/><rect x="14" y="2" width="8" height="8" rx="1"/>',
+      database: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>',
+      cpu: '<path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/>',
+      server: '<rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/>',
+      house: '<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',
+      terminal: '<path d="M12 19h8"/><path d="m4 17 6-6-6-6"/>',
+      star: '<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>',
+      fork: '<circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"/><path d="M12 12v3"/>',
+      chevL: '<path d="m15 18-6-6 6-6"/>',
+      chevR: '<path d="m9 18 6-6-6-6"/>'
+    };
+    const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const ext = (h) => /^https?:/.test(h) ? ' target="_blank" rel="noopener"' : "";
+    const ic = (k, sw) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw || 2}" stroke-linecap="round" stroke-linejoin="round">${ICONS[k] || ""}</svg>`;
+    const socials = document.getElementById("socials");
+    if (socials && P.connect) socials.innerHTML = P.connect.map((l) => `<a href="${esc(l.href)}"${ext(l.href)} title="${esc(l.label)}" aria-label="${esc(l.label)}">${ic(l.icon)}</a>`).join("");
+    const fcol = (id, title, arr) => { const el = document.getElementById(id); if (el && arr) el.innerHTML = `<h4>${esc(title)}</h4>` + arr.map((l) => `<a href="${esc(l.href)}"${ext(l.href)}>${ic(l.icon, 1.8)}${esc(l.label)}</a>`).join(""); };
+    fcol("fcol-connect", "Connect", P.connect);
+    fcol("fcol-elsewhere", "Elsewhere", P.elsewhere);
+    const wl = document.getElementById("wlist");
+    if (wl && P.writing) wl.innerHTML = P.writing.map((p) => {
+      const stat = (k, v) => v == null ? "" : `<span>${ic(k, 1.8)}${esc(v)}</span>`;
+      return `<a class="wpost" href="${esc(p.href)}"${ext(p.href)}>`
+        + `<div class="wp-top"><span class="wp-ic">${ic("medium", 1.8)}</span><span class="wp-date">${esc(p.date)}${p.source ? " · " + esc(p.source) : ""}</span></div>`
+        + `<div class="wp-title">${esc(p.title)}</div>`
+        + (p.desc ? `<div class="wp-desc">${esc(p.desc)}</div>` : "")
+        + `<div class="wp-meta">${stat("heart", p.claps)}${stat("comment", p.comments)}<span class="wp-src">${ic("medium", 1.6)}Medium</span></div>`
+        + `</a>`;
+    }).join("");
+
+    // impact stats
+    const impactEl = document.getElementById("impact-grid");
+    if (impactEl && P.impact) impactEl.innerHTML = P.impact.map((s) => `<div class="stat"><svg class="si" viewBox="0 0 24 24">${ICONS[s.icon] || ""}</svg><div><div class="sv">${esc(s.value)}</div><div class="sl">${esc(s.label)}</div></div></div>`).join("");
+
+    // architecture cards (viz: keyed diagram or chips)
+    const VIZ = {
+      pipeline: '<svg viewBox="0 0 220 96" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 34c8-10 16 10 24 0M16 58c8-10 16 10 24 0" opacity=".75"/><path d="M52 46h26M130 46h24" stroke-dasharray="3 5"/><path d="M92 32l16 14-16 14"/><ellipse cx="184" cy="38" rx="18" ry="7"/><path d="M166 38v20c0 4 8 7 18 7s18-3 18-7V38"/></svg>',
+      nodes: '<svg viewBox="0 0 220 96" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="110" cy="48" r="10" fill="currentColor" fill-opacity=".16"/><circle cx="44" cy="24" r="6"/><circle cx="44" cy="72" r="6"/><circle cx="176" cy="24" r="6"/><circle cx="176" cy="72" r="6"/><path d="M50 27l50 17M50 69l50-19M170 27l-50 17M170 69l-50-19" opacity=".5"/></svg>',
+      hex: '<svg viewBox="0 0 220 96" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M80 48l30-17 30 17-30 17z"/><path d="M64 32l16-9 16 9-16 9zM126 64l16-9 16 9-16 9z" opacity=".55"/><path d="M96 40l-12 5M140 56l12-5" opacity=".5"/></svg>'
+    };
+    const archEl = document.getElementById("arch-grid");
+    if (archEl && P.architecture) archEl.innerHTML = P.architecture.map((c) => {
+      const viz = c.viz === "chips" ? `<div class="minichips">${(c.chips || []).map((x) => `<span>${esc(x)}</span>`).join("")}</div>` : (VIZ[c.viz] || "");
+      return `<a class="acard" style="--ac:${esc(c.ac)}" href="${esc(c.href)}"${ext(c.href)}><div class="ac-top"><span class="ac-ic">${ic(c.icon, 1.8)}</span><h3>${esc(c.title)}</h3></div><div class="viz">${viz}</div><p>${esc(c.desc)}</p><div class="ac-tags">${(c.tags || []).map((t) => `<span>${esc(t)}</span>`).join("")}</div><span class="go">${ic("arrow", 2)}</span></a>`;
+    }).join("");
+
+    // open source repos + AI Lab card
+    const reposEl = document.getElementById("repos");
+    if (reposEl && P.repos) {
+      const repo = (r) => `<a class="repo" href="${esc(r.href)}"${ext(r.href)}><div class="rh"><span class="ava">${ic(r.icon, 2)}</span><span class="nm">mend3/<b>${esc(r.name)}</b></span></div><div class="rp">${esc(r.desc)}</div><div class="rtags">${(r.tags || []).map((t) => `<span>${esc(t)}</span>`).join("")}</div><div class="rmeta"><span class="lang"><i style="background:${esc(r.langColor)}"></i>${esc(r.lang)}</span><span class="rs"><span>${ic("star", 2)}${esc(r.stars)}</span><span>${ic("fork", 2)}${esc(r.forks)}</span></span></div></a>`;
+      const L = P.aiLab;
+      const lab = L ? `<div class="lab" id="ailab"><div class="lh"><h3>AI Lab</h3><div class="arrows"><button aria-label="prev"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS.chevL}</svg></button><button aria-label="next"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS.chevR}</svg></button></div></div><p>${esc(L.desc)}</p><a class="sec-link" href="${esc(L.href)}" style="margin-bottom:12px">Explore lab ${ic("arrow", 2)}</a><div class="term mono"><span class="y">lab/</span>${L.tree.map((t, i) => `<br>${i === L.tree.length - 1 ? "└──" : "├──"} <span class="${i < 3 ? "b" : "m"}">${esc(t)}</span>`).join("")}</div></div>` : "";
+      const renderRepos = (list) => { reposEl.innerHTML = list.map(repo).join("") + lab; };
+      renderRepos(P.repos); // inline fallback first
+      // live stars/forks from the GitHub API across both accounts (graceful fallback if offline/rate-limited)
+      Promise.all(["mend3", "mendshell"].map((u) =>
+        fetch(`https://api.github.com/users/${u}/repos?per_page=100&type=owner`).then((r) => r.ok ? r.json() : []).catch(() => [])
+      )).then((lists) => {
+        const m = {};
+        [].concat.apply([], lists).forEach((x) => { if (x && x.name) m[x.name.toLowerCase()] = { stars: x.stargazers_count, forks: x.forks_count }; });
+        if (Object.keys(m).length) renderRepos(P.repos.map((r) => { const live = m[r.name.toLowerCase()]; return live ? Object.assign({}, r, { stars: live.stars, forks: live.forks }) : r; }));
+      });
+    }
+
+    // now list
+    const nowEl = document.getElementById("nowlist");
+    if (nowEl && P.now) nowEl.innerHTML = P.now.map((n) => `<div class="ni"><span class="nd" style="background:${esc(n.c)}"></span>${esc(n.t)}</div>`).join("");
+
+    // hero (static markup remains for SEO; overwritten from data here)
+    const H = P.hero;
+    if (H) {
+      const q = (s) => document.querySelector(s);
+      const badge = q(".hero .badge"); if (badge) badge.innerHTML = H.badge;
+      const title = q(".hero .hl"); if (title) title.innerHTML = H.title;
+      const sub = q(".hero-sub"); if (sub) sub.textContent = H.sub;
+      const cta = q(".hero-cta"); if (cta && H.ctas) cta.innerHTML = H.ctas.map((b) => `<a class="btn ${b.primary ? "primary" : "ghost"}" href="${esc(b.href)}"${ext(b.href)}>${esc(b.label)} ${ic(b.icon, 2)}</a>`).join("");
+      const focus = q(".hero .focus .chips"); if (focus && H.focus) focus.innerHTML = H.focus.map((f) => `<span class="chip">${esc(f)}</span>`).join("");
+    }
+  })();
   const moon = '<path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>';
   const sun = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>';
   try { if (localStorage.getItem("hub-theme") === "dark") root.classList.add("dark"); } catch (e) {}
