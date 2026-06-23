@@ -291,7 +291,10 @@
   .secgraph-back { border:1px solid var(--line); background:var(--card); color:var(--accent); border-radius:8px; padding:5px 12px; font-weight:600; cursor:pointer; font-size:12px; }
   .secgraph-back:hover { border-color:var(--accent); }
   .secgraph-canvas { display:block; }
-  .secgraph-canvas canvas { display:block; cursor:grab; }
+  .secgraph-canvas canvas { display:block; cursor:grab; touch-action:none; }
+  .secgraph-r { display:flex; align-items:center; gap:12px; }
+  .secgraph-hint { font-weight:500; font-size:11px; color:var(--ink-muted); opacity:.78; }
+  @media (max-width:640px) { .secgraph-hint { display:none; } }
 
   /* github activity widget (above the map) */
   .ghw { text-align:left; background:var(--card); border:1px solid var(--line); border-radius:13px; box-shadow:var(--shadow); padding:14px 15px; margin-bottom:18px; }
@@ -826,8 +829,28 @@ window.__PROFILE = {
 
   // ---- in-place section graph: a "see all" link swaps its card grid for a scoped node graph ----
   (function sectionGraphs() {
-    let GRAPH = null;
+    let GRAPH = null, current = null;
     const SEM = new Set(["platform", "vision", "product", "domain", "capability", "project"]);
+    const REL_ALIAS = { depends_on: "depends", built_on: "built-on", relates_to: "relates-to", links_to: "links-to", uses_tech: "uses" };
+    const REL_STYLE = {
+      "connects": { color: "#34d399", width: 1.7, opacity: .9, flow: true },
+      "depends": { color: "#22d3ee", width: 1.7, opacity: .9, flow: true },
+      "built-on": { color: "#c084fc", width: 2.0, opacity: .95, glow: true },
+      "contains": { color: "#3b82f6", width: 1.5, opacity: .5 },
+      "includes": { color: "#6366f1", width: 1.5, opacity: .6 },
+      "serves": { color: "#f59e0b", width: 1.5, opacity: .55 },
+      "served-by": { color: "#f59e0b", width: 1.4, opacity: .5, dash: [1, 5] },
+      "provided-by": { color: "#f43f5e", width: 1.5, opacity: .55 },
+      "exposes": { color: "#10b981", width: 1.5, opacity: .55 },
+      "manages": { color: "#a855f7", width: 1.5, opacity: .55 },
+      "uses": { color: "#7c8aa0", width: 1.2, opacity: .35 },
+      "documents": { color: "#64748b", width: 1.2, opacity: .4, dash: [2, 4] },
+      "relates-to": { color: "#94a3b8", width: 1.3, opacity: .45, dash: [2, 6] },
+      "links-to": { color: "#94a3b8", width: 1.3, opacity: .45, dash: [3, 5] },
+    };
+    const DEFAULT_REL = { color: "#64748b", width: 1.3, opacity: .45 };
+    const relStyle = (r) => REL_STYLE[REL_ALIAS[r] || r] || DEFAULT_REL;
+    const REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const sub = (g, seeds) => {
       const byId = new Map(g.nodes.map((n) => [n.id, n]));
       const seed = new Set(g.nodes.filter((n) => seeds.includes(n.type)).map((n) => n.id));
@@ -836,35 +859,91 @@ window.__PROFILE = {
       return { nodes: g.nodes.filter((n) => inc.has(n.id)).map((n) => ({ id: n.id, label: n.label, type: n.type })), edges: g.edges.filter((e) => inc.has(e.source) && inc.has(e.target)), cats: g.categories || {} };
     };
     const render = (host, d) => {
-      const W = host.clientWidth || 700, H = 440, DPR = Math.min(window.devicePixelRatio || 1, 2);
+      const W = host.clientWidth || 700, H = 460, DPR = Math.min(window.devicePixelRatio || 1, 2);
       const cvs = document.createElement("canvas"); cvs.width = W * DPR; cvs.height = H * DPR; cvs.style.width = "100%"; cvs.style.height = H + "px";
-      const ctx = cvs.getContext("2d"); ctx.scale(DPR, DPR);
+      host.innerHTML = ""; host.appendChild(cvs);
+      const ctx = cvs.getContext("2d");
       const N = d.nodes, E = d.edges, idx = new Map(N.map((n) => [n.id, n]));
+      const nb = new Map(N.map((n) => [n.id, new Set()]));
+      E.forEach((e) => { if (nb.has(e.source) && nb.has(e.target)) { nb.get(e.source).add(e.target); nb.get(e.target).add(e.source); } });
       N.forEach((n) => { n.x = W / 2 + (Math.random() - .5) * W * .5; n.y = H / 2 + (Math.random() - .5) * H * .5; n.vx = 0; n.vy = 0; });
-      for (let it = 0; it < 240; it++) {
+      for (let it = 0; it < 260; it++) {
         for (let i = 0; i < N.length; i++) for (let j = i + 1; j < N.length; j++) { const a = N[i], b = N[j]; let dx = a.x - b.x, dy = a.y - b.y, dd = Math.hypot(dx, dy) || 1; const f = 2800 / (dd * dd); dx /= dd; dy /= dd; a.vx += dx * f; a.vy += dy * f; b.vx -= dx * f; b.vy -= dy * f; }
         E.forEach((e) => { const a = idx.get(e.source), b = idx.get(e.target); if (!a || !b) return; let dx = b.x - a.x, dy = b.y - a.y, dd = Math.hypot(dx, dy) || 1; const f = (dd - 100) * .02; dx /= dd; dy /= dd; a.vx += dx * f; a.vy += dy * f; b.vx -= dx * f; b.vy -= dy * f; });
-        N.forEach((n) => { n.vx += (W / 2 - n.x) * .003; n.vy += (H / 2 - n.y) * .003; n.x += Math.max(-7, Math.min(7, n.vx)); n.y += Math.max(-7, Math.min(7, n.vy)); n.vx *= .84; n.vy *= .84; n.x = Math.max(50, Math.min(W - 50, n.x)); n.y = Math.max(26, Math.min(H - 26, n.y)); });
+        N.forEach((n) => { n.vx += (W / 2 - n.x) * .003; n.vy += (H / 2 - n.y) * .003; n.x += Math.max(-7, Math.min(7, n.vx)); n.y += Math.max(-7, Math.min(7, n.vy)); n.vx *= .84; n.vy *= .84; });
       }
-      const ink = (getComputedStyle(document.body).getPropertyValue("--ink").trim()) || "#0f1722";
-      ctx.clearRect(0, 0, W, H);
-      E.forEach((e) => { const a = idx.get(e.source), b = idx.get(e.target); if (!a || !b) return; ctx.strokeStyle = "rgba(125,145,180,.32)"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); });
-      ctx.textAlign = "center"; ctx.font = "600 11px ui-sans-serif,system-ui";
-      N.forEach((n) => { const col = (d.cats[n.type] && d.cats[n.type].color) || "#64748b"; ctx.fillStyle = col; ctx.beginPath(); ctx.arc(n.x, n.y, 5.5, 0, 6.283); ctx.fill(); ctx.fillStyle = ink; ctx.fillText(n.label, n.x, n.y - 9); });
-      host.innerHTML = ""; host.appendChild(cvs);
+      const view = { x: 0, y: 0, k: 1 };
+      let minX = 1e9, minY = 1e9, maxX = -1e9, maxY = -1e9;
+      N.forEach((n) => { minX = Math.min(minX, n.x); maxX = Math.max(maxX, n.x); minY = Math.min(minY, n.y); maxY = Math.max(maxY, n.y); });
+      const pad = 64, gw = Math.max(1, maxX - minX), gh = Math.max(1, maxY - minY);
+      view.k = Math.min((W - pad * 2) / gw, (H - pad * 2) / gh, 1.5);
+      view.x = (W - (minX + maxX) * view.k) / 2; view.y = (H - (minY + maxY) * view.k) / 2;
+      const sx = (n) => n.x * view.k + view.x, sy = (n) => n.y * view.k + view.y;
+      const ink = () => (getComputedStyle(document.body).getPropertyValue("--ink").trim()) || "#0f1722";
+      let sel = null, drag = null, moved = false, raf = 0;
+      const ptr = (ev) => { const r = cvs.getBoundingClientRect(); const t = ev.touches ? ev.touches[0] : ev; return { px: t.clientX - r.left, py: t.clientY - r.top }; };
+      const hit = (px, py) => { const wx = (px - view.x) / view.k, wy = (py - view.y) / view.k; let best = null, bd = (14 / view.k) ** 2; for (const n of N) { const dx = n.x - wx, dy = n.y - wy, dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; best = n; } } return best; };
+      const draw = (ts) => {
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0); ctx.clearRect(0, 0, W, H);
+        const off = (ts || 0) * 0.05 % 64;
+        E.forEach((e) => {
+          const a = idx.get(e.source), b = idx.get(e.target); if (!a || !b) return;
+          const st = relStyle(e.relation), onSel = sel && (e.source === sel.id || e.target === sel.id), dim = sel && !onSel;
+          ctx.save();
+          ctx.globalAlpha = dim ? st.opacity * .1 : st.opacity;
+          ctx.strokeStyle = st.color; ctx.lineWidth = onSel ? st.width + .7 : st.width; ctx.lineCap = "round";
+          if (st.glow && !dim) { ctx.shadowColor = st.color; ctx.shadowBlur = 6; }
+          if (st.dash) ctx.setLineDash(st.dash);
+          else if (st.flow && !dim) { ctx.setLineDash([4, 12]); ctx.lineDashOffset = REDUCED ? 0 : -off; }
+          ctx.beginPath(); ctx.moveTo(sx(a), sy(a)); ctx.lineTo(sx(b), sy(b)); ctx.stroke();
+          ctx.restore();
+        });
+        ctx.textAlign = "center"; ctx.font = "600 11px ui-sans-serif,system-ui"; const I = ink();
+        N.forEach((n) => {
+          const col = (d.cats[n.type] && d.cats[n.type].color) || "#64748b";
+          const near = sel && (n.id === sel.id || nb.get(sel.id).has(n.id)), dim = sel && !near, isS = sel && n.id === sel.id;
+          const x = sx(n), y = sy(n), r = isS ? 7.5 : 5.5;
+          ctx.save();
+          ctx.globalAlpha = dim ? .18 : 1;
+          if (isS) { ctx.shadowColor = col; ctx.shadowBlur = 12; }
+          ctx.fillStyle = col; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.283); ctx.fill();
+          ctx.shadowBlur = 0;
+          if (isS) { ctx.lineWidth = 2; ctx.strokeStyle = "#fff"; ctx.stroke(); }
+          ctx.fillStyle = I; ctx.globalAlpha = dim ? .22 : 1; ctx.fillText(n.label, x, y - r - 4);
+          ctx.restore();
+        });
+        raf = requestAnimationFrame(draw);
+      };
+      const onMove = (ev) => {
+        const p = ptr(ev);
+        if (drag) { const dx = p.px - drag.px, dy = p.py - drag.py; if (Math.abs(dx) + Math.abs(dy) > 3) moved = true; view.x = drag.vx + dx; view.y = drag.vy + dy; ev.preventDefault && ev.preventDefault(); }
+        else cvs.style.cursor = hit(p.px, p.py) ? "pointer" : "grab";
+      };
+      const onDown = (ev) => { const p = ptr(ev); drag = { px: p.px, py: p.py, vx: view.x, vy: view.y }; moved = false; cvs.style.cursor = "grabbing"; };
+      const onUp = (ev) => { if (!drag) return; if (!moved) { const p = ptr(ev.changedTouches ? { touches: ev.changedTouches } : ev); const n = hit(p.px, p.py); sel = n && n === sel ? null : n; } drag = null; cvs.style.cursor = "grab"; };
+      const onWheel = (ev) => { ev.preventDefault(); const p = ptr(ev); const wx = (p.px - view.x) / view.k, wy = (p.py - view.y) / view.k; const k = Math.max(.4, Math.min(3.2, view.k * Math.exp(-ev.deltaY * .0012))); view.k = k; view.x = p.px - wx * k; view.y = p.py - wy * k; };
+      cvs.addEventListener("mousedown", onDown); cvs.addEventListener("touchstart", onDown, { passive: true });
+      window.addEventListener("mousemove", onMove); cvs.addEventListener("touchmove", onMove, { passive: false });
+      window.addEventListener("mouseup", onUp); cvs.addEventListener("touchend", onUp);
+      cvs.addEventListener("wheel", onWheel, { passive: false });
+      raf = requestAnimationFrame(draw);
+      return () => { cancelAnimationFrame(raf); window.removeEventListener("mousemove", onMove); window.removeEventListener("mouseup", onUp); };
     };
     const open = (grid, seeds, title) => {
       if (!grid || grid.dataset.graphOn) return;
+      if (current && current.grid !== grid) current.close();
       const go = () => {
         grid.dataset.graphOn = "1"; grid.dataset.orig = grid.innerHTML; grid.classList.add("graph-mode");
-        grid.innerHTML = `<div class="secgraph"><div class="secgraph-bar"><span>${title} — knowledge map</span><button class="secgraph-back" type="button">&larr; Back to cards</button></div><div class="secgraph-canvas"></div></div>`;
-        grid.querySelector(".secgraph-back").addEventListener("click", () => { grid.innerHTML = grid.dataset.orig; grid.classList.remove("graph-mode"); delete grid.dataset.graphOn; });
-        render(grid.querySelector(".secgraph-canvas"), sub(GRAPH, seeds));
+        grid.innerHTML = `<div class="secgraph"><div class="secgraph-bar"><span>${title} &mdash; knowledge map</span><div class="secgraph-r"><span class="secgraph-hint">Click a node &middot; scroll to zoom &middot; drag to pan</span><button class="secgraph-back" type="button">&larr; Back to cards</button></div></div><div class="secgraph-canvas"></div></div>`;
+        const stop = render(grid.querySelector(".secgraph-canvas"), sub(GRAPH, seeds));
+        const close = () => { if (stop) stop(); grid.innerHTML = grid.dataset.orig; grid.classList.remove("graph-mode"); delete grid.dataset.graphOn; if (current && current.grid === grid) current = null; };
+        grid.querySelector(".secgraph-back").addEventListener("click", close);
+        current = { grid, close };
       };
       if (GRAPH) return go();
       fetch("knowledge-graph.json").then((r) => r.ok ? r.json() : null).then((g) => { if (g && g.nodes) { GRAPH = g; go(); } }).catch(() => {});
     };
-    const wire = (linkSel, gridSel, seeds, title) => { const a = document.querySelector(linkSel); if (a) a.addEventListener("click", (e) => { e.preventDefault(); open(document.querySelector(gridSel), seeds, title); }); };
+    const wire = (linkSel, gridSel, seeds, title) => { const a = document.querySelector(linkSel); if (a) a.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); open(document.querySelector(gridSel), seeds, title); }); };
     wire('.sec-split .sec-link[href="knowledge-map.html"]', ".arch-grid", ["vision", "product", "domain", "capability", "platform"], "Architecture");
     wire('.os-row .sec-link', ".repos", ["project"], "Projects");
   })();
