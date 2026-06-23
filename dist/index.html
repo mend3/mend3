@@ -147,7 +147,7 @@
 
   /* ---------- impact ---------- */
   .impact-wrap { background:var(--paper); }
-  .impact { margin-top:-34px; position:relative; z-index:5; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); display:grid; grid-template-columns:repeat(4,1fr); }
+  .impact { margin-top:-34px; position:relative; z-index:5; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); display:grid; grid-template-columns:repeat(5,1fr); }
   .stat { display:flex; align-items:flex-start; gap:13px; padding:24px 22px; border-right:1px solid var(--line); }
   .stat:last-child { border-right:none; }
   .stat .si { width:30px; height:30px; flex:none; color:var(--accent); stroke:currentColor; fill:none; stroke-width:1.6; }
@@ -662,6 +662,7 @@ window.__PROFILE = {
   impact: [
     { icon: "target", value: "15+", label: "Years of experience" },
     { icon: "layers", value: "5+", label: "Industries shipped across" },
+    { icon: "cpu", value: "141", label: "Technologies & services", live: "techstack" },
     { icon: "blocks", value: "Platform", label: "architecture · AI · data" },
     { icon: "infinity", value: "∞", label: "Curiosity & builders" }
   ],
@@ -676,7 +677,7 @@ window.__PROFILE = {
     { name: "ts-boilerplate", href: "https://github.com/mend3/ts-boilerplate", icon: "terminal", desc: "Strict TypeScript boilerplate with top-level await.", tags: ["TypeScript", "Boilerplate"], lang: "TypeScript", langColor: "#3178c6", stars: 0, forks: 0 },
     { name: "mend3", href: "https://github.com/mend3/mend3", icon: "code", desc: "This very site — a self-generating, data-driven CV.", tags: ["CV", "GitHub Pages"], lang: "HTML", langColor: "#e34c26", stars: 0, forks: 0 }
   ],
-  aiLab: { desc: "Experiments, prototypes and research.", href: "#ailab", tree: ["mcp/", "agents/", "rag/", "automation/", "experiments/"] },
+  aiLab: { root: "ai/", desc: "Local-first by default — RAG, agentic workflows, multi-modal, across providers.", href: "#ailab", tree: ["local/", "rag/", "agentic/", "multimodal/", "providers/"] },
   now: [
     { c: "#2f6bff", t: "Building DevShell One — an AI-data-driven SaaS ecosystem on one multi-tenant foundation" },
     { c: "#ec4899", t: "Shipping verticals as modules — finance/Open Finance, connectors, scheduling" },
@@ -761,7 +762,12 @@ window.__PROFILE = {
 
     // impact stats
     const impactEl = document.getElementById("impact-grid");
-    if (impactEl && P.impact) impactEl.innerHTML = P.impact.map((s) => `<div class="stat"><svg class="si" viewBox="0 0 24 24">${ICONS[s.icon] || ""}</svg><div><div class="sv">${esc(s.value)}</div><div class="sl">${esc(s.label)}</div></div></div>`).join("");
+    if (impactEl && P.impact) {
+      impactEl.innerHTML = P.impact.map((s) => `<div class="stat"><svg class="si" viewBox="0 0 24 24">${ICONS[s.icon] || ""}</svg><div><div class="sv"${s.live ? ` data-live="${s.live}"` : ""}>${esc(s.value)}</div><div class="sl">${esc(s.label)}</div></div></div>`).join("");
+      // tech-stack count live from the knowledge-map graph (same techs/services it renders)
+      const techEl = impactEl.querySelector('[data-live="techstack"]');
+      if (techEl) fetch("knowledge-graph.json").then((r) => r.ok ? r.json() : null).then((g) => { if (g && Array.isArray(g.nodes)) { const n = g.nodes.filter((x) => x.type === "technology" || x.type === "service").length; if (n) techEl.textContent = String(n); } }).catch(() => {});
+    }
 
     // architecture cards (viz: keyed diagram or chips)
     const VIZ = {
@@ -780,7 +786,7 @@ window.__PROFILE = {
     if (reposEl && P.repos) {
       const repo = (r) => `<a class="repo" href="${esc(r.href)}"${ext(r.href)}><div class="rh"><span class="ava">${ic(r.icon, 2)}</span><span class="nm">mend3/<b>${esc(r.name)}</b></span></div><div class="rp">${esc(r.desc)}</div><div class="rtags">${(r.tags || []).map((t) => `<span>${esc(t)}</span>`).join("")}</div><div class="rmeta"><span class="lang"><i style="background:${esc(r.langColor)}"></i>${esc(r.lang)}</span><span class="rs"><span>${ic("star", 2)}${esc(r.stars)}</span><span>${ic("fork", 2)}${esc(r.forks)}</span></span></div></a>`;
       const L = P.aiLab;
-      const lab = L ? `<div class="lab" id="ailab"><div class="lh"><h3>AI Lab</h3><div class="arrows"><button aria-label="prev"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS.chevL}</svg></button><button aria-label="next"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS.chevR}</svg></button></div></div><p>${esc(L.desc)}</p><a class="sec-link" href="${esc(L.href)}" style="margin-bottom:12px">Explore lab ${ic("arrow", 2)}</a><div class="term mono"><span class="y">lab/</span>${L.tree.map((t, i) => `<br>${i === L.tree.length - 1 ? "└──" : "├──"} <span class="${i < 3 ? "b" : "m"}">${esc(t)}</span>`).join("")}</div></div>` : "";
+      const lab = L ? `<div class="lab" id="ailab"><div class="lh"><h3>AI Lab</h3><div class="arrows"><button aria-label="prev"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS.chevL}</svg></button><button aria-label="next"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS.chevR}</svg></button></div></div><p>${esc(L.desc)}</p><a class="sec-link" href="${esc(L.href)}" style="margin-bottom:12px">Explore lab ${ic("arrow", 2)}</a><div class="term mono"><span class="y">${esc(L.root || "lab/")}</span>${L.tree.map((t, i) => `<br>${i === L.tree.length - 1 ? "└──" : "├──"} <span class="${i < 3 ? "b" : "m"}">${esc(t)}</span>`).join("")}</div></div>` : "";
       const renderRepos = (list) => { reposEl.innerHTML = list.map(repo).join("") + lab; };
       renderRepos(P.repos); // inline fallback first
       // live stars/forks from the GitHub API across both accounts (graceful fallback if offline/rate-limited)
