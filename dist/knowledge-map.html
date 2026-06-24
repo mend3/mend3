@@ -619,7 +619,7 @@
     const p = pillOf.get(id); if (p) p.scrollIntoView({ behavior: "smooth", block: "center" });
   }
   cardBody.addEventListener("click", (e) => { const go = e.target.closest("[data-go]"); if (go) select(go.getAttribute("data-go")); });
-  document.getElementById("profile").addEventListener("click", (e) => { const c = e.target.closest(".chip.link[data-id]"); if (c) select(c.getAttribute("data-id")); });
+  { const pe = document.getElementById("profile"); if (pe) pe.addEventListener("click", (e) => { const c = e.target.closest(".chip.link[data-id]"); if (c) select(c.getAttribute("data-id")); }); }
   document.getElementById("hero").addEventListener("click", (e) => { if (e.target.closest("a")) return; const c = e.target.closest(".repo[data-id]"); if (c) select(c.getAttribute("data-id")); });
   document.getElementById("close").addEventListener("click", () => select(null));
   document.getElementById("min").addEventListener("click", () => { const m = card.classList.toggle("min"); document.getElementById("min").textContent = m ? "+" : "–"; });
