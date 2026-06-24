@@ -3930,5 +3930,31 @@
         "en": "Portuguese (native) · English (professional)"
       }
     }
+  },
+  "featured": {
+    "technologies": [
+      "TypeScript",
+      "Node.js",
+      "React",
+      "Next.js",
+      "Python",
+      "Java",
+      "Three.js",
+      "Prisma",
+      "Nx",
+      "Tailwind",
+      "Playwright",
+      "OpenAI"
+    ],
+    "services": [
+      "PostgreSQL",
+      "Redis",
+      "Ollama",
+      "Qdrant",
+      "Neo4j",
+      "ClickHouse",
+      "Prometheus",
+      "Grafana"
+    ]
   }
 }
