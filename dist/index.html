@@ -1482,19 +1482,20 @@ window.__PROFILE = {
   if (A.goatcounter) inject("//gc.zgo.at/count.js", { "data-goatcounter": A.goatcounter });
   if (A.umami && A.umami.id) inject(A.umami.src, { "data-website-id": A.umami.id });
   if (A.cloudflare) inject("https://static.cloudflareinsights.com/beacon.min.js", { "data-cf-beacon": JSON.stringify({ token: A.cloudflare }) });
-  // GA4 — cookies → consent-gated
-  var gaLoaded = false;
-  function loadGA() {
-    if (gaLoaded || !A.ga4) return; gaLoaded = true;
-    inject("https://www.googletagmanager.com/gtag/js?id=" + A.ga4, {});
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); };
-    window.gtag("js", new Date()); window.gtag("config", A.ga4);
-  }
+  // GA4 with Google Consent Mode v2 — the tag loads on every visit (so it stays
+  // detectable), but analytics_storage stays denied until the visitor accepts.
   var KEY = "hub-analytics-consent", consent = null;
   try { consent = localStorage.getItem(KEY); } catch (e) {}
-  if (consent === "granted") { loadGA(); return; }
-  if (consent === "denied") return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  function setConsent(state) { window.gtag("consent", "update", { analytics_storage: state }); }
+  if (A.ga4) {
+    window.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: consent === "granted" ? "granted" : "denied" });
+    inject("https://www.googletagmanager.com/gtag/js?id=" + A.ga4, {});
+    window.gtag("js", new Date());
+    window.gtag("config", A.ga4);
+  }
+  if (consent === "granted" || consent === "denied") return;
   // ---- consent banner (bilingual, follows the page language) ----
   var TXT = {
     h: { en: "Before you dig in", pt: "Antes de explorar" },
@@ -1509,8 +1510,8 @@ window.__PROFILE = {
     el.innerHTML = '<div class="cc-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>' + TXT.h[L] + "</div>"
       + "<p>" + TXT.body[L] + "</p>"
       + '<div class="cc-actions"><button class="cc-decline" type="button">' + TXT.decline[L] + '</button><button class="cc-accept" type="button">' + TXT.accept[L] + "</button></div>";
-    el.querySelector(".cc-accept").addEventListener("click", function () { try { localStorage.setItem(KEY, "granted"); } catch (e) {} loadGA(); close(); });
-    el.querySelector(".cc-decline").addEventListener("click", function () { try { localStorage.setItem(KEY, "denied"); } catch (e) {} close(); });
+    el.querySelector(".cc-accept").addEventListener("click", function () { try { localStorage.setItem(KEY, "granted"); } catch (e) {} setConsent("granted"); close(); });
+    el.querySelector(".cc-decline").addEventListener("click", function () { try { localStorage.setItem(KEY, "denied"); } catch (e) {} setConsent("denied"); close(); });
   }
   function close() { el.parentNode && el.parentNode.removeChild(el); }
   paint();
