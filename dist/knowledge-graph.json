@@ -3069,8 +3069,35 @@
     "tanstack query": "tanstack query",
     "react-query": "tanstack query"
   },
+  "featured": {
+    "technologies": [
+      "TypeScript",
+      "Node.js",
+      "React",
+      "Next.js",
+      "Python",
+      "Java",
+      "Three.js",
+      "Prisma",
+      "Nx",
+      "Tailwind",
+      "Playwright",
+      "OpenAI"
+    ],
+    "services": [
+      "PostgreSQL",
+      "Redis",
+      "Ollama",
+      "Qdrant",
+      "Neo4j",
+      "ClickHouse",
+      "Prometheus",
+      "Grafana"
+    ]
+  },
   "author": {
     "name": "Victor Mendonça",
+    "avatar": "https://avatars.githubusercontent.com/u/1450229?v=4",
     "headline": {
       "pt": "Principal Software Engineer · Arquiteto de Plataforma — Sistemas de IA, Plataformas de Dados & SaaS Multi-Tenant",
       "en": "Principal Software Engineer · Platform Architect — AI Systems, Data Platforms & Multi-Tenant SaaS",
@@ -3930,31 +3957,5 @@
         "en": "Portuguese (native) · English (professional)"
       }
     }
-  },
-  "featured": {
-    "technologies": [
-      "TypeScript",
-      "Node.js",
-      "React",
-      "Next.js",
-      "Python",
-      "Java",
-      "Three.js",
-      "Prisma",
-      "Nx",
-      "Tailwind",
-      "Playwright",
-      "OpenAI"
-    ],
-    "services": [
-      "PostgreSQL",
-      "Redis",
-      "Ollama",
-      "Qdrant",
-      "Neo4j",
-      "ClickHouse",
-      "Prometheus",
-      "Grafana"
-    ]
   }
 }
