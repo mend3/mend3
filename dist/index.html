@@ -159,6 +159,35 @@
   .sec-split { display:grid; grid-template-columns:255px minmax(0,1fr); gap:40px; align-items:start; }
   .sec-title { font-size:30px; font-weight:800; letter-spacing:-1px; line-height:1.1; margin:0; }
   .sec-lead { color:var(--ink-muted); font-size:15px; margin:16px 0 16px; max-width:230px; }
+  .cvsec { padding-top:64px; }
+  .cv-head { margin-bottom:30px; }
+  .cv-head .sec-lead { max-width:600px; }
+  .cv-top { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; }
+  .cv-name { font-size:23px; font-weight:800; letter-spacing:-.4px; color:var(--ink); }
+  .cv-headline { color:var(--accent); font-size:13.5px; font-weight:600; }
+  .cv-loc { color:var(--ink-muted); font-size:12.5px; }
+  .cv-links { display:flex; flex-wrap:wrap; gap:7px 16px; margin-left:auto; }
+  .cv-links a { display:inline-flex; align-items:center; gap:6px; font-size:12.5px; color:var(--accent); text-decoration:none; font-weight:600; }
+  .cv-links a:hover { text-decoration:underline; }
+  .cv-links svg { width:14px; height:14px; flex:none; fill:currentColor; }
+  .cv-sum { color:var(--ink-muted); font-size:14px; line-height:1.65; max-width:940px; margin:15px 0 17px; }
+  .cv-chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .cv-chip { font-size:11.5px; padding:5px 11px; border-radius:7px; border:1px solid var(--line); background:color-mix(in srgb,var(--ink) 3%,transparent); color:var(--ink-muted); white-space:nowrap; }
+  .cv-chip.accent { border-color:color-mix(in srgb,var(--accent) 38%,transparent); color:var(--accent); background:var(--accent-soft); }
+  .cv-cols { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:18px 48px; margin-top:30px; }
+  .cv-grp { min-width:0; }
+  .cv-grp h4 { font-size:12px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--ink-muted); margin:0 0 18px; }
+  .cv-exp { display:flex; flex-direction:column; gap:17px; }
+  .cv-item { padding-left:16px; border-left:2px solid var(--line); }
+  .cv-item.cur { border-left-color:var(--accent); }
+  .cv-h { display:flex; flex-wrap:wrap; align-items:baseline; gap:3px 8px; }
+  .cv-role { font-size:14px; font-weight:700; color:var(--ink); }
+  .cv-org { font-size:13px; color:var(--ink-muted); }
+  .cv-period { margin-left:auto; color:var(--ink-muted); font-size:11.5px; font-variant-numeric:tabular-nums; white-space:nowrap; padding-left:12px; }
+  .cv-desc { color:var(--ink-muted); font-size:12.5px; line-height:1.55; margin-top:5px; }
+  .skill-g { margin-bottom:16px; }
+  .skill-g h5 { font-size:10.5px; font-weight:600; color:var(--ink-muted); margin:0 0 8px; text-transform:uppercase; letter-spacing:.4px; }
+  @media (max-width:880px) { .cv-cols { grid-template-columns:1fr; } .cv-links { margin-left:0; flex-basis:100%; } .cv-period { margin-left:0; padding-left:0; } }
   .sec-link { color:var(--accent); font-weight:600; font-size:14px; display:inline-flex; align-items:center; gap:7px; transition:gap .12s; }
   .sec-link:hover { gap:11px; }
 
@@ -406,12 +435,12 @@
   </div>
   <nav class="nav">
     <a href="#home" class="active"><svg viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a>
+    <a href="#about"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>About</a>
     <a href="knowledge-map.html"><svg viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>Architecture</a>
     <a href="#ailab"><svg viewBox="0 0 24 24"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg>AI Lab</a>
     <a href="#opensource"><svg viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>Open Source</a>
     <a href="#writing"><svg viewBox="0 0 24 24"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></svg>Writing</a>
     <a href="#now"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Now</a>
-    <a href="#about"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>About</a>
     <a href="#contact"><svg viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>Contact</a>
   </nav>
   <div class="side-spacer"></div>
@@ -470,6 +499,19 @@
         <div class="stat"><svg class="si" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg><div><div class="sv">10+</div><div class="sl">Open source projects</div></div></div>
         <div class="stat"><svg class="si" viewBox="0 0 24 24"><path d="M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8"/></svg><div><div class="sv">&infin;</div><div class="sl">Curiosity &amp; builders</div></div></div>
       </div>
+    </div>
+  </div>
+
+  <!-- ABOUT / CV -->
+  <div class="impact-wrap">
+    <div class="wrap">
+      <section class="block cvsec" id="about">
+        <div class="cv-head">
+          <h2 class="sec-title">Who I am</h2>
+          <p class="sec-lead">The engineer behind the platforms — career, focus and what I'm open to.</p>
+        </div>
+        <div id="cv" class="cv"></div>
+      </section>
     </div>
   </div>
 
@@ -586,7 +628,7 @@
             <div class="ni"><span class="nd" style="background:#06b6d4"></span>Helping small teams ship like much larger ones</div>
           </div>
         </div>
-        <div class="mapcol" id="about">
+        <div class="mapcol" id="reach">
           <div class="ghw">
             <div class="ghw-head"><span class="ghw-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></span><a href="https://github.com/mend3" target="_blank" rel="noopener">@mend3</a><span class="ghw-grow"></span><a class="ghw-link" href="https://github.com/mend3" target="_blank" rel="noopener">GitHub &rarr;</a></div>
             <div class="ghw-badges">
@@ -946,6 +988,38 @@ window.__PROFILE = {
     const wire = (linkSel, gridSel, seeds, title) => { const a = document.querySelector(linkSel); if (a) a.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); open(document.querySelector(gridSel), seeds, title); }); };
     wire('.sec-split .sec-link[href="knowledge-map.html"]', ".arch-grid", ["vision", "product", "domain", "capability", "platform"], "Architecture");
     wire('.os-row .sec-link', ".repos", ["project"], "Projects");
+  })();
+  (function renderCV() {
+    const host = document.getElementById("cv"); if (!host) return;
+    const TR = (x) => (x && typeof x === "object" && !Array.isArray(x)) ? (x.en || x.pt || Object.values(x)[0] || "") : (x == null ? "" : x);
+    const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const GH = '<svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.8c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2.1v3.1c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>';
+    const LI = '<svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.53C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.73C24 .78 23.2 0 22.22 0z"/></svg>';
+    const LK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+    const linkIcon = (u) => /github\.com/i.test(u) ? GH : /linkedin\.com/i.test(u) ? LI : LK;
+    const chips = (arr, cls) => `<div class="cv-chips">${(arr || []).map((it) => `<span class="cv-chip${cls ? " " + cls : ""}">${esc(TR(it))}</span>`).join("")}</div>`;
+    const build = (a) => {
+      let h = `<div class="cv-top"><span class="cv-name">${esc(a.name)}</span>`;
+      if (a.headline) h += `<span class="cv-headline">${esc(TR(a.headline))}</span>`;
+      if (a.location) h += `<span class="cv-loc">${esc(TR(a.location))}</span>`;
+      if (Array.isArray(a.links) && a.links.length) h += `<span class="cv-links">${a.links.map((l) => `<a href="${esc(/^https?:/.test(l.url) ? l.url : "https://" + l.url)}" target="_blank" rel="noopener">${linkIcon(l.url)}${esc(l.label || l.url)}</a>`).join("")}</span>`;
+      h += `</div>`;
+      if (a.summary) h += `<div class="cv-sum">${esc(TR(a.summary))}</div>`;
+      if (a.expertise && a.expertise.length) h += chips(a.expertise, "accent");
+      h += `<div class="cv-cols">`;
+      if (a.experience && a.experience.length) {
+        h += `<div class="cv-grp"><h4>Experience</h4><div class="cv-exp">`;
+        a.experience.forEach((e) => { h += `<div class="cv-item${e.current ? " cur" : ""}"><div class="cv-h"><span class="cv-role">${esc(TR(e.role))}</span><span class="cv-org">&mdash; ${esc(TR(e.org))}</span><span class="cv-period">${esc(TR(e.period))}</span></div>${e.summary ? `<div class="cv-desc">${esc(TR(e.summary))}</div>` : ""}</div>`; });
+        h += `</div></div>`;
+      }
+      let right = "";
+      if (Array.isArray(a.skills)) a.skills.forEach((g) => { right += `<div class="skill-g"><h5>${esc(TR(g.group))}</h5>${chips(g.items)}</div>`; });
+      if (a.openTo && a.openTo.length) right += `<div class="skill-g"><h5>Open to</h5>${chips(a.openTo, "accent")}</div>`;
+      if (right) h += `<div class="cv-grp"><h4>Skills</h4>${right}</div>`;
+      h += `</div>`;
+      host.innerHTML = h;
+    };
+    fetch("knowledge-graph.json").then((r) => r.ok ? r.json() : null).then((g) => { if (g && g.author) build(g.author); }).catch(() => {});
   })();
   const moon = '<path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>';
   const sun = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>';
