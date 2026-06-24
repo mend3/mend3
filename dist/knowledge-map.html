@@ -272,17 +272,6 @@
 </header>
 
 <main id="main">
-  <section id="home" aria-label="Intro">
-    <p class="hero-lead" id="hero-lead"></p>
-    <div class="hero-roles" id="hero-roles"></div>
-    <div class="hero-meta" id="hero-meta"></div>
-    <div class="hero-cta" id="hero-cta"></div>
-  </section>
-
-  <section id="impact" class="sec" aria-label="Impact">
-    <div class="impact-grid" id="impact-grid"></div>
-  </section>
-
   <div id="stage">
     <svg id="edges"></svg>
 
@@ -294,36 +283,8 @@
     <section id="work" class="sec" aria-label="Selected work">
       <div id="hero"></div>
     </section>
-
-    <section id="ai" class="sec" aria-labelledby="ai-title">
-      <div class="sec-head"><h2 id="ai-title"></h2><p class="sec-sub" id="ai-sub"></p></div>
-      <div class="ailab-grid" id="ailab"></div>
-    </section>
-
-    <section id="about" class="sec" aria-labelledby="about-title">
-      <div class="sec-head"><h2 id="about-title"></h2></div>
-      <div id="profile"></div>
-      <section id="ella-cta" class="ella-cta">
-        <a class="ella-link" href="ella.html" title="Ella">
-          <img class="ella-img" src="ella-profile-image.jpeg" alt="Ella" />
-          <div class="ella-text">
-            <div class="ella-h" id="ella-h"></div>
-            <div class="ella-p" id="ella-p"></div>
-          </div>
-          <span class="ella-go" aria-hidden="true">&rarr;</span>
-        </a>
-      </section>
-    </section>
-
-    <section id="now" class="sec" aria-labelledby="now-title">
-      <div class="sec-head"><h2 id="now-title"></h2><p class="sec-sub" id="now-sub"></p></div>
-      <div class="now-list" id="now-list"></div>
-    </section>
   </div>
 </main>
-
-<footer class="foot" id="footer"></footer>
-
 
 <div id="card">
   <div id="card-head">
@@ -518,7 +479,7 @@
     set("brand-sub", H.brandSub || tr(a.headline) || "");
     set("skip-link", H.skip || "Skip to content");
     const nav = document.getElementById("nav");
-    if (nav) nav.innerHTML = (H.nav ? [["architecture", H.nav.architecture], ["work", H.nav.work], ["ai", H.nav.ai], ["about", H.nav.about], ["now", H.nav.now]] : []).map(([id, lbl]) => `<a href="#${id}">${esc(lbl)}</a>`).join("");
+    if (nav) nav.innerHTML = (H.nav ? [["architecture", H.nav.architecture], ["work", H.nav.work]] : []).map(([id, lbl]) => `<a href="#${id}">${esc(lbl)}</a>`).join("");
     if (hub.hero) {
       set("hero-lead", tr(hub.hero.lead));
       const roles = document.getElementById("hero-roles");
