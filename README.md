@@ -22,7 +22,6 @@ I build platforms that turn fragmented data, integrations, and processes into op
 [![Currículo PT-BR](https://img.shields.io/badge/Currículo-PT--BR-202940?style=flat-square&logo=adobeacrobatreader&logoColor=CAAA98&labelColor=202940&color=9A8678)](cv-pt-br.pdf)
 
 [![Live architecture map](https://img.shields.io/badge/Live-Architecture%20Map-202940?style=flat-square&logo=googlechrome&logoColor=CAAA98&labelColor=202940&color=9A8678)](https://mend3.github.io/mend3/)
-[![Ella — Intelligence Layer](https://img.shields.io/badge/Ella-Intelligence%20Layer-202940?style=flat-square&labelColor=202940&color=9A8678)](https://mend3.github.io/mend3/ella.html)
 
 </div>
 
@@ -193,6 +192,8 @@ The kinds of systems I design and own end-to-end — each framed by the problem 
 ![AI Systems](https://img.shields.io/badge/AI-Systems-202940?style=flat-square&labelColor=202940&color=4B4038)
 ![Data Platforms](https://img.shields.io/badge/Data-Platforms-202940?style=flat-square&labelColor=202940&color=4B4038)
 ![Web Scraping](https://img.shields.io/badge/Web-Scraping-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Accounting](https://img.shields.io/badge/Accounting-ERP-202940?style=flat-square&labelColor=202940&color=4B4038)
+![Software Houses](https://img.shields.io/badge/Software-Houses-202940?style=flat-square&labelColor=202940&color=4B4038)
 
 ---
 
@@ -360,19 +361,6 @@ Where the through-line started: fragmented data → operational intelligence, at
 | **Data & integration** | Connector frameworks · canonical data modeling · ETL & analytical pipelines · large-scale acquisition |
 | **AI-native** | Agentic systems · retrieval-augmented generation · knowledge systems · vector search · local-first inference |
 | **Operations** | Reliability & observability · cost engineering · infrastructure as a shared control plane |
-
----
-
-## Industries
-
-![Ecommerce](https://img.shields.io/badge/E-commerce-202940?style=flat-square&labelColor=202940&color=4B4038)
-![Retail Intelligence](https://img.shields.io/badge/Retail-Intelligence-202940?style=flat-square&labelColor=202940&color=4B4038)
-![Analytics](https://img.shields.io/badge/Retail-Analytics-202940?style=flat-square&labelColor=202940&color=4B4038)
-![LegalTech](https://img.shields.io/badge/Legal-Tech-202940?style=flat-square&labelColor=202940&color=4B4038)
-![FinTech](https://img.shields.io/badge/Fin-Tech-202940?style=flat-square&labelColor=202940&color=4B4038)
-![AI Systems](https://img.shields.io/badge/AI-Systems-202940?style=flat-square&labelColor=202940&color=4B4038)
-![Data Platforms](https://img.shields.io/badge/Data-Platforms-202940?style=flat-square&labelColor=202940&color=4B4038)
-![Web Scraping](https://img.shields.io/badge/Web-Scraping-202940?style=flat-square&labelColor=202940&color=4B4038)
 
 ---
 
