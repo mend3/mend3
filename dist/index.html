@@ -1497,10 +1497,10 @@ window.__PROFILE = {
   if (consent === "denied") return;
   // ---- consent banner (bilingual, follows the page language) ----
   var TXT = {
-    h: { en: "Privacy", pt: "Privacidade" },
-    body: { en: "We use analytics cookies to measure visits, navigation and time on page. No forms, no personal data collected.", pt: "Usamos cookies de analytics para medir acessos, navegação e tempo na página. Sem formulários, sem coleta de dados pessoais." },
-    accept: { en: "Accept", pt: "Aceitar" },
-    decline: { en: "Decline", pt: "Recusar" }
+    h: { en: "Before you dig in", pt: "Antes de explorar" },
+    body: { en: "I watch the basics here — page views, what gets clicked, how long people stick around — just to learn what's working. No forms, no personal data, nothing sold.", pt: "Acompanho o básico por aqui — acessos, o que recebe clique, quanto tempo as pessoas ficam — só pra entender o que funciona. Sem formulários, sem dado pessoal, nada vendido." },
+    accept: { en: "Sounds good", pt: "Tudo bem" },
+    decline: { en: "No thanks", pt: "Agora não" }
   };
   function lang() { try { var s = localStorage.getItem("hub-lang"); if (s === "pt" || s === "en") return s; } catch (e) {} return /^pt\b/i.test(navigator.language || "") ? "pt" : "en"; }
   var el = document.createElement("div"); el.className = "cc-banner"; el.setAttribute("role", "dialog"); el.setAttribute("aria-label", "Privacy");
