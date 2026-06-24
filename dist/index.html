@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<!-- Google tag (gtag.js) — Consent Mode v2: denied by default until the visitor accepts -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-97N1152358"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:(function(){try{return localStorage.getItem('hub-analytics-consent')==='granted'?'granted':'denied';}catch(e){return 'denied';}})() });
+  gtag('js', new Date());
+  gtag('config', 'G-97N1152358');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="dark light" />
 <title>Victor Mendonça — Principal Engineer & Platform Architect</title>
@@ -1482,19 +1491,11 @@ window.__PROFILE = {
   if (A.goatcounter) inject("//gc.zgo.at/count.js", { "data-goatcounter": A.goatcounter });
   if (A.umami && A.umami.id) inject(A.umami.src, { "data-website-id": A.umami.id });
   if (A.cloudflare) inject("https://static.cloudflareinsights.com/beacon.min.js", { "data-cf-beacon": JSON.stringify({ token: A.cloudflare }) });
-  // GA4 with Google Consent Mode v2 — the tag loads on every visit (so it stays
-  // detectable), but analytics_storage stays denied until the visitor accepts.
+  // GA4 itself is the canonical static tag in <head> (Consent Mode v2). Here we only
+  // flip analytics_storage via the consent banner.
   var KEY = "hub-analytics-consent", consent = null;
   try { consent = localStorage.getItem(KEY); } catch (e) {}
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () { window.dataLayer.push(arguments); };
-  function setConsent(state) { window.gtag("consent", "update", { analytics_storage: state }); }
-  if (A.ga4) {
-    window.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: consent === "granted" ? "granted" : "denied" });
-    inject("https://www.googletagmanager.com/gtag/js?id=" + A.ga4, {});
-    window.gtag("js", new Date());
-    window.gtag("config", A.ga4);
-  }
+  function setConsent(state) { if (typeof window.gtag === "function") window.gtag("consent", "update", { analytics_storage: state }); }
   if (consent === "granted" || consent === "denied") return;
   // ---- consent banner (bilingual, follows the page language) ----
   var TXT = {
