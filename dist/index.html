@@ -96,6 +96,17 @@
   .langseg button { flex:1; padding:5px 0; border:0; border-radius:6px; background:transparent; color:var(--side-muted); font:600 11.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.5px; cursor:pointer; transition:color .14s, background .14s; }
   .langseg button:hover { color:var(--side-text); }
   .langseg button[aria-pressed="true"] { background:var(--accent); color:#fff; }
+  /* cookie / analytics consent banner */
+  .cc-banner { position:fixed; left:16px; bottom:16px; z-index:210; width:340px; max-width:calc(100vw - 32px); background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 18px 48px rgba(0,0,0,.3); padding:16px 16px 14px; animation:cc-in .25s cubic-bezier(.2,.7,.3,1); }
+  @keyframes cc-in { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+  .cc-banner .cc-h { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700; color:var(--ink); margin-bottom:6px; }
+  .cc-banner .cc-h svg { width:16px; height:16px; color:var(--accent); }
+  .cc-banner p { margin:0 0 12px; font-size:12.5px; line-height:1.5; color:var(--ink-muted); }
+  .cc-banner .cc-actions { display:flex; gap:8px; }
+  .cc-banner button { flex:1; padding:8px 10px; border-radius:8px; border:1px solid var(--line); background:transparent; color:var(--ink-muted); font:600 12.5px/1 inherit; cursor:pointer; transition:background .14s, color .14s, border-color .14s; }
+  .cc-banner .cc-accept { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .cc-banner .cc-accept:hover { filter:brightness(1.06); }
+  .cc-banner .cc-decline:hover { color:var(--ink); border-color:var(--ink-muted); }
   .side-spacer { flex:1; }
   .shortcuts { padding:13px 6px 0; margin-top:13px; border-top:1px solid var(--side-div); display:flex; flex-direction:column; gap:6px; }
   .shortcuts .sc-h { font-size:10px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--side-muted); margin-bottom:2px; }
@@ -1450,6 +1461,62 @@ window.__PROFILE = {
     targets.forEach((el) => io.observe(el));
     setTimeout(() => targets.forEach(show), 1600);
   }
+})();
+</script>
+<script>
+/* Analytics: cookieless trackers load immediately; GA4 (cookies) is gated behind consent. */
+(function () {
+  "use strict";
+  var A = {
+    ga4: "G-97N1152358",
+    goatcounter: "https://mend3.goatcounter.com/count",
+    umami: { src: "https://cloud.umami.is/script.js", id: "a47e8a2d-9e6b-4ad3-aeb8-e9799cef4f8f" },
+    cloudflare: "3f42d9bf9b9543c288251721410d67d7"
+  };
+  function inject(src, attrs) {
+    var s = document.createElement("script"); s.src = src;
+    for (var k in attrs) if (attrs.hasOwnProperty(k)) s.setAttribute(k, attrs[k]);
+    document.head.appendChild(s); return s;
+  }
+  // cookieless — no consent required
+  if (A.goatcounter) inject("//gc.zgo.at/count.js", { "data-goatcounter": A.goatcounter });
+  if (A.umami && A.umami.id) inject(A.umami.src, { "data-website-id": A.umami.id });
+  if (A.cloudflare) inject("https://static.cloudflareinsights.com/beacon.min.js", { "data-cf-beacon": JSON.stringify({ token: A.cloudflare }) });
+  // GA4 — cookies → consent-gated
+  var gaLoaded = false;
+  function loadGA() {
+    if (gaLoaded || !A.ga4) return; gaLoaded = true;
+    inject("https://www.googletagmanager.com/gtag/js?id=" + A.ga4, {});
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date()); window.gtag("config", A.ga4);
+  }
+  var KEY = "hub-analytics-consent", consent = null;
+  try { consent = localStorage.getItem(KEY); } catch (e) {}
+  if (consent === "granted") { loadGA(); return; }
+  if (consent === "denied") return;
+  // ---- consent banner (bilingual, follows the page language) ----
+  var TXT = {
+    h: { en: "Privacy", pt: "Privacidade" },
+    body: { en: "We use analytics cookies to measure visits, navigation and time on page. No forms, no personal data collected.", pt: "Usamos cookies de analytics para medir acessos, navegação e tempo na página. Sem formulários, sem coleta de dados pessoais." },
+    accept: { en: "Accept", pt: "Aceitar" },
+    decline: { en: "Decline", pt: "Recusar" }
+  };
+  function lang() { try { var s = localStorage.getItem("hub-lang"); if (s === "pt" || s === "en") return s; } catch (e) {} return /^pt\b/i.test(navigator.language || "") ? "pt" : "en"; }
+  var el = document.createElement("div"); el.className = "cc-banner"; el.setAttribute("role", "dialog"); el.setAttribute("aria-label", "Privacy");
+  function paint() {
+    var L = lang();
+    el.innerHTML = '<div class="cc-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>' + TXT.h[L] + "</div>"
+      + "<p>" + TXT.body[L] + "</p>"
+      + '<div class="cc-actions"><button class="cc-decline" type="button">' + TXT.decline[L] + '</button><button class="cc-accept" type="button">' + TXT.accept[L] + "</button></div>";
+    el.querySelector(".cc-accept").addEventListener("click", function () { try { localStorage.setItem(KEY, "granted"); } catch (e) {} loadGA(); close(); });
+    el.querySelector(".cc-decline").addEventListener("click", function () { try { localStorage.setItem(KEY, "denied"); } catch (e) {} close(); });
+  }
+  function close() { el.parentNode && el.parentNode.removeChild(el); }
+  paint();
+  (document.body || document.documentElement).appendChild(el);
+  // keep banner text in sync if the user toggles language while it's visible
+  document.querySelectorAll(".langseg button").forEach(function (b) { b.addEventListener("click", function () { if (el.parentNode) paint(); }); });
 })();
 </script>
 </body>
