@@ -39,7 +39,7 @@ I operate across the full arc — **set the architecture and strategy, then writ
 
 ## Selected platform — what I'm building now
 
-**DevShell One** — a platform where one shared foundation powers many products and verticals, instead of rebuilding infrastructure, data, and AI for each. It spans an infrastructure control plane, a multi-tenant runtime, universal connectors, data acquisition at scale, workflow automation, and a native AI layer. The point isn't the parts — it's that **the cost of the next product, vertical, or tenant keeps falling**.
+**[DevShell One](https://devshell.tech/)** — a platform where one shared foundation powers many products and verticals, instead of rebuilding infrastructure, data, and AI for each. It spans an infrastructure control plane, a multi-tenant runtime, universal connectors, data acquisition at scale, workflow automation, and a native AI layer. The point isn't the parts — it's that **the cost of the next product, vertical, or tenant keeps falling**.
 
 <!-- KT:PROFILE:START -->
 ```mermaid
