@@ -61,7 +61,6 @@ flowchart LR
   d_ads["Ads"]:::dom
   d_ecommerce["Ecommerce"]:::dom
   d_financeiro["Financeiro"]:::dom
-  d_gaming["Gaming"]:::dom
   d_personal_ai["Personal AI"]:::dom
   d_real_estate["Real Estate"]:::dom
   d_talent_intelligence["Talent Intelligence"]:::dom
@@ -70,13 +69,9 @@ flowchart LR
   p_core_ella["core/ella"]:::proj
   p_core_hub["core/hub"]:::proj
   p_devshell_one["DevShell One"]:::plat
-  p_e7_copilot["E7 Copilot"]:::prod
   p_ella_local_ai["Ella — Local AI"]:::prod
   p_foundation_oracle["foundation/oracle"]:::proj
-  p_l2_game_platform["L2 Game Platform"]:::prod
   p_saas_hub["SaaS Hub"]:::prod
-  p_satellites_epic_seven["satellites/epic-seven"]:::proj
-  p_satellites_extalia["satellites/extalia"]:::proj
   p_scraping_platform["Scraping Platform"]:::prod
   v_automation_layer["Automation Layer"]:::vis
   v_cognition_layer["Cognition Layer"]:::vis
@@ -90,13 +85,10 @@ flowchart LR
   c_page_builder_cms -->|provided-by| p_core_hub
   c_rag_cognition -->|provided-by| p_core_ella
   c_rag_cognition -->|provided-by| p_core_hub
-  c_rag_cognition -->|provided-by| p_satellites_epic_seven
   c_universal_connectors -->|provided-by| p_core_hub
   d_ads -->|served-by| p_core_hub
   d_ecommerce -->|served-by| p_core_hub
   d_financeiro -->|served-by| p_core_hub
-  d_gaming -->|served-by| p_satellites_epic_seven
-  d_gaming -->|served-by| p_satellites_extalia
   d_personal_ai -->|served-by| p_core_ella
   d_real_estate -->|served-by| p_core_hub
   d_talent_intelligence -->|served-by| p_core_hub
@@ -112,16 +104,13 @@ flowchart LR
   p_devshell_one -->|contains| p_ella_local_ai
   p_devshell_one -->|contains| p_saas_hub
   p_devshell_one -->|contains| p_scraping_platform
-  p_e7_copilot -->|built-on| p_satellites_epic_seven
   p_ella_local_ai -->|built-on| p_core_ella
   p_ella_local_ai -->|serves| d_personal_ai
-  p_l2_game_platform -->|built-on| p_satellites_extalia
   p_saas_hub -->|built-on| p_core_hub
   p_scraping_platform -->|built-on| p_core_datahouse
   v_automation_layer -->|includes| p_core_hub
   v_cognition_layer -->|includes| p_core_ella
   v_cognition_layer -->|includes| p_core_hub
-  v_cognition_layer -->|includes| p_satellites_epic_seven
   v_control_plane -->|includes| p_foundation_oracle
   v_data_plane -->|includes| p_core_datahouse
   v_data_plane -->|includes| p_core_ella

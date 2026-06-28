@@ -43,12 +43,12 @@
     {
       "name": "Java",
       "color": "#b07219",
-      "pct": 56.6
+      "pct": 56.2
     },
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "pct": 34.5
+      "pct": 34.8
     },
     {
       "name": "SQL",
@@ -61,14 +61,14 @@
       "pct": 1.5
     },
     {
-      "name": "CSS",
-      "color": "#563d7c",
+      "name": "Python",
+      "color": "#3572A5",
       "pct": 1.3
     },
     {
-      "name": "Python",
-      "color": "#3572A5",
-      "pct": 1.2
+      "name": "CSS",
+      "color": "#563d7c",
+      "pct": 1.3
     },
     {
       "name": "SCSS",
@@ -83,7 +83,7 @@
     {
       "name": "Other",
       "color": "#8b949e",
-      "pct": 0.2
+      "pct": 0.3
     }
   ],
   "nodes": [
@@ -514,6 +514,60 @@
       }
     },
     {
+      "id": "service:oracle:ollama-pull",
+      "label": "ollama-pull",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:knowledge-engine",
+      "label": "knowledge-engine",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:hub",
+      "label": "hub",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:hub-web",
+      "label": "hub-web",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:async-ops",
+      "label": "async-ops",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
+      "id": "service:oracle:async-ops-worker",
+      "label": "async-ops-worker",
+      "type": "service",
+      "meta": {
+        "project": "oracle",
+        "group": "foundation"
+      }
+    },
+    {
       "id": "tech:express",
       "label": "Express",
       "type": "technology",
@@ -648,6 +702,18 @@
     {
       "id": "tech:mongodb",
       "label": "MongoDB",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:next-js",
+      "label": "Next.js",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:clerk",
+      "label": "Clerk",
       "type": "technology",
       "meta": {}
     },
@@ -815,12 +881,6 @@
     {
       "id": "tech:aws-sdk",
       "label": "AWS SDK",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:clerk",
-      "label": "Clerk",
       "type": "technology",
       "meta": {}
     },
@@ -1042,15 +1102,15 @@
       "label": "Epic Seven",
       "type": "project",
       "meta": {
-        "dir": "satellites/epic-seven",
-        "group": "satellites",
+        "dir": "gaming/epic-seven",
+        "group": "gaming",
         "summary": "Knowledge + reasoning + combat-simulation layer for Epic Seven: structured collectors,",
-        "remote": "https://github.com/mend3/epic-seven",
-        "repo": "mend3/epic-seven",
+        "remote": "https://github.com/mendshell/devshell-one",
+        "repo": "mendshell/devshell-one",
         "pitch": {
-          "pt": "Copiloto de IA para Epic Seven — RAG do meta do jogo, motor de combate e arena 3D para planejar e simular times e duelos.",
-          "en": "AI copilot for Epic Seven — game-meta RAG, a combat engine and a 3D arena to plan and simulate teams and duels.",
-          "es": "Copiloto de IA para Epic Seven — RAG del meta del juego, motor de combate y arena 3D para planear y simular equipos y duelos."
+          "pt": "Copiloto de IA para Epic Seven — RAG do meta do jogo, simulador de combate e arena 3D para planejar e simular times e duelos. O combate roda 100% sobre o motor agnóstico @forge/engine (sem motor duplicado).",
+          "en": "AI copilot for Epic Seven — game-meta RAG, a combat simulator and a 3D arena to plan and simulate teams and duels. Combat runs entirely on the agnostic @forge/engine (no duplicated engine).",
+          "es": "Copiloto de IA para Epic Seven — RAG del meta del juego, simulador de combate y arena 3D para planear y simular equipos y duelos. El combate corre 100% sobre el motor agnóstico @forge/engine (sin motor duplicado)."
         }
       }
     },
@@ -1060,7 +1120,7 @@
       "type": "service",
       "meta": {
         "project": "epic-seven",
-        "group": "satellites"
+        "group": "gaming"
       }
     },
     {
@@ -1069,7 +1129,7 @@
       "type": "service",
       "meta": {
         "project": "epic-seven",
-        "group": "satellites"
+        "group": "gaming"
       }
     },
     {
@@ -1078,7 +1138,7 @@
       "type": "service",
       "meta": {
         "project": "epic-seven",
-        "group": "satellites"
+        "group": "gaming"
       }
     },
     {
@@ -1087,7 +1147,7 @@
       "type": "service",
       "meta": {
         "project": "epic-seven",
-        "group": "satellites"
+        "group": "gaming"
       }
     },
     {
@@ -1099,12 +1159,6 @@
     {
       "id": "tech:bullmq",
       "label": "BullMQ",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:next-js",
-      "label": "Next.js",
       "type": "technology",
       "meta": {}
     },
@@ -1204,6 +1258,23 @@
       "meta": {}
     },
     {
+      "id": "project:forge",
+      "label": "Forge",
+      "type": "project",
+      "meta": {
+        "dir": "gaming/forge",
+        "group": "gaming",
+        "summary": "Engine de RPG tático determinístico extraída do Epic Seven copilot (`satellites/epic-seven`) e",
+        "remote": "https://github.com/mendshell/devshell-one",
+        "repo": "mendshell/devshell-one",
+        "pitch": {
+          "pt": "Engine de RPG tático determinístico game-agnostic (@forge/*: content, engine, catalog, harness, ai) — regras, stats, efeitos e ordem de turno viram dados/config via Ruleset. Base para uma fábrica de microjogos; Epic Seven é o primeiro ruleset.",
+          "en": "Game-agnostic deterministic tactical RPG engine (@forge/*: content, engine, catalog, harness, ai) — rules, stats, effects and turn order become data/config via a Ruleset. Foundation for a microgame factory; Epic Seven is the first ruleset.",
+          "es": "Motor de RPG táctico determinista game-agnostic (@forge/*: content, engine, catalog, harness, ai) — reglas, stats, efectos y orden de turno se vuelven datos/config vía un Ruleset. Base para una fábrica de microjuegos; Epic Seven es el primer ruleset."
+        }
+      }
+    },
+    {
       "id": "project:hub",
       "label": "Hub",
       "type": "project",
@@ -1219,33 +1290,6 @@
           "en": "Multi-tenant SaaS — blog, CRM, calendar, page-builder, AI workflows, finance/Open Finance and native connectors, with plan-based gating.",
           "es": "SaaS multi-tenant — blog, CRM, agenda, page-builder, workflows con IA, finanzas/Open Finance y conectores nativos, con gating por plan."
         }
-      }
-    },
-    {
-      "id": "service:hub:hub",
-      "label": "hub",
-      "type": "service",
-      "meta": {
-        "project": "hub",
-        "group": "core"
-      }
-    },
-    {
-      "id": "service:hub:async-ops",
-      "label": "async-ops",
-      "type": "service",
-      "meta": {
-        "project": "hub",
-        "group": "core"
-      }
-    },
-    {
-      "id": "service:hub:async-ops-worker",
-      "label": "async-ops-worker",
-      "type": "service",
-      "meta": {
-        "project": "hub",
-        "group": "core"
       }
     },
     {
@@ -1294,15 +1338,6 @@
           "en": "Workspace stateless ingestion engine — takes a file, URL or directory and returns normalized content for the knowledge base.",
           "es": "Motor de ingesta stateless del workspace — recibe un archivo, URL o directorio y devuelve contenido normalizado para la base de conocimiento."
         }
-      }
-    },
-    {
-      "id": "service:knowledge-engine:knowledge-engine",
-      "label": "knowledge-engine",
-      "type": "service",
-      "meta": {
-        "project": "knowledge-engine",
-        "group": "foundation"
       }
     },
     {
@@ -1427,6 +1462,14 @@
       "type": "domain",
       "meta": {
         "summary": "módulo real-estate do hub"
+      }
+    },
+    {
+      "id": "capability:game-engine",
+      "label": "Game Engine (agnostic)",
+      "type": "capability",
+      "meta": {
+        "summary": "Motor de RPG tático determinístico paramétrico sobre Ruleset (RNG seedado, replay byte-idêntico, Skill DSL)"
       }
     },
     {
@@ -1733,6 +1776,36 @@
     },
     {
       "source": "project:oracle",
+      "target": "service:oracle:ollama-pull",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:knowledge-engine",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:hub",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:hub-web",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:async-ops",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
+      "target": "service:oracle:async-ops-worker",
+      "relation": "contains"
+    },
+    {
+      "source": "project:oracle",
       "target": "tech:express",
       "relation": "uses"
     },
@@ -1844,6 +1917,16 @@
     {
       "source": "project:oracle",
       "target": "tech:mongodb",
+      "relation": "uses"
+    },
+    {
+      "source": "project:oracle",
+      "target": "tech:next-js",
+      "relation": "uses"
+    },
+    {
+      "source": "project:oracle",
+      "target": "tech:clerk",
       "relation": "uses"
     },
     {
@@ -2497,6 +2580,26 @@
       "relation": "uses"
     },
     {
+      "source": "project:forge",
+      "target": "tech:vitest",
+      "relation": "uses"
+    },
+    {
+      "source": "project:forge",
+      "target": "tech:postgresql",
+      "relation": "uses"
+    },
+    {
+      "source": "project:forge",
+      "target": "tech:zod",
+      "relation": "uses"
+    },
+    {
+      "source": "project:forge",
+      "target": "tech:typescript",
+      "relation": "uses"
+    },
+    {
       "source": "project:hub",
       "target": "service:oracle:redis",
       "relation": "contains"
@@ -2508,17 +2611,17 @@
     },
     {
       "source": "project:hub",
-      "target": "service:hub:hub",
+      "target": "service:oracle:hub",
       "relation": "contains"
     },
     {
       "source": "project:hub",
-      "target": "service:hub:async-ops",
+      "target": "service:oracle:async-ops",
       "relation": "contains"
     },
     {
       "source": "project:hub",
-      "target": "service:hub:async-ops-worker",
+      "target": "service:oracle:async-ops-worker",
       "relation": "contains"
     },
     {
@@ -2648,7 +2751,7 @@
     },
     {
       "source": "project:knowledge-engine",
-      "target": "service:knowledge-engine:knowledge-engine",
+      "target": "service:oracle:knowledge-engine",
       "relation": "contains"
     },
     {
@@ -2758,7 +2861,7 @@
     },
     {
       "source": "project:hub",
-      "target": "service:knowledge-engine:knowledge-engine",
+      "target": "service:oracle:knowledge-engine",
       "relation": "connects"
     },
     {
@@ -2810,6 +2913,11 @@
       "source": "project:knowledge-engine",
       "target": "project:oracle",
       "relation": "depends"
+    },
+    {
+      "source": "project:epic-seven",
+      "target": "project:forge",
+      "relation": "built-on"
     },
     {
       "source": "platform:devshell-one",
@@ -2927,6 +3035,11 @@
       "relation": "built-on"
     },
     {
+      "source": "product:e7-copilot",
+      "target": "project:forge",
+      "relation": "built-on"
+    },
+    {
       "source": "product:game-platform",
       "target": "project:extalia",
       "relation": "built-on"
@@ -2957,6 +3070,11 @@
       "relation": "served-by"
     },
     {
+      "source": "domain:gaming",
+      "target": "project:forge",
+      "relation": "served-by"
+    },
+    {
       "source": "domain:talent",
       "target": "project:hub",
       "relation": "served-by"
@@ -2970,6 +3088,11 @@
       "source": "domain:finance",
       "target": "project:hub",
       "relation": "served-by"
+    },
+    {
+      "source": "capability:game-engine",
+      "target": "project:forge",
+      "relation": "provided-by"
     },
     {
       "source": "capability:connectors",
