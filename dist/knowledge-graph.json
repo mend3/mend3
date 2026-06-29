@@ -43,32 +43,32 @@
     {
       "name": "Java",
       "color": "#b07219",
-      "pct": 56.2
+      "pct": 51.4
     },
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "pct": 34.8
-    },
-    {
-      "name": "SQL",
-      "color": "#e38c00",
-      "pct": 3.5
+      "pct": 32.1
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "pct": 1.5
+      "pct": 9.5
     },
     {
-      "name": "Python",
-      "color": "#3572A5",
-      "pct": 1.3
+      "name": "SQL",
+      "color": "#e38c00",
+      "pct": 3.2
     },
     {
       "name": "CSS",
       "color": "#563d7c",
       "pct": 1.3
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "pct": 1.2
     },
     {
       "name": "SCSS",
@@ -1105,8 +1105,8 @@
         "dir": "gaming/epic-seven",
         "group": "gaming",
         "summary": "Knowledge + reasoning + combat-simulation layer for Epic Seven: structured collectors,",
-        "remote": "https://github.com/mendshell/devshell-one",
-        "repo": "mendshell/devshell-one",
+        "remote": "https://github.com/mend3/mengine",
+        "repo": "mend3/mengine",
         "pitch": {
           "pt": "Copiloto de IA para Epic Seven — RAG do meta do jogo, simulador de combate e arena 3D para planejar e simular times e duelos. O combate roda 100% sobre o motor agnóstico @forge/engine (sem motor duplicado).",
           "en": "AI copilot for Epic Seven — game-meta RAG, a combat simulator and a 3D arena to plan and simulate teams and duels. Combat runs entirely on the agnostic @forge/engine (no duplicated engine).",
@@ -1262,11 +1262,12 @@
       "label": "Forge",
       "type": "project",
       "meta": {
-        "dir": "gaming/forge",
+        "dir": "gaming/packages",
         "group": "gaming",
-        "summary": "Engine de RPG tático determinístico extraída do Epic Seven copilot (`satellites/epic-seven`) e",
-        "remote": "https://github.com/mendshell/devshell-one",
-        "repo": "mendshell/devshell-one",
+        "summary": "Engine de RPG tático determinístico extraída do Epic Seven copilot (`epic-seven`) e",
+        "description": null,
+        "remote": "https://github.com/mend3/mengine",
+        "repo": "mend3/mengine",
         "pitch": {
           "pt": "Engine de RPG tático determinístico game-agnostic (@forge/*: content, engine, catalog, harness, ai) — regras, stats, efeitos e ordem de turno viram dados/config via Ruleset. Base para uma fábrica de microjogos; Epic Seven é o primeiro ruleset.",
           "en": "Game-agnostic deterministic tactical RPG engine (@forge/*: content, engine, catalog, harness, ai) — rules, stats, effects and turn order become data/config via a Ruleset. Foundation for a microgame factory; Epic Seven is the first ruleset.",
@@ -2421,6 +2422,11 @@
     },
     {
       "source": "project:epic-seven",
+      "target": "tech:javascript",
+      "relation": "uses"
+    },
+    {
+      "source": "project:epic-seven",
       "target": "tech:fastapi",
       "relation": "uses"
     },
@@ -2592,6 +2598,11 @@
     {
       "source": "project:forge",
       "target": "tech:zod",
+      "relation": "uses"
+    },
+    {
+      "source": "project:forge",
+      "target": "tech:three-js",
       "relation": "uses"
     },
     {
