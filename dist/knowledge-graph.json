@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedFrom": "/home/dev/workspace",
+    "generatedFrom": "/Users/victor/workspace/devshell-one",
     "generator": "extract-context.js",
     "layer": "mechanical",
-    "overlay": "/home/dev/workspace/.claude/skills/knowledge-topology/semantic-overlay.json"
+    "overlay": "/Users/victor/workspace/devshell-one/.claude/skills/knowledge-topology/semantic-overlay.json"
   },
   "categories": {
     "capability": {
@@ -41,48 +41,38 @@
   },
   "languages": [
     {
-      "name": "Java",
-      "color": "#b07219",
-      "pct": 51.4
-    },
-    {
       "name": "TypeScript",
       "color": "#3178c6",
-      "pct": 32.1
-    },
-    {
-      "name": "JavaScript",
-      "color": "#f1e05a",
-      "pct": 9.5
-    },
-    {
-      "name": "SQL",
-      "color": "#e38c00",
-      "pct": 3.2
-    },
-    {
-      "name": "CSS",
-      "color": "#563d7c",
-      "pct": 1.3
+      "pct": 89.5
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "pct": 1.2
+      "pct": 4.2
     },
     {
-      "name": "SCSS",
-      "color": "#c6538c",
-      "pct": 0.7
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "pct": 2.8
     },
     {
       "name": "Shell",
       "color": "#89e051",
-      "pct": 0.3
+      "pct": 1.4
     },
     {
-      "name": "Other",
-      "color": "#8b949e",
+      "name": "HCL",
+      "color": "#844FBA",
+      "pct": 1.3
+    },
+    {
+      "name": "CSS",
+      "color": "#563d7c",
+      "pct": 0.5
+    },
+    {
+      "name": "SQL",
+      "color": "#e38c00",
       "pct": 0.3
     }
   ],
@@ -724,12 +714,6 @@
       "meta": {}
     },
     {
-      "id": "tech:supabase",
-      "label": "Supabase",
-      "type": "technology",
-      "meta": {}
-    },
-    {
       "id": "project:datahouse",
       "label": "DataHouse",
       "type": "project",
@@ -1017,12 +1001,6 @@
       "meta": {}
     },
     {
-      "id": "tech:n8n",
-      "label": "n8n",
-      "type": "technology",
-      "meta": {}
-    },
-    {
       "id": "project:ella",
       "label": "Ella",
       "type": "project",
@@ -1098,184 +1076,6 @@
       "meta": {}
     },
     {
-      "id": "project:epic-seven",
-      "label": "Epic Seven",
-      "type": "project",
-      "meta": {
-        "dir": "gaming/epic-seven",
-        "group": "gaming",
-        "summary": "Knowledge + reasoning + combat-simulation layer for Epic Seven: structured collectors,",
-        "remote": "https://github.com/mend3/mengine",
-        "repo": "mend3/mengine",
-        "pitch": {
-          "pt": "Copiloto de IA para Epic Seven — RAG do meta do jogo, simulador de combate e arena 3D para planejar e simular times e duelos. O combate roda 100% sobre o motor agnóstico @forge/engine (sem motor duplicado).",
-          "en": "AI copilot for Epic Seven — game-meta RAG, a combat simulator and a 3D arena to plan and simulate teams and duels. Combat runs entirely on the agnostic @forge/engine (no duplicated engine).",
-          "es": "Copiloto de IA para Epic Seven — RAG del meta del juego, simulador de combate y arena 3D para planear y simular equipos y duelos. El combate corre 100% sobre el motor agnóstico @forge/engine (sin motor duplicado)."
-        }
-      }
-    },
-    {
-      "id": "service:epic-seven:db",
-      "label": "db",
-      "type": "service",
-      "meta": {
-        "project": "epic-seven",
-        "group": "gaming"
-      }
-    },
-    {
-      "id": "service:epic-seven:reasoner",
-      "label": "reasoner",
-      "type": "service",
-      "meta": {
-        "project": "epic-seven",
-        "group": "gaming"
-      }
-    },
-    {
-      "id": "service:epic-seven:combat",
-      "label": "combat",
-      "type": "service",
-      "meta": {
-        "project": "epic-seven",
-        "group": "gaming"
-      }
-    },
-    {
-      "id": "service:epic-seven:collector",
-      "label": "collector",
-      "type": "service",
-      "meta": {
-        "project": "epic-seven",
-        "group": "gaming"
-      }
-    },
-    {
-      "id": "tech:drizzle",
-      "label": "Drizzle",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:bullmq",
-      "label": "BullMQ",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:tanstack-query",
-      "label": "TanStack Query",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:radix-ui",
-      "label": "Radix UI",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:three-js",
-      "label": "Three.js",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "project:extalia",
-      "label": "Extalia",
-      "type": "project",
-      "meta": {
-        "dir": "satellites/extalia",
-        "group": "satellites",
-        "summary": "⚠️ **THIS DOCUMENT IS NOT OPTIONAL**",
-        "description": null,
-        "remote": "https://github.com/mend3/extalia",
-        "repo": "mend3/extalia",
-        "monorepo": "nx",
-        "pitch": {
-          "pt": "Servidor Lineage 2 Interlude (L2J/Java) com painel web, CDN e anticheat — a operação completa de um MMO clássico self-hosted.",
-          "en": "Lineage 2 Interlude server (L2J/Java) with web panel, CDN and anticheat — the full operation of a classic self-hosted MMO.",
-          "es": "Servidor Lineage 2 Interlude (L2J/Java) con panel web, CDN y anticheat — la operación completa de un MMO clásico self-hosted."
-        }
-      }
-    },
-    {
-      "id": "service:extalia:gameserver",
-      "label": "gameserver",
-      "type": "service",
-      "meta": {
-        "project": "extalia",
-        "group": "satellites",
-        "kind": "app"
-      }
-    },
-    {
-      "id": "service:extalia:socket",
-      "label": "socket",
-      "type": "service",
-      "meta": {
-        "project": "extalia",
-        "group": "satellites"
-      }
-    },
-    {
-      "id": "service:extalia:cdn",
-      "label": "cdn",
-      "type": "service",
-      "meta": {
-        "project": "extalia",
-        "group": "satellites"
-      }
-    },
-    {
-      "id": "service:extalia:nprotect",
-      "label": "nprotect",
-      "type": "service",
-      "meta": {
-        "project": "extalia",
-        "group": "satellites"
-      }
-    },
-    {
-      "id": "service:extalia:l2j-server",
-      "label": "l2j-server",
-      "type": "service",
-      "meta": {
-        "project": "extalia",
-        "group": "satellites"
-      }
-    },
-    {
-      "id": "tech:java",
-      "label": "Java",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "tech:php",
-      "label": "PHP",
-      "type": "technology",
-      "meta": {}
-    },
-    {
-      "id": "project:forge",
-      "label": "Forge",
-      "type": "project",
-      "meta": {
-        "dir": "gaming/packages",
-        "group": "gaming",
-        "summary": "Engine de RPG tático determinístico extraída do Epic Seven copilot (`epic-seven`) e",
-        "description": null,
-        "remote": "https://github.com/mend3/mengine",
-        "repo": "mend3/mengine",
-        "pitch": {
-          "pt": "Engine de RPG tático determinístico game-agnostic (@forge/*: content, engine, catalog, harness, ai) — regras, stats, efeitos e ordem de turno viram dados/config via Ruleset. Base para uma fábrica de microjogos; Epic Seven é o primeiro ruleset.",
-          "en": "Game-agnostic deterministic tactical RPG engine (@forge/*: content, engine, catalog, harness, ai) — rules, stats, effects and turn order become data/config via a Ruleset. Foundation for a microgame factory; Epic Seven is the first ruleset.",
-          "es": "Motor de RPG táctico determinista game-agnostic (@forge/*: content, engine, catalog, harness, ai) — reglas, stats, efectos y orden de turno se vuelven datos/config vía un Ruleset. Base para una fábrica de microjuegos; Epic Seven es el primer ruleset."
-        }
-      }
-    },
-    {
       "id": "project:hub",
       "label": "Hub",
       "type": "project",
@@ -1294,6 +1094,12 @@
       }
     },
     {
+      "id": "tech:bullmq",
+      "label": "BullMQ",
+      "type": "technology",
+      "meta": {}
+    },
+    {
       "id": "tech:dnd-kit",
       "label": "dnd-kit",
       "type": "technology",
@@ -1302,6 +1108,18 @@
     {
       "id": "tech:prisma",
       "label": "Prisma",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:radix-ui",
+      "label": "Radix UI",
+      "type": "technology",
+      "meta": {}
+    },
+    {
+      "id": "tech:tanstack-query",
+      "label": "TanStack Query",
       "type": "technology",
       "meta": {}
     },
@@ -1408,22 +1226,6 @@
       }
     },
     {
-      "id": "product:e7-copilot",
-      "label": "E7 Copilot",
-      "type": "product",
-      "meta": {
-        "summary": "Copiloto Epic Seven (RAG + combate + arena 3D)"
-      }
-    },
-    {
-      "id": "product:game-platform",
-      "label": "L2 Game Platform",
-      "type": "product",
-      "meta": {
-        "summary": "Servidor L2 Interlude + web"
-      }
-    },
-    {
       "id": "product:scraping-platform",
       "label": "Scraping Platform",
       "type": "product",
@@ -1444,12 +1246,6 @@
       "meta": {}
     },
     {
-      "id": "domain:gaming",
-      "label": "Gaming",
-      "type": "domain",
-      "meta": {}
-    },
-    {
       "id": "domain:talent",
       "label": "Talent Intelligence",
       "type": "domain",
@@ -1463,14 +1259,6 @@
       "type": "domain",
       "meta": {
         "summary": "módulo real-estate do hub"
-      }
-    },
-    {
-      "id": "capability:game-engine",
-      "label": "Game Engine (agnostic)",
-      "type": "capability",
-      "meta": {
-        "summary": "Motor de RPG tático determinístico paramétrico sobre Ruleset (RNG seedado, replay byte-idêntico, Skill DSL)"
       }
     },
     {
@@ -1552,6 +1340,12 @@
       "meta": {
         "summary": "Assistente pessoal / produtividade com IA local"
       }
+    },
+    {
+      "id": "tech:n8n",
+      "label": "n8n",
+      "type": "technology",
+      "meta": {}
     }
   ],
   "edges": [
@@ -1936,11 +1730,6 @@
       "relation": "uses"
     },
     {
-      "source": "project:oracle",
-      "target": "tech:supabase",
-      "relation": "uses"
-    },
-    {
       "source": "project:datahouse",
       "target": "service:datahouse:api",
       "relation": "contains"
@@ -2216,16 +2005,6 @@
       "relation": "uses"
     },
     {
-      "source": "project:datahouse",
-      "target": "tech:n8n",
-      "relation": "uses"
-    },
-    {
-      "source": "project:datahouse",
-      "target": "tech:mongodb",
-      "relation": "uses"
-    },
-    {
       "source": "project:ella",
       "target": "service:ella:searxng",
       "relation": "contains"
@@ -2298,316 +2077,6 @@
     {
       "source": "project:ella",
       "target": "tech:ollama",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:epic-seven:db",
-      "relation": "contains"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:datahouse:api",
-      "relation": "contains"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:epic-seven:reasoner",
-      "relation": "contains"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:epic-seven:combat",
-      "relation": "contains"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:ella:web",
-      "relation": "contains"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:epic-seven:collector",
-      "relation": "contains"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:fastify",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:drizzle",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:postgresql",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:redis",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:bullmq",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:zod",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:websocket",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:vitest",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:next-js",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:react",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:tanstack-query",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:radix-ui",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:framer-motion",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:three-js",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:tailwind",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:zustand",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:typescript",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:python",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:javascript",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:fastapi",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:node-js",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:ollama",
-      "relation": "uses"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "tech:traefik",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:datahouse:api",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:datahouse:app",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:extalia:gameserver",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:extalia:socket",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:datahouse:nginx",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:extalia:cdn",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:extalia:nprotect",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:extalia:l2j-server",
-      "relation": "contains"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:next-js",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:react",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:tailwind",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:redis",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:socket-io",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:typeorm",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:winston",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:zod",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:zustand",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:nx",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:webpack",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:typescript",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:javascript",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:java",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:shell",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:php",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:node-js",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:nginx",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:mysql",
-      "relation": "uses"
-    },
-    {
-      "source": "project:extalia",
-      "target": "tech:traefik",
-      "relation": "uses"
-    },
-    {
-      "source": "project:forge",
-      "target": "tech:vitest",
-      "relation": "uses"
-    },
-    {
-      "source": "project:forge",
-      "target": "tech:postgresql",
-      "relation": "uses"
-    },
-    {
-      "source": "project:forge",
-      "target": "tech:zod",
-      "relation": "uses"
-    },
-    {
-      "source": "project:forge",
-      "target": "tech:three-js",
-      "relation": "uses"
-    },
-    {
-      "source": "project:forge",
-      "target": "tech:typescript",
       "relation": "uses"
     },
     {
@@ -2806,11 +2275,6 @@
       "relation": "connects"
     },
     {
-      "source": "project:datahouse",
-      "target": "service:oracle:mongo",
-      "relation": "connects"
-    },
-    {
       "source": "project:ella",
       "target": "service:oracle:loki",
       "relation": "connects"
@@ -2818,41 +2282,6 @@
     {
       "source": "project:ella",
       "target": "service:oracle:ollama",
-      "relation": "connects"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:oracle:pgvector",
-      "relation": "connects"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:oracle:redis",
-      "relation": "connects"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:oracle:ollama",
-      "relation": "connects"
-    },
-    {
-      "source": "project:epic-seven",
-      "target": "service:oracle:traefik",
-      "relation": "connects"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:oracle:mysql",
-      "relation": "connects"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:oracle:traefik",
-      "relation": "connects"
-    },
-    {
-      "source": "project:extalia",
-      "target": "service:oracle:redis",
       "relation": "connects"
     },
     {
@@ -2882,11 +2311,6 @@
     },
     {
       "source": "project:hub",
-      "target": "service:extalia:cdn",
-      "relation": "connects"
-    },
-    {
-      "source": "project:hub",
       "target": "service:oracle:neo4j",
       "relation": "connects"
     },
@@ -2906,16 +2330,6 @@
       "relation": "depends"
     },
     {
-      "source": "project:epic-seven",
-      "target": "project:oracle",
-      "relation": "depends"
-    },
-    {
-      "source": "project:extalia",
-      "target": "project:oracle",
-      "relation": "depends"
-    },
-    {
       "source": "project:hub",
       "target": "project:oracle",
       "relation": "depends"
@@ -2926,9 +2340,9 @@
       "relation": "depends"
     },
     {
-      "source": "project:epic-seven",
-      "target": "project:forge",
-      "relation": "built-on"
+      "source": "project:datahouse",
+      "target": "tech:n8n",
+      "relation": "uses"
     },
     {
       "source": "platform:devshell-one",
@@ -3002,11 +2416,6 @@
     },
     {
       "source": "vision:cognition-layer",
-      "target": "project:epic-seven",
-      "relation": "includes"
-    },
-    {
-      "source": "vision:cognition-layer",
       "target": "project:ella",
       "relation": "includes"
     },
@@ -3041,21 +2450,6 @@
       "relation": "built-on"
     },
     {
-      "source": "product:e7-copilot",
-      "target": "project:epic-seven",
-      "relation": "built-on"
-    },
-    {
-      "source": "product:e7-copilot",
-      "target": "project:forge",
-      "relation": "built-on"
-    },
-    {
-      "source": "product:game-platform",
-      "target": "project:extalia",
-      "relation": "built-on"
-    },
-    {
       "source": "product:scraping-platform",
       "target": "project:datahouse",
       "relation": "built-on"
@@ -3068,21 +2462,6 @@
     {
       "source": "domain:ads",
       "target": "project:hub",
-      "relation": "served-by"
-    },
-    {
-      "source": "domain:gaming",
-      "target": "project:extalia",
-      "relation": "served-by"
-    },
-    {
-      "source": "domain:gaming",
-      "target": "project:epic-seven",
-      "relation": "served-by"
-    },
-    {
-      "source": "domain:gaming",
-      "target": "project:forge",
       "relation": "served-by"
     },
     {
@@ -3101,11 +2480,6 @@
       "relation": "served-by"
     },
     {
-      "source": "capability:game-engine",
-      "target": "project:forge",
-      "relation": "provided-by"
-    },
-    {
       "source": "capability:connectors",
       "target": "project:hub",
       "relation": "provided-by"
@@ -3113,11 +2487,6 @@
     {
       "source": "capability:rag",
       "target": "project:hub",
-      "relation": "provided-by"
-    },
-    {
-      "source": "capability:rag",
-      "target": "project:epic-seven",
       "relation": "provided-by"
     },
     {
@@ -3210,8 +2579,6 @@
       "React",
       "Next.js",
       "Python",
-      "Java",
-      "Three.js",
       "Prisma",
       "Nx",
       "Tailwind",
