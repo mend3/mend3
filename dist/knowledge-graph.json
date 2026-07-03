@@ -2696,9 +2696,9 @@
         },
         "current": true,
         "summary": {
-          "pt": "Arquiteto e líder técnico de um ecossistema SaaS multi-tenant unificado — plano de controle de infraestrutura compartilhada, framework universal de conectores, coleta de dados em larga escala, automação de workflows com IA, camada operacional de IA, sistemas de conhecimento e apps verticais de negócio (incluindo financeiro/Open Finance, projetos e atendimento ao cliente final).",
-          "en": "Architect and technical lead of a unified multi-tenant SaaS ecosystem — shared infrastructure control plane, universal connector framework, large-scale data acquisition, AI-driven workflow automation, AI operational layer, knowledge systems, and vertical business apps (including finance/Open Finance, projects, and end-customer support).",
-          "es": "Arquitecto y líder técnico de un ecosistema SaaS multi-tenant unificado — plano de control de infraestructura compartida, framework universal de conectores, adquisición de datos a gran escala, automatización de workflows con IA, capa operativa de IA, sistemas de conocimiento y apps verticales de negocio (incluyendo finanzas/Open Finance, proyectos y atención al cliente final)."
+          "pt": "Arquiteto e opero um ecossistema SaaS multi-tenant onde uma fundação compartilhada sustenta muitos produtos — control plane, framework de conectores, aquisição de dados em larga escala, automação de workflows, camada de IA e apps verticais (finanças/Open Finance, projetos, atendimento).",
+          "en": "I architect and operate a multi-tenant SaaS ecosystem where one shared foundation carries many products — control plane, connector framework, large-scale data acquisition, workflow automation, an AI layer, and vertical apps (finance/Open Finance, projects, support).",
+          "es": "Arquitecto y opero un ecosistema SaaS multi-tenant donde una base compartida sostiene muchos productos — control plane, framework de conectores, adquisición de datos a gran escala, automatización de workflows, capa de IA y apps verticales (finanzas/Open Finance, proyectos, atención)."
         }
       },
       {
@@ -2715,9 +2715,9 @@
         },
         "current": true,
         "summary": {
-          "pt": "Plataforma unificada de inteligência de e-commerce consolidando dados operacionais, de mídia, analytics e de mercado — pipelines de ingestão multi-fonte, integrações de marketplace/ads/analytics, ETL e cálculo de KPIs, entregue via web apps e uma Extensão do Chrome.",
-          "en": "Unified e-commerce intelligence platform consolidating operational, advertising, analytics, and market data — multi-source ingestion pipelines, marketplace/ads/analytics integrations, ETL and KPI computation, delivered via web apps and a Chrome Extension.",
-          "es": "Plataforma unificada de inteligencia de e-commerce que consolida datos operativos, de publicidad, analytics y de mercado — pipelines de ingesta multi-fuente, integraciones de marketplace/ads/analytics, ETL y cálculo de KPIs, entregada vía web apps y una Extensión de Chrome."
+          "pt": "Núcleo de integração e processamento de uma plataforma de inteligência de e-commerce — ingestão multi-fonte (marketplaces, ads, analytics), ETL e KPIs, entregue em web apps e uma extensão de navegador.",
+          "en": "The integration and processing core of an e-commerce intelligence platform — multi-source ingestion (marketplaces, ads, analytics), ETL and KPIs, delivered through web apps and a browser extension.",
+          "es": "El núcleo de integración y procesamiento de una plataforma de inteligencia de e-commerce — ingesta multi-fuente (marketplaces, ads, analytics), ETL y KPIs, entregado en web apps y una extensión de navegador."
         }
       },
       {
@@ -2729,9 +2729,9 @@
         "org": "Jusbrasil",
         "period": "2024 – 2025",
         "summary": {
-          "pt": "Infraestrutura de acesso web em larga escala para coleta de dados — arquitetura de proxy e roteamento, confiabilidade/resiliência, observabilidade e redução de custo de infraestrutura.",
-          "en": "Large-scale web access infrastructure for data acquisition — proxy and routing architecture, reliability/resiliency, observability, and infrastructure cost reduction.",
-          "es": "Infraestructura de acceso web a gran escala para adquisición de datos — arquitectura de proxy y enrutamiento, confiabilidad/resiliencia, observabilidad y reducción de costos de infraestructura."
+          "pt": "Infraestrutura de acesso web e aquisição de dados em larga escala por trás das operações de inteligência — arquitetura de proxies e roteamento, confiabilidade e observabilidade, e redução relevante de custo operacional.",
+          "en": "The large-scale web-access and data-acquisition infrastructure behind the intelligence operations — proxy and routing architecture, reliability and observability, and a material cut in operational cost.",
+          "es": "La infraestructura de acceso web y adquisición de datos a gran escala detrás de las operaciones de inteligencia — arquitectura de proxies y enrutamiento, confiabilidad y observabilidad, y una reducción relevante de costo operativo."
         }
       },
       {
@@ -2743,51 +2743,23 @@
         "org": "Stone",
         "period": "2023 – 2024",
         "summary": {
-          "pt": "Sistemas financeiros em larga escala para processamento de pagamentos, adquirência e operações financeiras — serviços de backend, sistemas distribuídos e confiabilidade/performance.",
-          "en": "Large-scale financial systems for payment processing, merchant acquiring, and financial operations — backend services, distributed systems, and reliability/performance.",
-          "es": "Sistemas financieros a gran escala para procesamiento de pagos, adquirencia y operaciones financieras — servicios de backend, sistemas distribuidos y confiabilidad/rendimiento."
+          "pt": "Serviços de backend e integrações para processamento de pagamentos e adquirência de alto volume — sistemas distribuídos, integrações bancárias e de gateways, e performance sob restrições de confiabilidade e conformidade.",
+          "en": "Backend services and integrations for high-volume payment processing and acquiring — distributed systems, banking and gateway integrations, and performance under reliability and compliance constraints.",
+          "es": "Servicios de backend e integraciones para procesamiento de pagos y adquirencia de alto volumen — sistemas distribuidos, integraciones bancarias y de gateways, y rendimiento bajo restricciones de confiabilidad y cumplimiento."
         }
       },
       {
         "role": {
-          "pt": "Gerente de Tecnologia",
-          "en": "Technology Manager",
-          "es": "Gerente de Tecnología"
+          "pt": "Desenvolvedor Full Stack → Líder Técnico → Gerente de Tecnologia",
+          "en": "Full Stack Developer → Technical Lead → Technology Manager",
+          "es": "Desarrollador Full Stack → Líder Técnico → Gerente de Tecnología"
         },
-        "org": "Ascential",
-        "period": "2023",
+        "org": "Intellibrand · Ascential",
+        "period": "2019 – 2023",
         "summary": {
-          "pt": "Liderança de engenharia para plataformas de inteligência de comércio digital usadas por marcas de consumo globais — arquitetura de plataforma, estratégia de plataforma de dados e roadmap técnico.",
-          "en": "Engineering leadership for digital commerce intelligence platforms used by global consumer brands — platform architecture, data platform strategy, and technical roadmap.",
-          "es": "Liderazgo de ingeniería para plataformas de inteligencia de comercio digital usadas por marcas de consumo globales — arquitectura de plataforma, estrategia de plataforma de datos y roadmap técnico."
-        }
-      },
-      {
-        "role": {
-          "pt": "Líder Técnico",
-          "en": "Technical Lead",
-          "es": "Líder Técnico"
-        },
-        "org": "Intellibrand",
-        "period": "2021 – 2023",
-        "summary": {
-          "pt": "Plataformas de inteligência de varejo processando milhões de sinais de preço, estoque e merchandising — arquitetura de plataforma, escalabilidade, pipelines de ingestão e analytics de prateleira digital.",
-          "en": "Retail intelligence platforms processing millions of pricing, inventory, and merchandising signals — platform architecture, scalability, ingestion pipelines, and digital shelf analytics.",
-          "es": "Plataformas de inteligencia de retail que procesan millones de señales de precio, inventario y merchandising — arquitectura de plataforma, escalabilidad, pipelines de ingesta y analytics de góndola digital."
-        }
-      },
-      {
-        "role": {
-          "pt": "Desenvolvedor Full Stack",
-          "en": "Full Stack Developer",
-          "es": "Desarrollador Full Stack"
-        },
-        "org": "Intellibrand",
-        "period": "2019 – 2021",
-        "summary": {
-          "pt": "Plataformas de analytics de comércio digital — apps frontend, serviços de backend, APIs e integrações, pipelines de dados e CI/CD.",
-          "en": "Digital commerce analytics platforms — frontend apps, backend services, APIs and integrations, data pipelines, and CI/CD.",
-          "es": "Plataformas de analytics de comercio digital — apps frontend, servicios de backend, APIs e integraciones, pipelines de datos y CI/CD."
+          "pt": "Quatro anos na mesma empresa de inteligência de varejo, subindo de desenvolvedor full-stack a gerente de tecnologia — construí e depois liderei as plataformas que transformavam milhões de sinais de preço, estoque e prateleira em decisões para marcas globais.",
+          "en": "Four years at the same retail-intelligence company, growing from full-stack developer to technology manager — I built and then led the platforms that turned millions of pricing, stock and shelf signals into decisions for global brands.",
+          "es": "Cuatro años en la misma empresa de inteligencia de retail, creciendo de desarrollador full-stack a gerente de tecnología — construí y luego lideré las plataformas que convertían millones de señales de precio, stock y góndola en decisiones para marcas globales."
         }
       },
       {
@@ -2799,9 +2771,9 @@
         "org": "Zoroastro C. Teixeira Advogados",
         "period": "2018 – 2019",
         "summary": {
-          "pt": "Software de operações jurídicas — gestão de processos, controles financeiros, automação de workflows e relatórios operacionais (Node.js, Angular, MongoDB, AWS).",
-          "en": "Legal operations software — case management, financial controls, workflow automation, and operational reporting (Node.js, Angular, MongoDB, AWS).",
-          "es": "Software de operaciones legales — gestión de casos, controles financieros, automatización de workflows y reportes operativos (Node.js, Angular, MongoDB, AWS)."
+          "pt": "Software de operações jurídicas — gestão de processos e prazos, controles financeiros e conciliação bancária, e automação de tarefas internas (Node.js, Angular, MongoDB, AWS).",
+          "en": "Legal-operations software — case and deadline management, financial controls and bank reconciliation, and internal task automation (Node.js, Angular, MongoDB, AWS).",
+          "es": "Software de operaciones legales — gestión de casos y plazos, controles financieros y conciliación bancaria, y automatización de tareas internas (Node.js, Angular, MongoDB, AWS)."
         }
       },
       {
@@ -2813,9 +2785,23 @@
         "org": "Contalex",
         "period": "2014 – 2017",
         "summary": {
-          "pt": "ERP SaaS para escritórios de contabilidade — gestão financeira, faturamento e pagamentos recorrentes e onboarding de clientes (Java, Spring, SQL Server, AngularJS, Azure).",
-          "en": "SaaS ERP for accounting firms — financial management, billing and recurring payments, and customer onboarding (Java, Spring, SQL Server, AngularJS, Azure).",
-          "es": "ERP SaaS para firmas contables — gestión financiera, facturación y pagos recurrentes y onboarding de clientes (Java, Spring, SQL Server, AngularJS, Azure)."
+          "pt": "ERP SaaS para escritórios de contabilidade — rotinas financeiras, cobrança recorrente via API de pagamentos e onboarding de clientes; meu primeiro contato de verdade com um produto SaaS multi-tenant (Java, Spring, SQL Server, AngularJS, Azure).",
+          "en": "A SaaS ERP for accounting firms — financial routines, recurring billing via a payments API, and customer onboarding; my first real taste of a multi-tenant SaaS product (Java, Spring, SQL Server, AngularJS, Azure).",
+          "es": "Un ERP SaaS para firmas contables — rutinas financieras, cobro recurrente vía API de pagos y onboarding de clientes; mi primer contacto real con un producto SaaS multi-tenant (Java, Spring, SQL Server, AngularJS, Azure)."
+        }
+      },
+      {
+        "role": {
+          "pt": "Desenvolvedor Web & Software",
+          "en": "Web & Software Developer",
+          "es": "Desarrollador Web & Software"
+        },
+        "org": "Early career",
+        "period": "2011 – 2014",
+        "summary": {
+          "pt": "Início de carreira em software houses e varejo — sistemas web e ERPs em PHP, um app desktop/RIA e e-commerce/mobile (CS-Consoft, RSWEBSITES, BLM, Orgamec). De onde vieram os fundamentos.",
+          "en": "Early career across software houses and retail — PHP web systems and ERPs, a desktop/RIA app, and e-commerce/mobile (CS-Consoft, RSWEBSITES, BLM, Orgamec). Where the fundamentals came from.",
+          "es": "Inicio de carrera en software houses y retail — sistemas web y ERPs en PHP, una app desktop/RIA y e-commerce/mobile (CS-Consoft, RSWEBSITES, BLM, Orgamec). De donde vinieron los fundamentos."
         }
       }
     ],
@@ -2968,9 +2954,9 @@
     "hub": {
       "hero": {
         "lead": {
-          "pt": "Construindo plataformas AI-native, ecossistemas de dados e produtos SaaS que escalam.",
-          "en": "Building AI-native platforms, data ecosystems, and SaaS products that scale.",
-          "es": "Construyendo plataformas AI-native, ecosistemas de datos y productos SaaS que escalan."
+          "pt": "Projeto plataformas que reduzem a complexidade organizacional — sistemas, e os times por trás deles, mais fáceis de evoluir.",
+          "en": "I design platforms that reduce organizational complexity — systems, and the teams behind them, easier to evolve.",
+          "es": "Diseño plataformas que reducen la complejidad organizacional — sistemas, y los equipos detrás de ellos, más fáciles de evolucionar."
         },
         "roles": [
           {
@@ -3170,8 +3156,8 @@
             "en": "Multi-tenant SaaS"
           },
           "v": {
-            "pt": "Uma plataforma servindo muitos clientes e verticais — novos produtos entram como módulos, não como reescritas.",
-            "en": "One platform serving many customers and verticals — new products ship as modules, not rewrites."
+            "pt": "Quase todo SaaS reconstrói as mesmas coisas — auth, billing, permissões, integrações. Trato isso como capacidade de plataforma, em vez de resolver de novo em cada produto.",
+            "en": "Most SaaS products rebuild the same things — auth, billing, permissions, integrations. I treat those as platform capabilities instead of re-solving them per product."
           }
         },
         {
@@ -3180,8 +3166,8 @@
             "en": "Data acquisition at scale"
           },
           "v": {
-            "pt": "Fornecimento confiável de dados externos quando a web resiste — a matéria-prima de qualquer inteligência.",
-            "en": "Reliable supply of external data when the web fights back — the raw material for any intelligence."
+            "pt": "Fornecimento confiável de dados externos quando a web resiste — crawling distribuído, automação de navegador, gestão de proxies e anti-bot.",
+            "en": "Reliable supply of external data when the web fights back — distributed crawling, browser automation, proxy management and anti-bot."
           }
         },
         {
@@ -3200,8 +3186,8 @@
             "en": "AI &amp; agentic systems"
           },
           "v": {
-            "pt": "IA que entende a operação inteira e age sobre ela — decisões com contexto, trabalho feito por conversa.",
-            "en": "AI that understands the whole operation and can act on it — decisions made with context, work done by conversation."
+            "pt": "A maioria da IA emperra porque o contexto está espalhado. O trabalho é a infraestrutura que deixa o modelo raciocinar sobre produtos, usuários, documentos e dados operacionais ao mesmo tempo.",
+            "en": "Most AI stalls because context is scattered. The work is the infrastructure that lets a model reason over products, users, documents and operational data at once."
           }
         },
         {
@@ -3220,8 +3206,8 @@
             "en": "Reliability &amp; cost"
           },
           "v": {
-            "pt": "Sistemas mais fáceis de operar do que de explicar — observáveis, resilientes e mais baratos ao longo do tempo.",
-            "en": "Systems easier to operate than to explain — observable, resilient, and cheaper to run over time."
+            "pt": "Um sistema que precisa de conhecimento tribal para rodar não está pronto — observável, resiliente e mais barato de operar ao longo do tempo.",
+            "en": "A system that needs tribal knowledge to run isn't finished — observable, resilient, and cheaper to operate over time."
           }
         }
       ],
@@ -3320,69 +3306,60 @@
           },
           "stack": "Node.js · TypeScript · distributed systems · cloud infrastructure"
         },
-        "Ascential": {
+        "Intellibrand · Ascential": {
           "built": {
-            "pt": "a engenharia das plataformas de inteligência de comércio digital usadas por marcas globais — arquitetura, pipelines de dados, analytics e infraestrutura de nuvem para dados de varejo em larga escala.",
-            "en": "engineering for the digital commerce-intelligence platforms used by global consumer brands — architecture, data pipelines, analytics, and cloud infrastructure for large-scale retail data."
+            "pt": "as plataformas de inteligência de varejo e comércio que transformavam <b>milhões de sinais de preço, estoque e merchandising</b> de milhares de prateleiras digitais em decisões acionáveis para marcas de consumo globais — e cresci de escrever esse sistema a liderar o time por trás dele.",
+            "en": "the retail- and commerce-intelligence platforms that turned <b>millions of pricing, inventory, and merchandising signals</b> from thousands of digital shelves into decisions global consumer brands could act on — and grew from writing that system to leading the team behind it."
           },
           "problem": {
-            "pt": "marcas globais não conseguem enxergar como realmente performam em milhares de prateleiras digitais.",
-            "en": "global brands can't see how they're really performing across thousands of digital shelves."
+            "pt": "marcas globais não conseguiam enxergar como realmente performavam em milhares de prateleiras digitais, em canais demais para acompanhar à mão.",
+            "en": "global brands couldn't see how they were really performing across thousands of digital shelves, in too many channels to track by hand."
           },
           "impact": {
-            "pt": "permitiu que essas marcas otimizassem preço, disponibilidade, visibilidade de busca, qualidade de conteúdo e performance na prateleira digital — e definiu o roadmap e os padrões de qualidade e operação por trás disso.",
-            "en": "enabled those brands to optimize pricing, availability, search visibility, content quality, and digital-shelf performance — and set the roadmap and the quality and operational standards behind it."
+            "pt": "inteligência de prateleira, preço e conteúdo em tempo real, usada por marcas globais na América Latina e além — e um time de engenharia e padrões que se sustentaram conforme o volume de dados crescia. Aqui começou o fio condutor: dados fragmentados → inteligência operacional, em escala.",
+            "en": "real-time digital-shelf, pricing and content intelligence used by global brands across Latin America and beyond — and a growing engineering team and the standards that held as data volumes climbed. This is where the through-line started: fragmented data → operational intelligence, at scale."
           },
+          "bullets": [
+            {
+              "pt": "<b>Desenvolvedor Full Stack (2019–2021)</b> — construí os pipelines de ingestão, APIs e dashboards por trás do analytics de varejo em tempo real, sobre bancos relacionais e NoSQL.",
+              "en": "<b>Full Stack Developer (2019–2021)</b> — built the ingestion pipelines, APIs and dashboards behind real-time retail analytics, across relational and NoSQL data."
+            },
+            {
+              "pt": "<b>Líder Técnico (2021–2023)</b> — dono da arquitetura escalável para coleta e analytics em larga escala, inteligência de preços e prateleira digital; mentorei engenheiros e defini os padrões de entrega.",
+              "en": "<b>Technical Lead (2021–2023)</b> — owned the scalable architecture for large-scale collection and analytics, pricing intelligence and digital-shelf insight; mentored engineers and set the delivery standards."
+            },
+            {
+              "pt": "<b>Gerente de Tecnologia · Ascential (2023)</b> — liderei engenharia em retail analytics, conteúdo &amp; compliance e store-locator; alinhei engenharia, produto e data science, e fui dono do roadmap técnico para marcas globais.",
+              "en": "<b>Technology Manager · Ascential (2023)</b> — led engineering across retail analytics, content &amp; compliance and store-locator tooling; aligned engineering, product and data science, and owned the technical roadmap for global brands."
+            }
+          ],
           "note": {
-            "pt": "Liderança de engenharia em analytics de varejo, conteúdo &amp; compliance e ferramentas de store locator.",
-            "en": "Engineering leadership across retail analytics, content &amp; compliance, and store-locator tooling."
-          },
-          "stack": "Distributed data platforms · analytics pipelines · cloud infrastructure",
-          "verb": {
-            "pt": "Liderou",
-            "en": "Led"
-          }
-        },
-        "Intellibrand": {
-          "built": {
-            "pt": "plataformas de inteligência de varejo em larga escala processando <b>milhões de sinais de preço, estoque e merchandising</b> em varejistas e marketplaces globais — como Tech Lead, dono da escalabilidade, ingestão de dados, inteligência de preços e analytics de prateleira digital.",
-            "en": "large-scale retail-intelligence platforms processing <b>millions of pricing, inventory, and merchandising signals</b> across global retailers and marketplaces — as Tech Lead, owned scalability, data ingestion, pricing intelligence, and digital-shelf analytics."
-          },
-          "problem": {
-            "pt": "decisões de preço e prateleira eram tomadas às cegas, em canais demais para acompanhar à mão.",
-            "en": "pricing and shelf decisions were made blind, across too many channels to track by hand."
-          },
-          "impact": {
-            "pt": "transformou uma enxurrada de sinais fragmentados em inteligência em tempo real sobre a qual as marcas podiam agir — e fez crescer o time de engenharia e os padrões que sustentaram isso.",
-            "en": "turned a flood of fragmented signals into real-time intelligence brands could act on — and grew the engineering team and the standards that sustained it."
-          },
-          "note": {
-            "pt": "Onde o fio condutor começou: dados fragmentados → inteligência operacional, em escala.",
-            "en": "Where the through-line started: fragmented data → operational intelligence, at scale."
+            "pt": "Onde o fio condutor começou — e onde subi de IC a gestor na mesma plataforma.",
+            "en": "Where the through-line started — and where I grew from IC to manager on the same platform."
           },
           "stack": "Node.js · TypeScript · data pipelines · cloud · AI/ML · CI/CD",
           "verb": {
-            "pt": "Construiu e liderou",
+            "pt": "Construí e liderei",
             "en": "Built &amp; led"
           }
         }
       },
       "achievements": [
         {
-          "pt": "<b>Projetou e opera o DevShell One de ponta a ponta</b> — control plane, aquisição de dados, framework de integração, automação de processos, camada de IA e aplicações verticais — provando que uma fundação pode sustentar muitos produtos com custo marginal decrescente.",
-          "en": "<b>Designed and operate DevShell One end-to-end</b> — control plane, data acquisition, integration framework, workflow automation, AI layer, and vertical apps — proving one foundation can power many products at a falling marginal cost."
+          "pt": "<b>Projetei e opero o DevShell One de ponta a ponta</b> — control plane, aquisição de dados, framework de integração, automação de processos, camada de IA e aplicações verticais — provando que uma fundação pode sustentar muitos produtos com custo marginal decrescente.",
+          "en": "<b>I designed and operate DevShell One end-to-end</b> — control plane, data acquisition, integration framework, workflow automation, AI layer, and vertical apps — proving one foundation can power many products at a falling marginal cost."
         },
         {
-          "pt": "<b>Construiu plataformas de inteligência de varejo e comércio processando milhões de sinais de preço, estoque e merchandising</b> em marketplaces globais, usadas por marcas globais para guiar preço, disponibilidade e estratégia de prateleira digital.",
-          "en": "<b>Built retail &amp; commerce-intelligence platforms processing millions of pricing, inventory, and merchandising signals</b> across global marketplaces, used by global consumer brands to steer pricing, availability, and digital-shelf strategy."
+          "pt": "<b>Construí plataformas de inteligência de varejo e comércio processando milhões de sinais de preço, estoque e merchandising</b> em marketplaces globais, usadas por marcas globais para guiar preço, disponibilidade e estratégia de prateleira digital.",
+          "en": "<b>I built retail &amp; commerce-intelligence platforms processing millions of pricing, inventory, and merchandising signals</b> across global marketplaces, used by global consumer brands to steer pricing, availability, and digital-shelf strategy."
         },
         {
-          "pt": "<b>Arquitetou infraestrutura de acesso web e aquisição de dados em larga escala, eficiente em custo</b>, com confiabilidade e observabilidade como prioridades de primeira ordem — reduzindo custo operacional sem sacrificar qualidade.",
-          "en": "<b>Architected large-scale, cost-efficient web-access and data-acquisition infrastructure</b> with reliability and observability as first-class concerns — cutting operational spend without sacrificing quality."
+          "pt": "<b>Arquitetei infraestrutura de acesso web e aquisição de dados em larga escala, eficiente em custo</b>, com confiabilidade e observabilidade como prioridades de primeira ordem — reduzindo custo operacional sem sacrificar qualidade.",
+          "en": "<b>I architected large-scale, cost-efficient web-access and data-acquisition infrastructure</b> with reliability and observability as first-class concerns — cutting operational spend without sacrificing quality."
         },
         {
-          "pt": "<b>Entregou sistemas financeiros e de pagamentos de alto volume</b> sob restrições rígidas de confiabilidade e conformidade, em uma das maiores adquirentes da América Latina.",
-          "en": "<b>Delivered high-volume payments and financial systems</b> under strict reliability and compliance constraints, at one of Latin America's largest acquirers."
+          "pt": "<b>Entreguei sistemas financeiros e de pagamentos de alto volume</b> sob restrições rígidas de confiabilidade e conformidade, em uma das maiores adquirentes da América Latina.",
+          "en": "<b>I delivered high-volume payments and financial systems</b> under strict reliability and compliance constraints, at one of Latin America's largest acquirers."
         },
         {
           "pt": "<b>O fio constante em fintech, legaltech, inteligência de varejo e plataformas de dados:</b> transformar dados, integrações e processos fragmentados em inteligência operacional.",
