@@ -43,14 +43,14 @@ I operate across the full arc — **set the architecture and strategy, then writ
 
 <!-- KT:PROFILE:START -->
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#202940','primaryTextColor':'#CAAA98','primaryBorderColor':'#9A8678','lineColor':'#9A8678','fontFamily':'ui-monospace, monospace'}}}%%
+%%{init: {'theme':'base','themeVariables':{'clusterBkg':'transparent','clusterBorder':'#999999','titleColor':'#333333','lineColor':'#888888','primaryColor':'#ffffff','primaryBorderColor':'#333333','primaryTextColor':'#333333','fontFamily':'sans-serif'}}}%%
 flowchart LR
-  classDef plat fill:#202940,stroke:#CAAA98,color:#CAAA98,stroke-width:3px;
-  classDef vis fill:#4B4038,stroke:#9A8678,color:#CAAA98,stroke-width:2px;
-  classDef cap fill:#9A8678,stroke:#4B4038,color:#202940;
-  classDef prod fill:#CAAA98,stroke:#9A8678,color:#202940;
-  classDef dom fill:#202940,stroke:#9A8678,color:#CAAA98,stroke-dasharray:4 3;
-  classDef proj fill:#4B4038,stroke:#CAAA98,color:#CAAA98,stroke-width:2px;
+  classDef plat stroke:#333,color:#333,stroke-width:3px;
+  classDef vis stroke:#555,color:#333,stroke-width:2px;
+  classDef prod stroke:#555,color:#333,stroke-width:1.5px;
+  classDef dom stroke:#777,color:#333,stroke-dasharray:5 3;
+  classDef cap stroke:#777,color:#333,stroke-dasharray:2 2;
+  classDef proj stroke:#333,color:#333,stroke-width:2px;
   c_automa_o_com_ia["Automação com IA"]:::cap
   c_local_llm["Local LLM"]:::cap
   c_multi_tenant["Multi-tenant"]:::cap

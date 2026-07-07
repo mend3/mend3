@@ -2600,14 +2600,19 @@
     "name": "Victor Mendonça",
     "avatar": "https://avatars.githubusercontent.com/u/1450229?v=4",
     "headline": {
-      "pt": "Principal Software Engineer · Arquiteto de Plataforma — Sistemas de IA, Plataformas de Dados & SaaS Multi-Tenant",
-      "en": "Principal Software Engineer · Platform Architect — AI Systems, Data Platforms & Multi-Tenant SaaS",
-      "es": "Principal Software Engineer · Arquitecto de Plataforma — Sistemas de IA, Plataformas de Datos & SaaS Multi-Tenant"
+      "pt": "Principal / Staff Software Engineer · Arquiteto de Plataforma — Sistemas de IA, Plataformas de Dados & SaaS Multi-Tenant",
+      "en": "Principal / Staff Software Engineer · Platform Architect — AI Systems, Data Platforms & Multi-Tenant SaaS",
+      "es": "Principal / Staff Software Engineer · Arquitecto de Plataforma — Sistemas de IA, Plataformas de Datos & SaaS Multi-Tenant"
     },
     "location": {
       "pt": "São Paulo, Brasil",
       "en": "São Paulo, Brazil",
       "es": "São Paulo, Brasil"
+    },
+    "availability": {
+      "pt": "Remoto (overlap confortável com fusos US e EU) · aberto a realocação · full-time via EOR ou contractor",
+      "en": "Remote (comfortable US and EU timezone overlap) · open to relocation · full-time via EOR or contractor",
+      "es": "Remoto (overlap cómodo con husos US y EU) · abierto a reubicación · full-time vía EOR o contractor"
     },
     "summary": {
       "pt": "Oi, eu sou o Victor — engenheiro de software e arquiteto de plataforma. Passei os últimos 15+ anos construindo e operando SaaS escalável, sistemas distribuídos, aplicações data-intensive e produtos com IA em fintech, legaltech, inteligência de e-commerce e analytics. O que mais gosto é transformar dados, processos e conhecimento fragmentados em sistemas que de fato operam um negócio — SaaS multi-tenant, ecossistemas de integração, automação de workflows, coleta de dados em larga escala, produtos AI-native e sistemas de conhecimento. Hoje lidero a arquitetura de um ecossistema SaaS AI-data-driven sobre uma plataforma multi-tenant unificada, enquanto contribuo com analytics de inteligência de e-commerce enterprise. Me importo profundamente com arquitetura pragmática, fundações de dados limpas e fazer a IA ser genuinamente útil em produção — e adoro trocar ideias com quem está construindo nesse mesmo espaço.",
@@ -2951,190 +2956,10 @@
         "url": "https://www.linkedin.com/in/vicmendonca/"
       }
     ],
-    "hub": {
-      "hero": {
-        "lead": {
-          "pt": "Projeto plataformas que reduzem a complexidade organizacional — sistemas, e os times por trás deles, mais fáceis de evoluir.",
-          "en": "I design platforms that reduce organizational complexity — systems, and the teams behind them, easier to evolve.",
-          "es": "Diseño plataformas que reducen la complejidad organizacional — sistemas, y los equipos detrás de ellos, más fáciles de evolucionar."
-        },
-        "roles": [
-          {
-            "pt": "Principal Engineer",
-            "en": "Principal Engineer",
-            "es": "Principal Engineer"
-          },
-          {
-            "pt": "Arquiteto de Plataforma",
-            "en": "Platform Architect",
-            "es": "Arquitecto de Plataforma"
-          },
-          {
-            "pt": "Fundador",
-            "en": "Founder",
-            "es": "Fundador"
-          }
-        ]
-      },
-      "impact": [
-        {
-          "value": "15+",
-          "label": {
-            "pt": "anos construindo plataformas em produção",
-            "en": "years building platforms in production",
-            "es": "años construyendo plataformas en producción"
-          }
-        },
-        {
-          "value": {
-            "pt": "milhões",
-            "en": "millions",
-            "es": "millones"
-          },
-          "label": {
-            "pt": "de sinais de preço e estoque processados",
-            "en": "of pricing & inventory signals processed",
-            "es": "de señales de precio e inventario procesadas"
-          }
-        },
-        {
-          "value": {
-            "pt": "Multi-tenant",
-            "en": "Multi-tenant",
-            "es": "Multi-tenant"
-          },
-          "label": {
-            "pt": "ecossistema SaaS sobre uma só fundação",
-            "en": "SaaS ecosystem on one shared foundation",
-            "es": "ecosistema SaaS sobre una sola base"
-          }
-        },
-        {
-          "value": {
-            "pt": "AI-native",
-            "en": "AI-native",
-            "es": "AI-native"
-          },
-          "label": {
-            "pt": "RAG, agentes e LLMs locais em produção",
-            "en": "RAG, agents & local LLMs in production",
-            "es": "RAG, agentes y LLMs locales en producción"
-          }
-        },
-        {
-          "value": {
-            "pt": "fintech · commerce",
-            "en": "fintech · commerce",
-            "es": "fintech · commerce"
-          },
-          "label": {
-            "pt": "domínios entregues — pagamentos a inteligência de varejo",
-            "en": "domains shipped — payments to retail intelligence",
-            "es": "dominios entregados — pagos a inteligencia de retail"
-          }
-        },
-        {
-          "value": {
-            "pt": "Distribuído",
-            "en": "Distributed",
-            "es": "Distribuido"
-          },
-          "label": {
-            "pt": "sistemas orientados a eventos, observáveis e resilientes",
-            "en": "event-driven systems, observable & resilient",
-            "es": "sistemas orientados a eventos, observables y resilientes"
-          }
-        }
-      ],
-      "aiLab": [
-        {
-          "t": {
-            "pt": "LLMs local-first",
-            "en": "Local-first LLMs",
-            "es": "LLMs local-first"
-          },
-          "d": {
-            "pt": "Ollama self-hosted (qwen2.5) na fundação compartilhada — inferência que pode ficar na infra do próprio cliente.",
-            "en": "Self-hosted Ollama (qwen2.5) on the shared foundation — inference that can stay on a company's own infra.",
-            "es": "Ollama self-hosted (qwen2.5) en la base compartida — inferencia que puede quedarse en la infra del propio cliente."
-          }
-        },
-        {
-          "t": {
-            "pt": "RAG & busca vetorial",
-            "en": "RAG & vector search",
-            "es": "RAG & búsqueda vectorial"
-          },
-          "d": {
-            "pt": "Recuperação sobre Qdrant + pgvector, alimentando conhecimento sobre a operação inteira.",
-            "en": "Retrieval over Qdrant + pgvector, powering knowledge across the whole operation.",
-            "es": "Recuperación sobre Qdrant + pgvector, alimentando conocimiento sobre toda la operación."
-          }
-        },
-        {
-          "t": {
-            "pt": "Workflows agênticos",
-            "en": "Agentic workflows",
-            "es": "Workflows agénticos"
-          },
-          "d": {
-            "pt": "Ella — um agente com persona própria, memória persistente, recuperação de conhecimento e execução de ferramentas.",
-            "en": "Ella — a persona-driven agent with persistent memory, knowledge retrieval and tool execution.",
-            "es": "Ella — un agente con persona propia, memoria persistente, recuperación de conocimiento y ejecución de herramientas."
-          }
-        },
-        {
-          "t": {
-            "pt": "Infraestrutura MCP",
-            "en": "MCP infrastructure",
-            "es": "Infraestructura MCP"
-          },
-          "d": {
-            "pt": "Uma camada Model Context Protocol que conecta ferramentas, dados e navegadores aos agentes.",
-            "en": "A Model Context Protocol layer wiring tools, data and browsers into agents.",
-            "es": "Una capa Model Context Protocol que conecta herramientas, datos y navegadores a los agentes."
-          }
-        },
-        {
-          "t": {
-            "pt": "Sistemas de conhecimento",
-            "en": "Knowledge systems",
-            "es": "Sistemas de conocimiento"
-          },
-          "d": {
-            "pt": "Um motor de conhecimento + este mapa de topologia vivo, gerado a partir de código e docs.",
-            "en": "A knowledge engine + this living topology map, generated from code and docs.",
-            "es": "Un motor de conocimiento + este mapa de topología vivo, generado a partir de código y docs."
-          }
-        }
-      ],
-      "now": [
-        {
-          "pt": "DevShell One — um ecossistema SaaS AI-data-driven onde verticais entram como módulos sobre uma fundação multi-tenant.",
-          "en": "DevShell One — an AI-data-driven SaaS ecosystem where verticals ship as modules on one multi-tenant foundation.",
-          "es": "DevShell One — un ecosistema SaaS AI-data-driven donde las verticales entran como módulos sobre una base multi-tenant."
-        },
-        {
-          "pt": "Inteligência de e-commerce — consolidando dados de marketplace, ads e analytics em uma só camada de decisão.",
-          "en": "E-commerce intelligence — consolidating marketplace, ads and analytics data into one decision layer.",
-          "es": "Inteligencia de e-commerce — consolidando datos de marketplace, ads y analytics en una sola capa de decisión."
-        },
-        {
-          "pt": "Infraestrutura de MCP e agentes — fazendo a IA ser genuinamente útil em produção, local-first.",
-          "en": "MCP & agent infrastructure — making AI genuinely useful in production, local-first.",
-          "es": "Infraestructura de MCP y agentes — haciendo la IA genuinamente útil en producción, local-first."
-        },
-        {
-          "pt": "Este mapa de conhecimento — uma topologia auto-gerada de tudo acima.",
-          "en": "This knowledge map — a self-generating topology of everything above.",
-          "es": "Este mapa de conocimiento — una topología auto-generada de todo lo anterior."
-        }
-      ]
-    },
     "cv": {
       "tagline": {
-        "pt": "Engenheiro de Software Principal · Arquiteto de Plataforma · Sistemas de IA, Plataformas de Dados & SaaS Multi-Tenant",
-        "en": "Principal Software Engineer · Platform Architect · AI Systems, Data Platforms & Multi-Tenant SaaS"
+        "pt": "Engenheiro de Software Principal / Staff · Arquiteto de Plataforma · Sistemas de IA, Plataformas de Dados & SaaS Multi-Tenant",
+        "en": "Principal / Staff Software Engineer · Platform Architect · AI Systems, Data Platforms & Multi-Tenant SaaS"
       },
       "email": "victor.mendonca@live.com",
       "summary": {
@@ -3431,8 +3256,725 @@
         "en": "Tools in service of the systems above — not the other way around."
       },
       "languages": {
-        "pt": "Português (nativo) · Inglês (profissional)",
-        "en": "Portuguese (native) · English (professional)"
+        "pt": "Português (nativo) · Inglês (proficiência profissional)",
+        "en": "Portuguese (native) · English (professional working proficiency)"
+      }
+    },
+    "web": {
+      "profile": {
+        "hero": {
+          "badge": {
+            "en": "PRINCIPAL / STAFF ENGINEER <span class=\"sp\">&middot;</span> PLATFORM ARCHITECT",
+            "pt": "PRINCIPAL / STAFF ENGINEER <span class=\"sp\">&middot;</span> ARQUITETO DE PLATAFORMA"
+          },
+          "title": {
+            "en": "I design platforms that <span class=\"sp\">reduce organizational complexity</span>.",
+            "pt": "Projeto plataformas que <span class=\"sp\">reduzem a complexidade organizacional</span>."
+          },
+          "sub": {
+            "en": "The code matters — but the real goal is making systems, and the teams behind them, easier to evolve. Fifteen-plus years on the platforms other products are built on: multi-tenant SaaS, data platforms, integrations, and lately AI.",
+            "pt": "O código importa — mas o objetivo real é deixar os sistemas, e os times por trás deles, mais fáceis de evoluir. Há mais de quinze anos nas plataformas sobre as quais outros produtos são construídos: SaaS multi-tenant, plataformas de dados, integrações e, mais recentemente, IA."
+          },
+          "ctas": [
+            {
+              "label": {
+                "en": "View Projects",
+                "pt": "Ver Projetos"
+              },
+              "href": "#opensource",
+              "icon": "github",
+              "primary": true
+            },
+            {
+              "label": {
+                "en": "Book a call",
+                "pt": "Agendar conversa"
+              },
+              "href": "https://calendly.com/mend3",
+              "icon": "calendar"
+            }
+          ],
+          "focus": [
+            {
+              "en": "Platform Architecture",
+              "pt": "Arquitetura de plataforma"
+            },
+            {
+              "en": "Distributed Systems",
+              "pt": "Sistemas distribuídos"
+            },
+            {
+              "en": "Multi-tenant SaaS",
+              "pt": "SaaS multi-tenant"
+            },
+            {
+              "en": "AI Infrastructure",
+              "pt": "Infraestrutura de IA"
+            },
+            {
+              "en": "Developer Experience",
+              "pt": "Experiência de quem desenvolve"
+            }
+          ]
+        },
+        "connect": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/mend3",
+            "icon": "github"
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://www.linkedin.com/in/vicmendonca/",
+            "icon": "linkedin"
+          },
+          {
+            "label": "Google Developers",
+            "href": "https://me.developers.google.com/u/vmendonca",
+            "icon": "code"
+          },
+          {
+            "label": "Email",
+            "href": "mailto:victor.mendonca@live.com",
+            "icon": "mail"
+          }
+        ],
+        "elsewhere": [
+          {
+            "label": "Stack Overflow",
+            "href": "https://stackoverflow.com/users/1725952/mend3",
+            "icon": "stackoverflow"
+          },
+          {
+            "label": "Medium",
+            "href": "https://medium.com/@mend3",
+            "icon": "medium"
+          },
+          {
+            "label": {
+              "en": "Book a call",
+              "pt": "Agendar conversa"
+            },
+            "href": "https://calendly.com/mend3",
+            "icon": "calendar"
+          },
+          {
+            "label": "Last.fm",
+            "href": "https://www.last.fm/user/mend3",
+            "icon": "audiolines"
+          }
+        ],
+        "writing": [
+          {
+            "title": "Going TypeStack with NX Monorepo and Docker (Part 1)",
+            "href": "https://medium.com/dev-genius/going-typestack-with-nx-monorepo-and-docker-part-1-d5ff257981f2",
+            "date": "May 26, 2022",
+            "source": "Dev Genius",
+            "desc": {
+              "en": "A long, hands-on tutorial — wiring a full project (APIs, app, Storybook, databases) on the Nx + Docker monorepo architecture.",
+              "pt": "Um tutorial longo e prático — montando um projeto completo (APIs, app, Storybook, bancos de dados) na arquitetura de monorepo Nx + Docker."
+            },
+            "claps": 177,
+            "comments": 0
+          },
+          {
+            "title": "Going TypeStack with NX Monorepo and Docker (Part 2)",
+            "href": "https://blog.devgenius.io/going-typestack-with-nx-monorepo-and-docker-part-2-f66c543c7d8f",
+            "date": "May 29, 2022",
+            "source": "Dev Genius",
+            "desc": {
+              "en": "Part 2 — extending the Nx workspace with Storybook, React and Tailwind CSS for more flexibility.",
+              "pt": "Parte 2 — estendendo o workspace Nx com Storybook, React e Tailwind CSS para mais flexibilidade."
+            },
+            "claps": 88,
+            "comments": 8
+          }
+        ],
+        "impact": [
+          {
+            "icon": "target",
+            "value": "15+",
+            "label": {
+              "en": "Years of experience",
+              "pt": "Anos de experiência"
+            }
+          },
+          {
+            "icon": "cloud",
+            "value": {
+              "en": "AWS · GCP",
+              "pt": "AWS · GCP"
+            },
+            "label": {
+              "en": "Cloud & Kubernetes",
+              "pt": "Nuvem & Kubernetes"
+            }
+          },
+          {
+            "icon": "layers",
+            "value": "5+",
+            "label": {
+              "en": "Industries shipped across",
+              "pt": "Setores onde atuei"
+            },
+            "pop": "industries"
+          },
+          {
+            "icon": "cpu",
+            "value": "141",
+            "label": {
+              "en": "Technologies & services",
+              "pt": "Tecnologias & serviços"
+            },
+            "live": "techstack",
+            "pop": "stack"
+          },
+          {
+            "icon": "blocks",
+            "value": {
+              "en": "Platform",
+              "pt": "Plataforma"
+            },
+            "label": {
+              "en": "architecture · AI · data",
+              "pt": "arquitetura · IA · dados"
+            },
+            "pop": "layers"
+          },
+          {
+            "icon": "infinity",
+            "value": "∞",
+            "label": {
+              "en": "Curiosity & Focus",
+              "pt": "Curiosidade & Foco"
+            }
+          }
+        ],
+        "sectors": [
+          {
+            "en": "Fintech & payments",
+            "pt": "Fintech & pagamentos"
+          },
+          {
+            "en": "Legaltech",
+            "pt": "Legaltech"
+          },
+          {
+            "en": "E-commerce & retail intelligence",
+            "pt": "Inteligência de e-commerce & varejo"
+          },
+          {
+            "en": "Accounting & ERP",
+            "pt": "Contábil & ERP"
+          },
+          {
+            "en": "Software houses",
+            "pt": "Software houses"
+          },
+          {
+            "en": "Data & analytics",
+            "pt": "Dados & analytics"
+          }
+        ],
+        "architecture": [
+          {
+            "ac": "#2f6bff",
+            "icon": "blocks",
+            "title": {
+              "en": "SaaS Ecosystem",
+              "pt": "Ecossistema SaaS"
+            },
+            "viz": "chips",
+            "chips": [
+              "Auth",
+              "Billing",
+              "Tenant",
+              "API",
+              "Events",
+              "Analytics"
+            ],
+            "desc": {
+              "en": "Most SaaS products end up rebuilding the same things — auth, billing, permissions, integrations. I'd rather treat those as platform capabilities than re-solve them in every product.",
+              "pt": "Quase todo SaaS acaba reconstruindo as mesmas coisas — auth, billing, permissões, integrações. Prefiro tratá-las como capacidades de plataforma a resolvê-las de novo em cada produto."
+            },
+            "tags": [
+              "Multi-tenant",
+              "Billing",
+              "RBAC"
+            ]
+          },
+          {
+            "ac": "#06b6d4",
+            "icon": "database",
+            "title": {
+              "en": "Data Platform",
+              "pt": "Plataforma de Dados"
+            },
+            "viz": "pipeline",
+            "desc": {
+              "en": "Turning disconnected operational data into something teams can actually trust. Usually that's event streams, ETL and lakehouses — plus a lot of unglamorous consistency work.",
+              "pt": "Transformar dados operacionais dispersos em algo em que os times realmente confiam. Normalmente são event streams, ETL e lakehouses — além de muito trabalho pouco glamouroso de consistência."
+            },
+            "tags": [
+              "Streaming",
+              "Lakehouse",
+              "ETL"
+            ]
+          },
+          {
+            "ac": "#8b5cf6",
+            "icon": "cpu",
+            "title": {
+              "en": "AI Systems",
+              "pt": "Sistemas de IA"
+            },
+            "viz": "nodes",
+            "desc": {
+              "en": "Most AI projects stall because context lives in too many places. The interesting part is the infrastructure that lets a model reason over products, users, documents and operational data at once.",
+              "pt": "A maioria dos projetos de IA emperra porque o contexto mora em lugares demais. A parte interessante é a infraestrutura que deixa o modelo raciocinar sobre produtos, usuários, documentos e dados operacionais ao mesmo tempo."
+            },
+            "tags": [
+              "RAG",
+              "Agents",
+              "MCP"
+            ]
+          },
+          {
+            "ac": "#f59e0b",
+            "icon": "server",
+            "title": {
+              "en": "Platform Engineering",
+              "pt": "Engenharia de Plataforma"
+            },
+            "viz": "hex",
+            "desc": {
+              "en": "A platform that needs tribal knowledge to run isn't finished. The good ones remove operational decisions instead of documenting them.",
+              "pt": "Uma plataforma que precisa de conhecimento tribal para rodar não está pronta. As boas removem decisões de operação em vez de documentá-las."
+            },
+            "tags": [
+              "Kubernetes",
+              "CI/CD",
+              "Observability"
+            ]
+          }
+        ],
+        "repos": [
+          {
+            "name": "typestack",
+            "href": "https://github.com/mend3/typestack",
+            "icon": "blocks",
+            "desc": {
+              "en": "Companion repo to the Dev Genius series — a full Nx monorepo + Docker stack (APIs, app, Storybook, databases).",
+              "pt": "Repo companheiro da série no Dev Genius — um monorepo Nx + stack Docker completa (APIs, app, Storybook, bancos de dados)."
+            },
+            "tags": [
+              "Nx",
+              "Docker",
+              "Monorepo"
+            ],
+            "lang": "JavaScript",
+            "langColor": "#f1e05a",
+            "stars": 5,
+            "forks": 0
+          },
+          {
+            "name": "mcp",
+            "href": "https://github.com/mend3/mcp",
+            "icon": "server",
+            "desc": {
+              "en": "Useful Model Context Protocol servers — with sauce.",
+              "pt": "Servidores Model Context Protocol úteis — com um toque especial."
+            },
+            "tags": [
+              "MCP",
+              "TypeScript",
+              "AI"
+            ],
+            "lang": "TypeScript",
+            "langColor": "#3178c6",
+            "stars": 0,
+            "forks": 0
+          },
+          {
+            "name": "mend3",
+            "href": "https://github.com/mend3/mend3",
+            "icon": "code",
+            "desc": {
+              "en": "This very site — a self-generating, data-driven CV.",
+              "pt": "Este próprio site — um CV auto-gerado e data-driven."
+            },
+            "tags": [
+              "CV",
+              "GitHub Pages"
+            ],
+            "lang": "HTML",
+            "langColor": "#e34c26",
+            "stars": 0,
+            "forks": 0
+          }
+        ],
+        "aiLab": {
+          "root": "ai/",
+          "desc": {
+            "en": "Local-first by default — RAG, agentic workflows, multi-modal, across providers.",
+            "pt": "Local-first por padrão — RAG, workflows agênticos, multi-modal, entre provedores."
+          },
+          "href": "#ailab",
+          "tree": [
+            "local/",
+            "rag/",
+            "agentic/",
+            "multimodal/",
+            "providers/"
+          ]
+        },
+        "now": [
+          {
+            "c": "#c0982f",
+            "t": {
+              "en": "Building DevShell One — making one foundation carry many products, so each new one costs less than the last",
+              "pt": "Construindo o DevShell One — fazendo uma fundação carregar muitos produtos, pra cada novo custar menos que o anterior"
+            }
+          },
+          {
+            "c": "#b06a30",
+            "t": {
+              "en": "Proving a vertical can ship as a module, not a rewrite — finance/Open Finance and connectors riding the same core",
+              "pt": "Provando que uma vertical entra como módulo, não como reescrita — financeiro/Open Finance e conectores no mesmo core"
+            }
+          },
+          {
+            "c": "#9a7a3c",
+            "t": {
+              "en": "Making local-first AI genuinely useful — Ella runs RAG, agents and memory on infra a company can own",
+              "pt": "Fazendo a IA local-first ser de fato útil — a Ella roda RAG, agentes e memória em infra que a empresa pode ter"
+            }
+          },
+          {
+            "c": "#87793c",
+            "t": {
+              "en": "Turning scattered docs and signals into a knowledge base the system queries — and keeps current on its own",
+              "pt": "Transformando docs e sinais espalhados numa base de conhecimento que o sistema consulta — e mantém atualizada sozinha"
+            }
+          },
+          {
+            "c": "#a98a38",
+            "t": {
+              "en": "Off-hours: local LLMs, edge AI and a Home Assistant setup that's a little too automated",
+              "pt": "Nas horas vagas: LLMs locais, edge AI e um Home Assistant automatizado além da conta"
+            }
+          }
+        ]
+      },
+      "i18n": {
+        "nav.home": {
+          "en": "Home",
+          "pt": "Início"
+        },
+        "nav.about": {
+          "en": "About",
+          "pt": "Sobre"
+        },
+        "nav.architecture": {
+          "en": "Architecture",
+          "pt": "Arquitetura"
+        },
+        "nav.ailab": {
+          "en": "AI Lab",
+          "pt": "AI Lab"
+        },
+        "nav.opensource": {
+          "en": "Open Source",
+          "pt": "Open Source"
+        },
+        "nav.writing": {
+          "en": "Writing",
+          "pt": "Escritos"
+        },
+        "nav.now": {
+          "en": "Now",
+          "pt": "Agora"
+        },
+        "nav.contact": {
+          "en": "Contact",
+          "pt": "Contato"
+        },
+        "skip": {
+          "en": "Skip to content",
+          "pt": "Pular para o conteúdo"
+        },
+        "side.timezone": {
+          "en": "Timezone",
+          "pt": "Fuso"
+        },
+        "side.available": {
+          "en": "Available",
+          "pt": "Disponível"
+        },
+        "sc.title": {
+          "en": "Shortcuts",
+          "pt": "Atalhos"
+        },
+        "sc.theme": {
+          "en": "Theme",
+          "pt": "Tema"
+        },
+        "sc.lang": {
+          "en": "Language",
+          "pt": "Idioma"
+        },
+        "sc.share": {
+          "en": "Share",
+          "pt": "Compartilhar"
+        },
+        "share.title": {
+          "en": "Share",
+          "pt": "Compartilhar"
+        },
+        "share.sub": {
+          "en": "Choose where to share this page.",
+          "pt": "Escolha onde compartilhar esta página."
+        },
+        "share.copy": {
+          "en": "Copy link",
+          "pt": "Copiar link"
+        },
+        "share.copied": {
+          "en": "Copied!",
+          "pt": "Copiado!"
+        },
+        "sc.print": {
+          "en": "Print",
+          "pt": "Imprimir"
+        },
+        "sc.email": {
+          "en": "Email",
+          "pt": "E-mail"
+        },
+        "hero.lead": {
+          "en": "The engineer behind the platforms — career, focus and what I'm open to.",
+          "pt": "O engenheiro por trás das plataformas — carreira, foco e o que estou aberto a fazer."
+        },
+        "hero.scroll": {
+          "en": "SCROLL",
+          "pt": "ROLAR"
+        },
+        "hero.focuslabel": {
+          "en": "What I work on",
+          "pt": "No que trabalho"
+        },
+        "arch.title": {
+          "en": "Architecture<br>in practice",
+          "pt": "Arquitetura<br>na prática"
+        },
+        "arch.lead": {
+          "en": "A few things I keep coming back to, across very different companies.",
+          "pt": "Algumas coisas às quais eu sempre volto, em empresas bem diferentes."
+        },
+        "os.title": {
+          "en": "Open Source",
+          "pt": "Open Source"
+        },
+        "os.lead": {
+          "en": "Most of these exist because I wanted to solve something once — and automate never solving it again.",
+          "pt": "A maioria deles existe porque eu quis resolver algo uma vez — e automatizar o processo para nunca mais ter de resolvê-lo novamente."
+        },
+        "os.seeall": {
+          "en": "See all projects",
+          "pt": "Ver todos os projetos"
+        },
+        "lab.title": {
+          "en": "AI Lab",
+          "pt": "AI Lab"
+        },
+        "lab.desc": {
+          "en": "A place where ideas only survive if they turn out to be useful.",
+          "pt": "Um lugar onde as ideias só sobrevivem se provarem ser úteis."
+        },
+        "lab.explore": {
+          "en": "Explore lab",
+          "pt": "Explorar lab"
+        },
+        "think.title": {
+          "en": "How I think",
+          "pt": "Como eu penso"
+        },
+        "think.thesis": {
+          "en": "The hard part is rarely the code. It's keeping systems — and the teams behind them — easy to change as they grow.",
+          "pt": "A parte difícil raramente é o código. É manter os sistemas — e os times por trás deles — fáceis de mudar à medida que crescem."
+        },
+        "think.tolabel": {
+          "en": "Trade-offs I optimize for",
+          "pt": "Trade-offs que eu priorizo"
+        },
+        "think.to1": {
+          "en": "<b>Clarity</b> over cleverness",
+          "pt": "<b>Clareza</b> acima de esperteza"
+        },
+        "think.to2": {
+          "en": "<b>Evolution</b> over peak performance",
+          "pt": "<b>Evolução</b> acima de performance extrema"
+        },
+        "think.to3": {
+          "en": "<b>Platform</b> over product",
+          "pt": "<b>Plataforma</b> acima de produto"
+        },
+        "think.to4": {
+          "en": "<b>Automation</b> over process",
+          "pt": "<b>Automação</b> acima de processo"
+        },
+        "think.to5": {
+          "en": "<b>Data</b> over opinions",
+          "pt": "<b>Dados</b> acima de opiniões"
+        },
+        "think.p1": {
+          "en": "Architecture is mostly about making future changes cheaper.",
+          "pt": "Arquitetura é, no fundo, tornar as próximas mudanças mais baratas."
+        },
+        "think.p2": {
+          "en": "Every repeated implementation is usually a missing platform capability.",
+          "pt": "Toda implementação repetida costuma ser uma capacidade de plataforma que falta."
+        },
+        "think.p3": {
+          "en": "Platforms should remove decisions, not create new ones.",
+          "pt": "Plataformas deveriam remover decisões, não criar novas."
+        },
+        "think.p4": {
+          "en": "I design systems that stay understandable as they grow.",
+          "pt": "Projeto sistemas que continuam compreensíveis à medida que crescem."
+        },
+        "think.p5": {
+          "en": "Software scales when teams can evolve independently.",
+          "pt": "Software escala quando os times conseguem evoluir de forma independente."
+        },
+        "think.p6": {
+          "en": "I spend more time removing complexity than adding features.",
+          "pt": "Passo mais tempo removendo complexidade do que adicionando features."
+        },
+        "think.avoidlabel": {
+          "en": "What I avoid",
+          "pt": "O que eu evito"
+        },
+        "think.avoid": {
+          "en": "accidental complexity · unnecessary coupling · framework-driven architecture · lock-in · recurring manual work",
+          "pt": "complexidade acidental · acoplamento desnecessário · arquitetura guiada por framework · lock-in · trabalho manual recorrente"
+        },
+        "writing.title": {
+          "en": "Latest Writing",
+          "pt": "Escritos Recentes"
+        },
+        "writing.lead": {
+          "en": "Thoughts on architecture, engineering and AI.",
+          "pt": "Reflexões sobre arquitetura, engenharia e IA."
+        },
+        "writing.medium": {
+          "en": "Read on Medium",
+          "pt": "Ler no Medium"
+        },
+        "now.title": {
+          "en": "Now",
+          "pt": "Agora"
+        },
+        "now.sub": {
+          "en": "What I'm focused on.",
+          "pt": "No que estou focado."
+        },
+        "reach.contrib": {
+          "en": "Contributions · last 6 months",
+          "pt": "Contribuições · últimos 6 meses"
+        },
+        "reach.global": {
+          "en": "Remote · comfortable US &amp; EU overlap · open to relocation",
+          "pt": "Remoto · overlap confortável US &amp; EU · aberto a realocação"
+        },
+        "foot.quote": {
+          "en": "Good systems survive rewrites. Great ones survive reorganizations.",
+          "pt": "Bons sistemas sobrevivem a reescritas. Os ótimos sobrevivem a reorganizações."
+        },
+        "foot.connect": {
+          "en": "Connect",
+          "pt": "Conecte-se"
+        },
+        "foot.elsewhere": {
+          "en": "Elsewhere",
+          "pt": "Em outros lugares"
+        },
+        "foot.copyright": {
+          "en": "© 2026 mend3 — Built with ♥ and lots of ☕",
+          "pt": "© 2026 mend3 — Feito com ♥ e muito ☕"
+        },
+        "foot.tagline": {
+          "en": "Self-assembling page · data-driven HTML · CSS · Vanilla JS, conjured by AI wizards 🧙",
+          "pt": "Página auto-montável · HTML data-driven · CSS · Vanilla JS, conjurada por feiticeiros de IA 🧙"
+        },
+        "who.sharer": {
+          "en": "systems thinker · platform builder · learns by building",
+          "pt": "pensa em sistemas · constrói plataformas · aprende construindo"
+        },
+        "who.hobbies": {
+          "en": "games · cinema · rock · lots of code",
+          "pt": "games · cinema · rock · muito código"
+        },
+        "sg.title": {
+          "en": "knowledge map",
+          "pt": "mapa de conhecimento"
+        },
+        "sg.hint": {
+          "en": "Click a node · scroll to zoom · drag to pan",
+          "pt": "Clique num nó · role para zoom · arraste para mover"
+        },
+        "sg.back": {
+          "en": "← Back to cards",
+          "pt": "← Voltar aos cards"
+        },
+        "sg.projects": {
+          "en": "Projects",
+          "pt": "Projetos"
+        },
+        "sg.architecture": {
+          "en": "Architecture",
+          "pt": "Arquitetura"
+        },
+        "pop.industries": {
+          "en": "Sectors I've worked in",
+          "pt": "Setores onde atuei"
+        },
+        "pop.layers": {
+          "en": "Platform layers",
+          "pt": "Camadas da plataforma"
+        },
+        "cv.more": {
+          "en": "See career & impact",
+          "pt": "Ver carreira & impacto"
+        },
+        "cv.achievements": {
+          "en": "Selected achievements",
+          "pt": "Conquistas selecionadas"
+        },
+        "cv.experience": {
+          "en": "Experience",
+          "pt": "Experiência"
+        },
+        "cv.skills": {
+          "en": "Skills",
+          "pt": "Habilidades"
+        },
+        "cv.openTo": {
+          "en": "Open to",
+          "pt": "Aberto a"
+        },
+        "cv.howiwork": {
+          "en": "How I work",
+          "pt": "Como eu trabalho"
+        },
+        "cv.problem": {
+          "en": "Problem —",
+          "pt": "Problema —"
+        },
+        "cv.impact": {
+          "en": "Impact —",
+          "pt": "Impacto —"
+        }
       }
     }
   }
