@@ -31,7 +31,7 @@ I build platforms that turn fragmented data, integrations, and processes into op
 
 Software engineer, platform architect, and technical leader with **15+ years** designing, building, and operating the platforms that companies run on — multi-tenant SaaS, distributed systems, large-scale data acquisition, and AI-native products.
 
-One thread connects the work across **fintech, legaltech, retail & commerce intelligence, and data-intensive platforms**: taking fragmented data, integrations, and processes and turning them into **operational intelligence** — systems a business operates on, not dashboards it looks at. I did it consolidating millions of pricing signals for global brands; I'm doing it now in **DevShell One**, where many products share one foundation.
+One thread connects the work across **fintech, legaltech, retail & commerce intelligence, and data-intensive platforms**: taking fragmented data, integrations, and processes and turning them into **operational intelligence** — systems a business operates on, not dashboards it looks at. I did it consolidating millions of pricing signals for global brands; I'm doing it now in **DevShell Tech**, where many products share one foundation.
 
 I operate across the full arc — **set the architecture and strategy, then write the code that de-risks the hardest parts** — and I treat structural decisions as business decisions: every one tied to cost, reliability, or speed-to-market.
 
@@ -39,7 +39,7 @@ I operate across the full arc — **set the architecture and strategy, then writ
 
 ## Selected platform — what I'm building now
 
-**[DevShell One](https://devshell.tech/)** — a platform where one shared foundation powers many products and verticals, instead of rebuilding infrastructure, data, and AI for each. It spans an infrastructure control plane, a multi-tenant runtime, universal connectors, data acquisition at scale, workflow automation, and a native AI layer. The point isn't the parts — it's that **the cost of the next product, vertical, or tenant keeps falling**.
+**[DevShell Tech](https://devshell.tech/)** — a platform where one shared foundation powers many products and verticals, instead of rebuilding infrastructure, data, and AI for each. It spans an infrastructure control plane, a multi-tenant runtime, universal connectors, data acquisition at scale, workflow automation, and a native AI layer. The point isn't the parts — it's that **the cost of the next product, vertical, or tenant keeps falling**.
 
 <!-- KT:PROFILE:START -->
 ```mermaid
@@ -66,11 +66,11 @@ flowchart LR
   d_talent_intelligence["Talent Intelligence"]:::dom
   p_commerce_intelligence["Commerce Intelligence"]:::prod
   p_core_datahouse["core/datahouse"]:::proj
-  p_core_ella["core/ella"]:::proj
+  p_core_ella["satellites/ella"]:::proj
   p_core_hub["core/hub"]:::proj
-  p_devshell_one["DevShell One"]:::plat
+  p_devshell_one["DevShell Tech"]:::plat
   p_ella_local_ai["Ella — Local AI"]:::prod
-  p_foundation_oracle["foundation/oracle"]:::proj
+  p_foundation_oracle["core/oracle"]:::proj
   p_saas_hub["SaaS Hub"]:::prod
   p_scraping_platform["Scraping Platform"]:::prod
   v_automation_layer["Automation Layer"]:::vis
@@ -163,7 +163,7 @@ The kinds of systems I design and own end-to-end — each framed by the problem 
 
 ## Selected Platform Achievements
 
-- **Designed and operate DevShell One end-to-end** — control plane, data acquisition, integration framework, workflow automation, AI layer, and vertical apps — proving one foundation can power many products at a falling marginal cost.
+- **Designed and operate DevShell Tech end-to-end** — control plane, data acquisition, integration framework, workflow automation, AI layer, and vertical apps — proving one foundation can power many products at a falling marginal cost.
 - **Built retail & commerce-intelligence platforms processing millions of pricing, inventory, and merchandising signals** across global marketplaces, used by global consumer brands to steer pricing, availability, and digital-shelf strategy.
 - **Architected large-scale, cost-efficient web-access and data-acquisition infrastructure** with reliability and observability as first-class concerns — cutting operational spend without sacrificing quality.
 - **Delivered high-volume payments and financial systems** under strict reliability and compliance constraints, at one of Latin America's largest acquirers.
@@ -221,16 +221,16 @@ timeline
     Now : Founder — Platform Architect
 ```
 
-Different industries, one trajectory: from building data and commerce-intelligence platforms for global brands, to owning the architecture of DevShell One. The constant is **platforms, data, integrations, and operational intelligence** — each role a deeper cut at the same problem.
+Different industries, one trajectory: from building data and commerce-intelligence platforms for global brands, to owning the architecture of DevShell Tech. The constant is **platforms, data, integrations, and operational intelligence** — each role a deeper cut at the same problem.
 
 <br/>
 
 <details>
-<summary><b>Founder & Platform Architect</b> — DevShell One · 2023–Present</summary>
+<summary><b>Founder & Platform Architect</b> — DevShell Tech · 2023–Present</summary>
 
 <br/>
 
-**Built:** **DevShell One** — a single platform where one shared foundation powers many products: control plane, data acquisition, integration framework, workflow automation, native AI layer, and vertical apps.
+**Built:** **DevShell Tech** — a single platform where one shared foundation powers many products: control plane, data acquisition, integration framework, workflow automation, native AI layer, and vertical apps.
 **Problem:** every new product or vertical normally means rebuilding infrastructure, data, and AI from scratch.
 **Impact:** verticals now ship as modules on a shared base, so the marginal cost of the next product, tenant, or market keeps falling — and the AI understands the whole operation because everything lives on one data model.
 

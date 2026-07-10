@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedFrom": "/Users/victor/workspace/devshell-one",
+    "generatedFrom": "/home/dev/workspace",
     "generator": "extract-context.js",
     "layer": "mechanical",
-    "overlay": "/Users/victor/workspace/devshell-one/.claude/skills/knowledge-topology/semantic-overlay.json"
+    "overlay": "/home/dev/workspace/.claude/skills/knowledge-topology/semantic-overlay.json"
   },
   "categories": {
     "capability": {
@@ -43,12 +43,12 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "pct": 89.5
+      "pct": 90.3
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "pct": 4.2
+      "pct": 3.4
     },
     {
       "name": "JavaScript",
@@ -82,8 +82,8 @@
       "label": "Oracle",
       "type": "project",
       "meta": {
-        "dir": "foundation/oracle",
-        "group": "foundation",
+        "dir": "core/oracle",
+        "group": "core",
         "summary": "The infrastructure orchestrator for the workspace. It owns the shared `workspace` Docker network and is the **single provider of the global services** every product consumes over it — Traefik ingress ",
         "description": null,
         "remote": "https://github.com/mendshell/oracle",
@@ -101,7 +101,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -111,7 +111,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -121,7 +121,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -131,7 +131,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -141,7 +141,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -151,7 +151,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -161,7 +161,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -171,7 +171,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -181,7 +181,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -191,7 +191,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -201,7 +201,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -211,7 +211,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation",
+        "group": "core",
         "global": true
       }
     },
@@ -221,7 +221,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -230,7 +230,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -239,7 +239,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -248,7 +248,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -257,7 +257,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -266,7 +266,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -275,7 +275,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -284,7 +284,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -293,7 +293,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -302,7 +302,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -311,7 +311,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -320,7 +320,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -329,7 +329,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -338,7 +338,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -347,7 +347,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -356,7 +356,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -365,7 +365,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -374,7 +374,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -383,7 +383,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -392,7 +392,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -401,7 +401,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -410,7 +410,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -419,7 +419,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -428,7 +428,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -437,7 +437,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -446,7 +446,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -455,7 +455,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -464,7 +464,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -473,7 +473,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -482,7 +482,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -491,7 +491,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -500,7 +500,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -509,7 +509,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -518,7 +518,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -527,7 +527,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -536,7 +536,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -545,7 +545,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -554,7 +554,7 @@
       "type": "service",
       "meta": {
         "project": "oracle",
-        "group": "foundation"
+        "group": "core"
       }
     },
     {
@@ -714,6 +714,12 @@
       "meta": {}
     },
     {
+      "id": "tech:supabase",
+      "label": "Supabase",
+      "type": "technology",
+      "meta": {}
+    },
+    {
       "id": "project:datahouse",
       "label": "DataHouse",
       "type": "project",
@@ -729,6 +735,36 @@
           "en": "Scraping platform at scale — API, scrapers, proxy and a browser pool for resilient, distributed data collection.",
           "es": "Plataforma de scraping a escala — API, scrapers, proxy y pool de navegadores para recolección de datos resiliente y distribuida."
         }
+      }
+    },
+    {
+      "id": "service:datahouse:scraper",
+      "label": "scraper",
+      "type": "service",
+      "meta": {
+        "project": "datahouse",
+        "group": "core",
+        "kind": "app"
+      }
+    },
+    {
+      "id": "service:datahouse:pulumi",
+      "label": "pulumi",
+      "type": "service",
+      "meta": {
+        "project": "datahouse",
+        "group": "core",
+        "kind": "app"
+      }
+    },
+    {
+      "id": "service:datahouse:proxy",
+      "label": "proxy",
+      "type": "service",
+      "meta": {
+        "project": "datahouse",
+        "group": "core",
+        "kind": "app"
       }
     },
     {
@@ -752,28 +788,8 @@
       }
     },
     {
-      "id": "service:datahouse:proxy",
-      "label": "proxy",
-      "type": "service",
-      "meta": {
-        "project": "datahouse",
-        "group": "core",
-        "kind": "app"
-      }
-    },
-    {
-      "id": "service:datahouse:pulumi",
-      "label": "pulumi",
-      "type": "service",
-      "meta": {
-        "project": "datahouse",
-        "group": "core",
-        "kind": "app"
-      }
-    },
-    {
-      "id": "service:datahouse:scraper",
-      "label": "scraper",
+      "id": "service:datahouse:datahouse",
+      "label": "datahouse",
       "type": "service",
       "meta": {
         "project": "datahouse",
@@ -1001,12 +1017,18 @@
       "meta": {}
     },
     {
+      "id": "tech:n8n",
+      "label": "n8n",
+      "type": "technology",
+      "meta": {}
+    },
+    {
       "id": "project:ella",
       "label": "Ella",
       "type": "project",
       "meta": {
-        "dir": "core/ella",
-        "group": "core",
+        "dir": "satellites/ella",
+        "group": "satellites",
         "summary": "This repo runs **Ella** — an AI companion built on **Hermes Agent** — in a",
         "description": null,
         "remote": "https://github.com/mendshell/ella",
@@ -1024,7 +1046,7 @@
       "type": "service",
       "meta": {
         "project": "ella",
-        "group": "core"
+        "group": "satellites"
       }
     },
     {
@@ -1033,7 +1055,7 @@
       "type": "service",
       "meta": {
         "project": "ella",
-        "group": "core"
+        "group": "satellites"
       }
     },
     {
@@ -1042,7 +1064,7 @@
       "type": "service",
       "meta": {
         "project": "ella",
-        "group": "core"
+        "group": "satellites"
       }
     },
     {
@@ -1051,7 +1073,7 @@
       "type": "service",
       "meta": {
         "project": "ella",
-        "group": "core"
+        "group": "satellites"
       }
     },
     {
@@ -1060,7 +1082,7 @@
       "type": "service",
       "meta": {
         "project": "ella",
-        "group": "core"
+        "group": "satellites"
       }
     },
     {
@@ -1142,26 +1164,8 @@
       "meta": {}
     },
     {
-      "id": "project:knowledge-engine",
-      "label": "Knowledge Engine",
-      "type": "project",
-      "meta": {
-        "dir": "foundation/knowledge-engine",
-        "group": "foundation",
-        "summary": "Motor de **ingestão stateless** do workspace: dado um arquivo, URL ou diretório, devolve",
-        "description": null,
-        "remote": "https://github.com/mendshell/devshell-one",
-        "repo": "mendshell/devshell-one",
-        "pitch": {
-          "pt": "Motor de ingestão stateless do workspace — recebe um arquivo, URL ou diretório e devolve conteúdo normalizado para a base de conhecimento.",
-          "en": "Workspace stateless ingestion engine — takes a file, URL or directory and returns normalized content for the knowledge base.",
-          "es": "Motor de ingesta stateless del workspace — recibe un archivo, URL o directorio y devuelve contenido normalizado para la base de conocimiento."
-        }
-      }
-    },
-    {
-      "id": "platform:devshell-one",
-      "label": "DevShell One",
+      "id": "platform:devshell-tech",
+      "label": "DevShell Tech",
       "type": "platform",
       "meta": {
         "owner": "Core Team",
@@ -1342,10 +1346,15 @@
       }
     },
     {
-      "id": "tech:n8n",
-      "label": "n8n",
-      "type": "technology",
-      "meta": {}
+      "id": "project:knowledge-engine",
+      "meta": {
+        "pitch": {
+          "pt": "Motor de ingestão stateless do workspace — recebe um arquivo, URL ou diretório e devolve conteúdo normalizado para a base de conhecimento.",
+          "en": "Workspace stateless ingestion engine — takes a file, URL or directory and returns normalized content for the knowledge base.",
+          "es": "Motor de ingesta stateless del workspace — recibe un archivo, URL o directorio y devuelve contenido normalizado para la base de conocimiento."
+        }
+      },
+      "label": "Knowledge Engine"
     }
   ],
   "edges": [
@@ -1730,6 +1739,26 @@
       "relation": "uses"
     },
     {
+      "source": "project:oracle",
+      "target": "tech:supabase",
+      "relation": "uses"
+    },
+    {
+      "source": "project:datahouse",
+      "target": "service:datahouse:scraper",
+      "relation": "contains"
+    },
+    {
+      "source": "project:datahouse",
+      "target": "service:datahouse:pulumi",
+      "relation": "contains"
+    },
+    {
+      "source": "project:datahouse",
+      "target": "service:datahouse:proxy",
+      "relation": "contains"
+    },
+    {
       "source": "project:datahouse",
       "target": "service:datahouse:api",
       "relation": "contains"
@@ -1741,17 +1770,7 @@
     },
     {
       "source": "project:datahouse",
-      "target": "service:datahouse:proxy",
-      "relation": "contains"
-    },
-    {
-      "source": "project:datahouse",
-      "target": "service:datahouse:pulumi",
-      "relation": "contains"
-    },
-    {
-      "source": "project:datahouse",
-      "target": "service:datahouse:scraper",
+      "target": "service:datahouse:datahouse",
       "relation": "contains"
     },
     {
@@ -1818,6 +1837,16 @@
       "source": "project:datahouse",
       "target": "service:datahouse:integration",
       "relation": "contains"
+    },
+    {
+      "source": "service:datahouse:pulumi",
+      "target": "service:datahouse:api",
+      "relation": "depends"
+    },
+    {
+      "source": "service:datahouse:pulumi",
+      "target": "service:datahouse:app",
+      "relation": "depends"
     },
     {
       "source": "project:datahouse",
@@ -2002,6 +2031,16 @@
     {
       "source": "project:datahouse",
       "target": "tech:traefik",
+      "relation": "uses"
+    },
+    {
+      "source": "project:datahouse",
+      "target": "tech:n8n",
+      "relation": "uses"
+    },
+    {
+      "source": "project:datahouse",
+      "target": "tech:mongodb",
       "relation": "uses"
     },
     {
@@ -2230,26 +2269,6 @@
       "relation": "uses"
     },
     {
-      "source": "project:knowledge-engine",
-      "target": "service:oracle:knowledge-engine",
-      "relation": "contains"
-    },
-    {
-      "source": "project:knowledge-engine",
-      "target": "tech:python",
-      "relation": "uses"
-    },
-    {
-      "source": "project:knowledge-engine",
-      "target": "tech:qdrant",
-      "relation": "uses"
-    },
-    {
-      "source": "project:knowledge-engine",
-      "target": "tech:postgresql",
-      "relation": "uses"
-    },
-    {
       "source": "project:datahouse",
       "target": "service:oracle:redis",
       "relation": "connects"
@@ -2272,6 +2291,11 @@
     {
       "source": "project:datahouse",
       "target": "service:oracle:grafana",
+      "relation": "connects"
+    },
+    {
+      "source": "project:datahouse",
+      "target": "service:oracle:mongo",
       "relation": "connects"
     },
     {
@@ -2315,11 +2339,6 @@
       "relation": "connects"
     },
     {
-      "source": "project:knowledge-engine",
-      "target": "service:oracle:qdrant",
-      "relation": "connects"
-    },
-    {
       "source": "project:datahouse",
       "target": "project:oracle",
       "relation": "depends"
@@ -2335,57 +2354,47 @@
       "relation": "depends"
     },
     {
-      "source": "project:knowledge-engine",
-      "target": "project:oracle",
-      "relation": "depends"
-    },
-    {
-      "source": "project:datahouse",
-      "target": "tech:n8n",
-      "relation": "uses"
-    },
-    {
-      "source": "platform:devshell-one",
+      "source": "platform:devshell-tech",
       "target": "product:saas-hub",
       "relation": "contains"
     },
     {
-      "source": "platform:devshell-one",
+      "source": "platform:devshell-tech",
       "target": "product:commerce-intelligence",
       "relation": "contains"
     },
     {
-      "source": "platform:devshell-one",
+      "source": "platform:devshell-tech",
       "target": "product:scraping-platform",
       "relation": "contains"
     },
     {
-      "source": "platform:devshell-one",
+      "source": "platform:devshell-tech",
       "target": "product:ella",
       "relation": "contains"
     },
     {
-      "source": "platform:devshell-one",
+      "source": "platform:devshell-tech",
       "target": "vision:control-plane",
       "relation": "built-on"
     },
     {
-      "source": "platform:devshell-one",
+      "source": "platform:devshell-tech",
       "target": "vision:data-plane",
       "relation": "built-on"
     },
     {
-      "source": "platform:devshell-one",
+      "source": "platform:devshell-tech",
       "target": "vision:cognition-layer",
       "relation": "built-on"
     },
     {
-      "source": "platform:devshell-one",
+      "source": "platform:devshell-tech",
       "target": "vision:automation-layer",
       "relation": "built-on"
     },
     {
-      "source": "platform:devshell-one",
+      "source": "platform:devshell-tech",
       "target": "vision:intelligence-layer",
       "relation": "built-on"
     },
@@ -2693,7 +2702,7 @@
           "en": "Founder & Platform Architect",
           "es": "Fundador & Arquitecto de Plataforma"
         },
-        "org": "DevShell One",
+        "org": "DevShell Tech",
         "period": {
           "pt": "2023 – Atual",
           "en": "2023 – Present",
@@ -2965,12 +2974,12 @@
       "summary": {
         "pt": [
           "Engenheiro de software, arquiteto de plataforma e líder técnico com <b>mais de 15 anos</b> projetando, construindo e operando as plataformas sobre as quais as empresas funcionam — SaaS multi-tenant, sistemas distribuídos, aquisição de dados em larga escala e produtos nativos de IA.",
-          "Um único fio conecta o trabalho em <b>fintech, legaltech, inteligência de varejo e comércio, e plataformas de uso intensivo de dados</b>: pegar dados, integrações e processos fragmentados e convertê-los em <b>inteligência operacional</b> — sistemas que o negócio de fato opera, não painéis que ele só olha. Fiz isso consolidando milhões de sinais de preço para marcas globais; faço de novo agora no DevShell One, onde muitos produtos compartilham uma só fundação.",
+          "Um único fio conecta o trabalho em <b>fintech, legaltech, inteligência de varejo e comércio, e plataformas de uso intensivo de dados</b>: pegar dados, integrações e processos fragmentados e convertê-los em <b>inteligência operacional</b> — sistemas que o negócio de fato opera, não painéis que ele só olha. Fiz isso consolidando milhões de sinais de preço para marcas globais; faço de novo agora no DevShell Tech, onde muitos produtos compartilham uma só fundação.",
           "Atuo em todo o arco — <b>defino a arquitetura e a estratégia e, então, escrevo o código que tira o risco das partes mais difíceis</b> — e trato decisões estruturais como decisões de negócio: cada uma ligada a custo, confiabilidade ou velocidade de entrega."
         ],
         "en": [
           "Software engineer, platform architect, and technical leader with <b>15+ years</b> designing, building, and operating the platforms that companies run on — multi-tenant SaaS, distributed systems, large-scale data acquisition, and AI-native products.",
-          "One thread connects the work across <b>fintech, legaltech, retail &amp; commerce intelligence, and data-intensive platforms</b>: taking fragmented data, integrations, and processes and turning them into <b>operational intelligence</b> — systems a business operates on, not dashboards it looks at. I did it consolidating millions of pricing signals for global brands; I'm doing it now in DevShell One, where many products share one foundation.",
+          "One thread connects the work across <b>fintech, legaltech, retail &amp; commerce intelligence, and data-intensive platforms</b>: taking fragmented data, integrations, and processes and turning them into <b>operational intelligence</b> — systems a business operates on, not dashboards it looks at. I did it consolidating millions of pricing signals for global brands; I'm doing it now in DevShell Tech, where many products share one foundation.",
           "I operate across the full arc — <b>set the architecture and strategy, then write the code that de-risks the hardest parts</b> — and I treat structural decisions as business decisions: every one tied to cost, reliability, or speed-to-market."
         ]
       },
@@ -3037,7 +3046,7 @@
         }
       ],
       "experienceDetail": {
-        "DevShell One": {
+        "DevShell Tech": {
           "built": {
             "pt": "uma plataforma única em que uma fundação compartilhada sustenta muitos produtos e verticais — em vez de reconstruir infraestrutura, dados e IA a cada um.",
             "en": "a single platform where one shared foundation powers many products and verticals — instead of rebuilding infrastructure, data, and AI for each."
@@ -3171,8 +3180,8 @@
       },
       "achievements": [
         {
-          "pt": "<b>Projetei e opero o DevShell One de ponta a ponta</b> — control plane, aquisição de dados, framework de integração, automação de processos, camada de IA e aplicações verticais — provando que uma fundação pode sustentar muitos produtos com custo marginal decrescente.",
-          "en": "<b>I designed and operate DevShell One end-to-end</b> — control plane, data acquisition, integration framework, workflow automation, AI layer, and vertical apps — proving one foundation can power many products at a falling marginal cost."
+          "pt": "<b>Projetei e opero o DevShell Tech de ponta a ponta</b> — control plane, aquisição de dados, framework de integração, automação de processos, camada de IA e aplicações verticais — provando que uma fundação pode sustentar muitos produtos com custo marginal decrescente.",
+          "en": "<b>I designed and operate DevShell Tech end-to-end</b> — control plane, data acquisition, integration framework, workflow automation, AI layer, and vertical apps — proving one foundation can power many products at a falling marginal cost."
         },
         {
           "pt": "<b>Construí plataformas de inteligência de varejo e comércio processando milhões de sinais de preço, estoque e merchandising</b> em marketplaces globais, usadas por marcas globais para guiar preço, disponibilidade e estratégia de prateleira digital.",
@@ -3632,8 +3641,8 @@
           {
             "c": "#c0982f",
             "t": {
-              "en": "Building DevShell One — making one foundation carry many products, so each new one costs less than the last",
-              "pt": "Construindo o DevShell One — fazendo uma fundação carregar muitos produtos, pra cada novo custar menos que o anterior"
+              "en": "Building DevShell Tech — making one foundation carry many products, so each new one costs less than the last",
+              "pt": "Construindo o DevShell Tech — fazendo uma fundação carregar muitos produtos, pra cada novo custar menos que o anterior"
             }
           },
           {
