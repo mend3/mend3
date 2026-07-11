@@ -70,69 +70,65 @@ flowchart LR
   classDef cap stroke:#777,color:#333,stroke-dasharray:2 2;
   classDef proj stroke:#333,color:#333,stroke-width:2px;
   c_automa_o_com_ia["Automação com IA"]:::cap
-  c_local_llm["Local LLM"]:::cap
+  c_egress_proxy["Egress Proxy"]:::cap
   c_multi_tenant["Multi-tenant"]:::cap
   c_open_finance_financeiro["Open Finance / Financeiro"]:::cap
   c_page_builder_cms["Page Builder / CMS"]:::cap
   c_rag_cognition["RAG / Cognition"]:::cap
   c_universal_connectors["Universal Connectors"]:::cap
+  c_web_scraping["Web Scraping"]:::cap
   d_ads["Ads"]:::dom
   d_ecommerce["Ecommerce"]:::dom
   d_financeiro["Financeiro"]:::dom
-  d_personal_ai["Personal AI"]:::dom
   d_real_estate["Real Estate"]:::dom
   d_talent_intelligence["Talent Intelligence"]:::dom
   p_commerce_intelligence["Commerce Intelligence"]:::prod
-  p_core_datahouse["core/datahouse"]:::proj
-  p_core_ella["satellites/ella"]:::proj
   p_core_hub["core/hub"]:::proj
-  p_devshell_one["DevShell Tech"]:::plat
-  p_ella_local_ai["Ella — Local AI"]:::prod
-  p_foundation_oracle["core/oracle"]:::proj
+  p_core_knowledge_engine["core/knowledge-engine"]:::proj
+  p_core_oracle["core/oracle"]:::proj
+  p_core_proxy["core/proxy"]:::proj
+  p_data_acquisition["Data Acquisition"]:::prod
+  p_devshell_tech["DevShell Tech"]:::plat
   p_saas_hub["SaaS Hub"]:::prod
-  p_scraping_platform["Scraping Platform"]:::prod
   v_automation_layer["Automation Layer"]:::vis
   v_cognition_layer["Cognition Layer"]:::vis
   v_control_plane["Control Plane"]:::vis
   v_data_plane["Data Plane"]:::vis
   v_intelligence_layer["Intelligence Layer"]:::vis
   c_automa_o_com_ia -->|provided-by| p_core_hub
-  c_local_llm -->|provided-by| p_core_ella
+  c_egress_proxy -->|provided-by| p_core_proxy
   c_multi_tenant -->|provided-by| p_core_hub
   c_open_finance_financeiro -->|provided-by| p_core_hub
   c_page_builder_cms -->|provided-by| p_core_hub
-  c_rag_cognition -->|provided-by| p_core_ella
   c_rag_cognition -->|provided-by| p_core_hub
   c_universal_connectors -->|provided-by| p_core_hub
+  c_web_scraping -->|provided-by| p_core_hub
+  c_web_scraping -->|provided-by| p_core_proxy
   d_ads -->|served-by| p_core_hub
   d_ecommerce -->|served-by| p_core_hub
   d_financeiro -->|served-by| p_core_hub
-  d_personal_ai -->|served-by| p_core_ella
   d_real_estate -->|served-by| p_core_hub
   d_talent_intelligence -->|served-by| p_core_hub
   p_commerce_intelligence -->|built-on| p_core_hub
   p_commerce_intelligence -->|serves| d_ads
   p_commerce_intelligence -->|serves| d_ecommerce
-  p_devshell_one -->|built-on| v_automation_layer
-  p_devshell_one -->|built-on| v_cognition_layer
-  p_devshell_one -->|built-on| v_control_plane
-  p_devshell_one -->|built-on| v_data_plane
-  p_devshell_one -->|built-on| v_intelligence_layer
-  p_devshell_one -->|contains| p_commerce_intelligence
-  p_devshell_one -->|contains| p_ella_local_ai
-  p_devshell_one -->|contains| p_saas_hub
-  p_devshell_one -->|contains| p_scraping_platform
-  p_ella_local_ai -->|built-on| p_core_ella
-  p_ella_local_ai -->|serves| d_personal_ai
+  p_data_acquisition -->|built-on| p_core_hub
+  p_data_acquisition -->|built-on| p_core_proxy
+  p_devshell_tech -->|built-on| v_automation_layer
+  p_devshell_tech -->|built-on| v_cognition_layer
+  p_devshell_tech -->|built-on| v_control_plane
+  p_devshell_tech -->|built-on| v_data_plane
+  p_devshell_tech -->|built-on| v_intelligence_layer
+  p_devshell_tech -->|contains| p_commerce_intelligence
+  p_devshell_tech -->|contains| p_data_acquisition
+  p_devshell_tech -->|contains| p_saas_hub
   p_saas_hub -->|built-on| p_core_hub
-  p_scraping_platform -->|built-on| p_core_datahouse
   v_automation_layer -->|includes| p_core_hub
-  v_cognition_layer -->|includes| p_core_ella
   v_cognition_layer -->|includes| p_core_hub
-  v_control_plane -->|includes| p_foundation_oracle
-  v_data_plane -->|includes| p_core_datahouse
-  v_data_plane -->|includes| p_core_ella
+  v_control_plane -->|includes| p_core_oracle
   v_data_plane -->|includes| p_core_hub
+  v_data_plane -->|includes| p_core_knowledge_engine
+  v_data_plane -->|includes| p_core_proxy
   v_intelligence_layer -->|includes| p_core_hub
 </pre>
 <!-- KT:PROFILE:END --><p class="topo-note">Mapped from the real running system I architect and operate — vision &rarr; products &rarr; domains &rarr; capabilities &rarr; projects.</p></section>
