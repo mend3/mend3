@@ -43,27 +43,27 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "pct": 93.7
+      "pct": 94.2
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "pct": 2.1
+      "pct": 1.9
     },
     {
       "name": "HCL",
       "color": "#844FBA",
-      "pct": 1.7
+      "pct": 1.6
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "pct": 1.2
+      "pct": 1.1
     },
     {
       "name": "Shell",
       "color": "#89e051",
-      "pct": 1.1
+      "pct": 1
     },
     {
       "name": "CSS",
@@ -1036,14 +1036,14 @@
       "meta": {
         "dir": "core/proxy",
         "group": "core",
-        "summary": "Forward-proxy de egress in-house do oracle (port standalone, sem NX, do `apps/proxy` do",
-        "description": "Forward-proxy de egress global do oracle (vendors brightdata/netnut + circuit-breaker/LB + auth/rate-limit/metricas). Port standalone (sem NX) do apps/proxy do datahouse.",
+        "summary": "Forward-proxy de egress in-house do oracle. É o **orquestrador de requests**: os engines de coleta o usam como upstream",
+        "description": "Forward-proxy de egress global do oracle (vendors brightdata/netnut + circuit-breaker/LB + auth/rate-limit/metricas).",
         "remote": "https://github.com/mendshell/devshell-one",
         "repo": "mendshell/devshell-one",
         "pitch": {
-          "pt": "Forward-proxy de egress in-house — orquestra os requests de coleta e decide o downstream por header (direct/brightdata/netnut), com circuit-breaker/LB, rate-limit, auth e guard SSRF. Promovido do datahouse; vive na rede workspace como proxy:8080.",
-          "en": "In-house egress forward-proxy — orchestrates collection requests and picks the downstream per header (direct/brightdata/netnut), with circuit-breaker/LB, rate-limit, auth and SSRF guard. Promoted out of datahouse; lives on the workspace network as proxy:8080.",
-          "es": "Forward-proxy de egress in-house — orquesta los requests de recolección y elige el downstream por header (direct/brightdata/netnut), con circuit-breaker/LB, rate-limit, auth y guard SSRF. Promovido del datahouse; vive en la red workspace como proxy:8080."
+          "pt": "Forward-proxy de egress in-house — orquestra os requests de coleta e decide o downstream por header (direct/brightdata/netnut), com circuit-breaker/LB, rate-limit, auth e guard SSRF; vive na rede workspace como proxy:8080.",
+          "en": "In-house egress forward-proxy — orchestrates collection requests and picks the downstream per header (direct/brightdata/netnut), with circuit-breaker/LB, rate-limit, auth and SSRF guard; lives on the workspace network as proxy:8080.",
+          "es": "Forward-proxy de egress in-house — orquesta los requests de recolección y elige el downstream por header (direct/brightdata/netnut), con circuit-breaker/LB, rate-limit, auth y guard SSRF; vive en la red workspace como proxy:8080."
         }
       }
     },
@@ -1126,7 +1126,7 @@
       "label": "Data Acquisition",
       "type": "product",
       "meta": {
-        "summary": "Coleta de dados em escala — módulo scraping nativo do hub + egress proxy in-house (vendors brightdata/netnut/direct) + pool de browsers (browserless/flaresolverr) dos globais do oracle. Herda a plataforma de scraping do antigo datahouse, agora dobrada no hub + proxy."
+        "summary": "Coleta de dados em escala — módulo scraping nativo do hub + egress proxy in-house (vendors brightdata/netnut/direct) + pool de browsers (browserless/flaresolverr) dos globais do oracle."
       }
     },
     {
@@ -1170,7 +1170,7 @@
       "label": "Web Scraping",
       "type": "capability",
       "meta": {
-        "summary": "Coleta web resiliente — engine por job, stage-runners, pool de browsers (browserless/flaresolverr) e egress via proxy. Módulo scraping nativo do hub (migrado do datahouse) + orquestração de egress no proxy."
+        "summary": "Coleta web resiliente — engine por job, stage-runners, pool de browsers (browserless/flaresolverr) e egress via proxy. Módulo scraping nativo do hub + orquestração de egress no proxy."
       }
     },
     {
