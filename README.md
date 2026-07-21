@@ -65,12 +65,13 @@ flowchart LR
   d_real_estate["Real Estate"]:::dom
   d_talent_intelligence["Talent Intelligence"]:::dom
   p_commerce_intelligence["Commerce Intelligence"]:::prod
+  p_core_daimon["core/daimon"]:::proj
   p_core_hub["core/hub"]:::proj
   p_core_knowledge_engine["core/knowledge-engine"]:::proj
   p_core_oracle["core/oracle"]:::proj
   p_core_proxy["core/proxy"]:::proj
   p_data_acquisition["Data Acquisition"]:::prod
-  p_devshell_tech["DevShell Tech"]:::plat
+  p_devshell_one["DevShell One"]:::plat
   p_saas_hub["SaaS Hub"]:::prod
   v_automation_layer["Automation Layer"]:::vis
   v_cognition_layer["Cognition Layer"]:::vis
@@ -82,6 +83,7 @@ flowchart LR
   c_multi_tenant -->|provided-by| p_core_hub
   c_open_finance_financeiro -->|provided-by| p_core_hub
   c_page_builder_cms -->|provided-by| p_core_hub
+  c_rag_cognition -->|provided-by| p_core_daimon
   c_rag_cognition -->|provided-by| p_core_hub
   c_universal_connectors -->|provided-by| p_core_hub
   c_web_scraping -->|provided-by| p_core_hub
@@ -96,16 +98,17 @@ flowchart LR
   p_commerce_intelligence -->|serves| d_ecommerce
   p_data_acquisition -->|built-on| p_core_hub
   p_data_acquisition -->|built-on| p_core_proxy
-  p_devshell_tech -->|built-on| v_automation_layer
-  p_devshell_tech -->|built-on| v_cognition_layer
-  p_devshell_tech -->|built-on| v_control_plane
-  p_devshell_tech -->|built-on| v_data_plane
-  p_devshell_tech -->|built-on| v_intelligence_layer
-  p_devshell_tech -->|contains| p_commerce_intelligence
-  p_devshell_tech -->|contains| p_data_acquisition
-  p_devshell_tech -->|contains| p_saas_hub
+  p_devshell_one -->|built-on| v_automation_layer
+  p_devshell_one -->|built-on| v_cognition_layer
+  p_devshell_one -->|built-on| v_control_plane
+  p_devshell_one -->|built-on| v_data_plane
+  p_devshell_one -->|built-on| v_intelligence_layer
+  p_devshell_one -->|contains| p_commerce_intelligence
+  p_devshell_one -->|contains| p_data_acquisition
+  p_devshell_one -->|contains| p_saas_hub
   p_saas_hub -->|built-on| p_core_hub
   v_automation_layer -->|includes| p_core_hub
+  v_cognition_layer -->|includes| p_core_daimon
   v_cognition_layer -->|includes| p_core_hub
   v_control_plane -->|includes| p_core_oracle
   v_data_plane -->|includes| p_core_hub
